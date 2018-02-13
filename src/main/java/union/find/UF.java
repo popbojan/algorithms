@@ -1,17 +1,13 @@
 package union.find;
 
-public class UF {
+public abstract class UF {
 
     public UF(int N) {
     }
 
-    public void union(int p, int q) {
+    public abstract void union(int p, int q);
 
-    }
-
-    public boolean connected(int p, int q) {
-        return false;
-    }
+    public abstract boolean connected(int p, int q);
 
     public int find(int p) {
         return -1;
@@ -20,4 +16,6 @@ public class UF {
     public int count() {
         return -1;
     }
+
+    public abstract int[] getIds();
 }

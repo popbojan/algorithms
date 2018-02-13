@@ -7,7 +7,7 @@ public class RunUF {
     public static void main(String[] args) throws IOException {
         System.out.println("RunUF has started");
         int N = System.in.read();
-        UF uf = new UF(N);
+        UF uf = new QuickFindUF(N);
         while (System.in.available() > 0)
         {
              int p = System.in.read();
