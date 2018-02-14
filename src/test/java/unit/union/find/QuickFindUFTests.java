@@ -10,7 +10,7 @@ import union.find.UF;
 import static org.junit.Assert.*;
 import static org.mockito.Mockito.*;
 
-public class UFTests {
+public class QuickFindUFTests {
 
     UF uf;
 

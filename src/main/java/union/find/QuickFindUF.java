@@ -2,14 +2,8 @@ package union.find;
 
 public class QuickFindUF extends UF {
 
-    private int[] id;
-
     public QuickFindUF(int N) {
         super(N);
-        id = new int[N];
-        for (int i = 0; i < N; i++){
-            id[i] = i;
-        }
     }
 
     @Override
@@ -27,11 +21,5 @@ public class QuickFindUF extends UF {
     public boolean connected(int p, int q) {
         return id[p] == id[q];
     }
-
-    @Override
-    public int[] getIds() {
-        return id;
-    }
-
 
 }
