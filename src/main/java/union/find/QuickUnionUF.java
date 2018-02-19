@@ -8,11 +8,20 @@ public class QuickUnionUF extends UF{
 
     @Override
     public void union(int p, int q) {
-
+        int i = root(p);
+        int j = root(q);
+        id[i] = j;
     }
 
     @Override
     public boolean connected(int p, int q) {
-        return false;
+        return root(p) == root(q);
+    }
+
+    private int root(int i){
+        while (i != id[i]){
+            i = id[i];
+        }
+        return i;
     }
 }
