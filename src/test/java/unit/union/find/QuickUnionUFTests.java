@@ -4,12 +4,13 @@ import org.junit.Before;
 import org.junit.Test;
 import org.mockito.MockitoAnnotations;
 import union.find.QuickUnionUF;
+import union.find.UF;
 
 import static org.junit.Assert.assertTrue;
 
 public class QuickUnionUFTests {
 
-    QuickUnionUF qu;
+    UF qu;
 
     @Before
     public void setup()
@@ -21,7 +22,7 @@ public class QuickUnionUFTests {
 
     @Test
     public void canBeCreated() {
-        QuickUnionUF qu = new QuickUnionUF(10);
+        UF qu = new QuickUnionUF(10);
     }
 
     @Test
