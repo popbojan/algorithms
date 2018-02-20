@@ -44,11 +44,7 @@ public class QuickFindUFTests {
 
         assertFalse(uf.connected(1, 5));
 
-        //outprint ids just to be clear:
-        int[] id = uf.getIds();
-        for(int i=0; i<id.length; i++){
-            System.out.println(id[i]);
-        }
+        uf.printIdArray();
     }
 
 

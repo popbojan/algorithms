@@ -32,6 +32,8 @@ public class QuickUnionUFTests {
 
         assertTrue(qu.connected(1, 5));
         assertTrue(qu.connected(1, 7));
+
+        qu.printIdArray();
     }
 
 }

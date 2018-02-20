@@ -31,6 +31,8 @@ public class WeightedQuickUnionUFTests {
 
         assertTrue(wqu.connected(1, 5));
         assertTrue(wqu.connected(1, 7));
+
+        wqu.printIdArray();
     }
 
 }

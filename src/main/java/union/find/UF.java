@@ -26,4 +26,11 @@ public abstract class UF {
     public int[] getIds(){
         return id;
     }
+
+    public void printIdArray() {
+        int[] id = getIds();
+        for (int i = 0; i < id.length; i++) {
+            System.out.println(id[i]);
+        }
+    }
 }

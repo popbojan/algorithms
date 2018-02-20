@@ -31,6 +31,8 @@ public class PathCompressionWeightedQuickUnionUFTests {
 
         assertTrue(pcwqu.connected(1, 5));
         assertTrue(pcwqu.connected(1, 7));
+
+        pcwqu.printIdArray();
     }
     
 }
