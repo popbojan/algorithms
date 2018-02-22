@@ -30,8 +30,17 @@ public class QuickUnionUFTests {
         qu.union(1,  5);
         qu.union(7, 1);
 
+        qu.union(0, 9);
+        qu.union(4, 9);
+
+        qu.union(4, 1);
+
+        assertTrue(qu.connected(5, 9));
         assertTrue(qu.connected(1, 5));
         assertTrue(qu.connected(1, 7));
+
+        // this check iterate twice to find root, because root of 4 is 9 and root of 9 is 5
+        assertTrue(qu.connected(4, 7));
 
         qu.printIdArray();
     }
