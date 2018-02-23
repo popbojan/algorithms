@@ -28,4 +28,14 @@ public class WeightedQuickUnionUF extends QuickUnionUF {
             size[i] += size[j];
         }
     }
+
+    @Override
+    public void printIdArray() {
+        System.out.print("Id Array:");
+        super.printIdArray();
+        System.out.print("Size Array:");
+        for (int i = 0; i < size.length; i++) {
+            System.out.println(size[i]);
+        }
+    }
 }

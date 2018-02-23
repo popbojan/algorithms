@@ -27,7 +27,9 @@ public class WeightedQuickUnionUFTests {
     @Test
     public void union_unitedObjectsAreConnected() {
         wqu.union(1,  5);
+        wqu.printIdArray();
         wqu.union(7, 1);
+        wqu.printIdArray();
 
         assertTrue(wqu.connected(1, 5));
         assertTrue(wqu.connected(1, 7));
