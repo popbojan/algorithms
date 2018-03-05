@@ -2,8 +2,8 @@ package stack;
 
 public class FixedCapacityStackOfStrings {
 
-    private String[] s;
-    private int N = 0;
+    protected String[] s;
+    protected int N = 0;
 
     public FixedCapacityStackOfStrings(int capacity) {
         s = new String[capacity];
@@ -23,5 +23,9 @@ public class FixedCapacityStackOfStrings {
      */
     public String pop() {
         return s[--N];
+    }
+
+    public void printSize() {
+        System.out.println("size: [" + s.length + "]");
     }
 }
