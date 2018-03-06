@@ -2,7 +2,7 @@ package queue;
 
 public class LinkedStackOfQueue {
 
-    private Node last = null;
+    private Node first, last;
 
     private class Node {
         String item;
@@ -10,7 +10,7 @@ public class LinkedStackOfQueue {
     }
 
     public boolean isEmpty() {
-        return last == null;
+        return first == null;
     }
 
     public void enqueue(String item) {
@@ -18,8 +18,11 @@ public class LinkedStackOfQueue {
         last = new Node();
         last.item = item;
         last.next = null;
-        oldlast.next = last;
-
+        if (isEmpty()) {
+            first = last;
+        } else {
+            oldlast.next = last;
+        }
     }
 
     /**
@@ -27,8 +30,11 @@ public class LinkedStackOfQueue {
      * words, removes and returns the first element of this list.
      */
     public String dequeue() {
-        String item = last.item;
-        last = last.next;
+        String item = first.item;
+        first = first.next;
+        if (isEmpty()) {
+            last = null;
+        }
         return item;
     }
 }
