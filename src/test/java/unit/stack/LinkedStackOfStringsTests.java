@@ -1,5 +1,6 @@
 package unit.stack;
 
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.MockitoAnnotations;
@@ -28,6 +29,12 @@ public class LinkedStackOfStringsTests {
         linkedStack.push("the");
         linkedStack.push("is");
         linkedStack.push("Bojan");
+
+        Assert.assertEquals("Bojan", linkedStack.pop());
+        Assert.assertEquals("is", linkedStack.pop());
+        Assert.assertEquals("the", linkedStack.pop());
+        Assert.assertEquals("best", linkedStack.pop());
+        Assert.assertEquals("!!!", linkedStack.pop());
 
         while (!linkedStack.isEmpty()) {
             System.out.println(linkedStack.pop());
