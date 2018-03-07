@@ -20,7 +20,7 @@ public class LinkedStackOfQueueTests {
     }
 
     @Test
-    public void enqueue_ItemsAreLinked() {
+    public void enqueue_ItemsAreLinked_andFirstAddedFirstComesOut() {
         lsq.enqueue("Bojan");
         lsq.enqueue("is");
         lsq.enqueue("the");
