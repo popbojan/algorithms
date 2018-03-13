@@ -15,13 +15,6 @@ public class SortTests {
     }
 
     @Test
-    public void test_less_isLess_returnsTrue() {
-        Comparable a = 1;
-        Comparable b = 6;
-        Assert.assertTrue(sort.less(a,  b));
-    }
-
-    @Test
     public void test_exchange() {
         Comparable[] a = {1, 2, 3, 4, 5};
 
@@ -29,6 +22,13 @@ public class SortTests {
 
         Assert.assertEquals(a[1], 4);
         Assert.assertEquals(a[3], 2);
+    }
+
+    @Test
+    public void test_less_isLess_returnsTrue() {
+        Comparable a = 1;
+        Comparable b = 6;
+        Assert.assertTrue(sort.less(a,  b));
     }
 
     @Test
