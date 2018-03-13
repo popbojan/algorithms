@@ -1,6 +1,6 @@
 package sort;
 
-public class Sort {
+public abstract class Sort {
 
     public boolean less(Comparable v, Comparable w) {
         return v.compareTo(w) < 0;
@@ -20,5 +20,7 @@ public class Sort {
         }
         return true;
     }
+
+    public abstract void sort(Comparable[] a);
 
 }

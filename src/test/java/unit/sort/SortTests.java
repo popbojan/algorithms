@@ -3,6 +3,7 @@ package unit.sort;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
+import sort.SelectionSort;
 import sort.Sort;
 
 public class SortTests {
@@ -11,7 +12,7 @@ public class SortTests {
 
     @Before
     public void setup() {
-        sort = new Sort();
+        sort = new SelectionSort();
     }
 
     @Test
