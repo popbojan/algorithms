@@ -23,4 +23,7 @@ public abstract class Sort {
 
     public abstract void sort(Comparable[] a);
 
+    public void shuffle(Comparable[] a) {
+    }
+
 }

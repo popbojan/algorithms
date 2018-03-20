@@ -2,21 +2,22 @@ package sort;
 
 import java.util.Random;
 
-public class KnuthShuffle extends Sort{
+public class KnuthShuffle extends Sort {
 
     private Random rn;
 
-    public KnuthShuffle()
-    {
+    public KnuthShuffle() {
         rn = new Random();
     }
 
-    public void shuffle(Comparable[] a){
-        int N =  a.length;
-        for(int i=0; i<N; i++){
-            int r = rn.nextInt(i + 1);
+    @Override
+    public void shuffle(Comparable[] a) {
+        int N = a.length;
+        for (int i = 0; i < N; i++) {
+            int r = rn.nextInt(i + 1); // between 0 and i
             exchange(a, i, r);
         }
+        super.shuffle(a);
     }
 
     @Override
