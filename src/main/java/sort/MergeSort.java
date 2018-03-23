@@ -6,17 +6,22 @@ public class MergeSort extends Sort {
 
         for (int k = lo; k <= hi; k++) {
             aux[k] = a[k];
+            System.out.println(aux[k]);
         }
 
         int i = lo, j = mid + 1;
         for (int k = lo; k <= hi; k++) {
-            if (i > mid) { // if i element is exhausted move to j
+            if (i > mid) {// if i element is exhausted move to j
                 a[k] = aux[j++];
             } else if (j > hi) { // if j element is exhausted move to i
                 a[k] = aux[i++];
             } else if (less(aux[j], aux[i])) {
+                System.out.println("aux of  i" + aux[i]);
+                System.out.println("aux of j" + aux[j]);
                 a[k] = aux[j++];
             } else {
+                System.out.println("aux of  i" + aux[i]);
+                System.out.println("aux of j" + aux[j]);
                 a[k] = aux[i++];
             }
         }
@@ -26,9 +31,13 @@ public class MergeSort extends Sort {
     @Override
     public void sort(Comparable[] a) {
         int lo = 0;
-        int mid = a.length / 2;
         int hi = a.length - 1;
+        int mid = a.length / 2;
 
-        merge(a, a, lo, mid, hi);
+        merge(a, new Comparable[a.length], lo, mid, hi);
+
+        if (!isSorted(a)) {
+            sort(a);
+        }
     }
 }
