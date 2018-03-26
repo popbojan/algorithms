@@ -28,16 +28,22 @@ public class MergeSort extends Sort {
 
     }
 
+    private void mergeSort(Comparable[] a, Comparable[] aux, int lo, int hi) {
+        if (hi <= lo) {
+            return;
+        }
+        int mid = lo + (hi - lo) / 2;
+
+        mergeSort(a, aux, lo, mid);
+        mergeSort(a, aux, mid + 1, hi);
+        merge(a, new Comparable[a.length], lo, mid, hi);
+    }
+
     @Override
     public void sort(Comparable[] a) {
         int lo = 0;
         int hi = a.length - 1;
-        int mid = a.length / 2;
-
-        merge(a, new Comparable[a.length], lo, mid, hi);
-
-        if (!isSorted(a)) {
-            sort(a);
-        }
+        Comparable[] aux = new Comparable[a.length];
+        mergeSort(a, aux, lo, hi);
     }
 }

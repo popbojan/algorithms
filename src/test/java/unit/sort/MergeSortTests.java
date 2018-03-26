@@ -17,7 +17,7 @@ public class MergeSortTests {
 
     @Test
     public void test_merge() {
-        Comparable[] a = {1, 2, 3, 4, 5, 7};
+        Comparable[] a = {1, 2, 3, 4, 5, 7, 4};
 
         ms.exchange(a, 1, 3);
         ms.exchange(a, 4, 0);
