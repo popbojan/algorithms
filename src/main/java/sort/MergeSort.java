@@ -2,6 +2,8 @@ package sort;
 
 public class MergeSort extends Sort {
 
+    private final int CUTOFF = 7;
+
     private void merge(Comparable[] a, Comparable[] aux, int lo, int mid, int hi) {
 
         for (int k = lo; k <= hi; k++) {
@@ -32,10 +34,25 @@ public class MergeSort extends Sort {
         if (hi <= lo) {
             return;
         }
+
+        /** use insertion sort when array, that needs to be sorted, is up to 7 items
+         * in order to have more faster algorithm          */
+        if (hi <= lo + CUTOFF - 1) {
+            Sort insertion = new InsertionSort();
+            insertion.sort(a);
+            return;
+        }
+
         int mid = lo + (hi - lo) / 2;
 
         mergeSort(a, aux, lo, mid);
         mergeSort(a, aux, mid + 1, hi);
+
+        /** if it's already in order skip merging */
+        if (!less(a[mid + 1], a[mid])) {
+            return;
+        }
+
         merge(a, new Comparable[a.length], lo, mid, hi);
     }
 
