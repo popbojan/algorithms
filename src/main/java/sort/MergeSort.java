@@ -2,9 +2,9 @@ package sort;
 
 public class MergeSort extends Sort {
 
-    private final int CUTOFF = 7;
+    protected final int CUTOFF = 7;
 
-    private void merge(Comparable[] a, Comparable[] aux, int lo, int mid, int hi) {
+    protected void merge(Comparable[] a, Comparable[] aux, int lo, int mid, int hi) {
 
         for (int k = lo; k <= hi; k++) {
             aux[k] = a[k];
@@ -30,7 +30,7 @@ public class MergeSort extends Sort {
 
     }
 
-    private void mergeSort(Comparable[] a, Comparable[] aux, int lo, int hi) {
+    protected void mergeSort(Comparable[] a, Comparable[] aux, int lo, int hi) {
         if (hi <= lo) {
             return;
         }
@@ -53,7 +53,7 @@ public class MergeSort extends Sort {
             return;
         }
 
-        merge(a, new Comparable[a.length], lo, mid, hi);
+        merge(a, aux, lo, mid, hi);
     }
 
     @Override
