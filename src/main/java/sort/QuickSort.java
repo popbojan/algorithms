@@ -12,6 +12,11 @@ public class QuickSort extends KnuthShuffle {
         if (hi <= lo) {
             return;
         }
+
+        // improve quick sort by estimating partition element to be around middle by introducing medianOf3
+        int m = medianOf3(a, lo, hi);
+        exchange(a, lo, m);
+
         int j = partition(a, lo, hi);
         sort(a, lo, j - 1);
         sort(a, j + 1, hi);
