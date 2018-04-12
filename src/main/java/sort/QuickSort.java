@@ -1,10 +1,20 @@
 package sort;
 
-public class QuickSort extends Sort {
+public class QuickSort extends KnuthShuffle {
 
     @Override
     public void sort(Comparable[] a) {
+        shuffle(a);
+        sort(a, 0, a.length - 1);
+    }
 
+    private void sort(Comparable[] a, int lo, int hi) {
+        if (hi <= lo) {
+            return;
+        }
+        int j = partition(a, lo, hi);
+        sort(a, lo, j - 1);
+        sort(a, j + 1, hi);
     }
 
     private int partition(Comparable[] a, int lo, int hi) {

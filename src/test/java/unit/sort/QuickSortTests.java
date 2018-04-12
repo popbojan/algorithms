@@ -1,5 +1,6 @@
 package unit.sort;
 
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import sort.QuickSort;
@@ -16,6 +17,12 @@ public class QuickSortTests {
 
     @Test
     public void test_sort() {
+        Comparable[] a = {1, 2, 3, 4, 5};
 
+        qs.exchange(a, 1, 3);
+        qs.exchange(a, 4, 0);
+        qs.sort(a);
+
+        Assert.assertTrue(qs.isSorted(a));
     }
 }
