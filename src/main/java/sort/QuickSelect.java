@@ -2,6 +2,10 @@ package sort;
 
 public class QuickSelect extends QuickSort {
 
+    /**
+     * Used to find min (k=0), max (k=N-1), median (k=N/2)
+     * eg find top k
+     */
     @Override
     public Comparable select(Comparable[] a, int k) {
         shuffle(a);
