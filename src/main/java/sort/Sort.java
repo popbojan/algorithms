@@ -45,4 +45,8 @@ public abstract class Sort {
         return (int) a[right - 1];
     }
 
+    public Comparable select(Comparable[] a, int k) {
+        return null;
+    }
+
 }

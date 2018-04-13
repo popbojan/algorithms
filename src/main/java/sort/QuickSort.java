@@ -22,7 +22,7 @@ public class QuickSort extends KnuthShuffle {
         sort(a, j + 1, hi);
     }
 
-    private int partition(Comparable[] a, int lo, int hi) {
+    protected int partition(Comparable[] a, int lo, int hi) {
         int i = lo, j = hi + 1;
         while (true) {
             while (less(a[++i], a[lo])) { // find item on left to swap
