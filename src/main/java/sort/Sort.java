@@ -6,6 +6,10 @@ public abstract class Sort {
         return v.compareTo(w) < 0;
     }
 
+    public boolean less(Comparable[] a, int v, int w) {
+        return a[v].compareTo(a[w]) < 0;
+    }
+
     public void exchange(Comparable[] a, int i, int j) {
         Comparable swap = a[i];
         a[i] = a[j];
