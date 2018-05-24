@@ -4,9 +4,9 @@ import edu.princeton.cs.introcs.StdDraw;
 
 public class Ball {
 
-    private double rx, ry; //position
-    private double vx, vy; //velocity
-    private final double radius = 10; //radius
+    protected double rx, ry; //position
+    protected double vx, vy; //velocity
+    protected final double RADIUS = 10; //RADIUS
 
     public Ball() {
     }
@@ -19,10 +19,10 @@ public class Ball {
     }
 
     public void move(double dt) {
-        if ((rx + vx * dt < radius) || (rx + vx * dt > 1.0 - radius)) {
+        if ((rx + vx * dt < RADIUS) || (rx + vx * dt > 1.0 - RADIUS)) {
             vx = -vx;
         }
-        if ((ry + vy * dt < radius) || (ry + vy * dt > 1.0 - radius)) {
+        if ((ry + vy * dt < RADIUS) || (ry + vy * dt > 1.0 - RADIUS)) {
             vy = -vy;
         }
         rx = rx + vx * dt;
@@ -30,6 +30,6 @@ public class Ball {
     }
 
     public void draw() {
-        StdDraw.filledCircle(rx, ry, radius);
+        StdDraw.filledCircle(rx, ry, RADIUS);
     }
 }
