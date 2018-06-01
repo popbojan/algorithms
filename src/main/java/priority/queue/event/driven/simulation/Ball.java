@@ -7,6 +7,7 @@ public class Ball {
     protected double rx, ry; //position
     protected double vx, vy; //velocity
     protected final double RADIUS = 10; //RADIUS
+    protected double mass;
 
     public Ball() {
     }

@@ -3,6 +3,7 @@ package priority.queue.event.driven.simulation;
 public class Particle extends Ball {
 
     protected final double INFINITY = 0.0;
+    protected int count;
 
     // predict collision with particle or wall
     public double timeToHit(Particle that){
@@ -36,7 +37,19 @@ public class Particle extends Ball {
 
     //resolve collision with particle or wall
     public void bounceOff(Particle that){
-        throw new  RuntimeException("not implemented yet!");
+        double dx = that.rx - this.rx, dy = that.ry - this.ry;
+        double dvx = that.vx - this.vx, dvy = that.vy - this.vy;
+        double dvdr = dx*dvx + dy*dvy;
+        double dist = this.RADIUS + that.RADIUS;
+        double J = 2 * this.mass * that.mass * dvdr / ((this.mass + that.mass) * dist);
+        double Jx = J * dx / dist;
+        double Jy = J * dy / dist;
+        this.vx += Jx / this.mass;
+        this.vy += Jy / this.mass;
+        that.vx -= Jx / that.mass;
+        that.vy -= Jy / that.mass;
+        this.count++;
+        that.count++;
     }
 
     public void bounceOffVerticalWall(){
