@@ -28,4 +28,9 @@ public class PrintValuesE117Tests {
     public void test_printC(){
         pv.printC();
     }
+
+    @Test
+    public void test_printChar(){
+        pv.printChars();
+    }
 }

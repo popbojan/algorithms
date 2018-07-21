@@ -35,4 +35,13 @@ public class PrintValuesE117 {
         }
         StdOut.println(sum);
     }
+
+    public void printChars(){
+        StdOut.println('b');
+        StdOut.println((char) 'b');
+        StdOut.println('b'+'c');
+        StdOut.println((char) ('a' +4));
+        StdOut.println((char) (4));
+        StdOut.println('a' +4);
+    }
 }
