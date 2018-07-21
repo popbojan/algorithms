@@ -1,21 +1,21 @@
 package unit.book.exercises.basicprogrammingmodel;
 
-import book.exercises.basicprogrammingmodel.ThreeIntegersEqual113;
+import book.exercises.basicprogrammingmodel.ThreeIntegersEqualE113;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.MockitoAnnotations;
 
-public class ThreeIntegersEqual113Tests {
+public class ThreeIntegersEqualE113Tests {
 
-    ThreeIntegersEqual113 tie;
+    ThreeIntegersEqualE113 tie;
 
     @Before
     public void setup()
     {
         MockitoAnnotations.initMocks(this);
 
-        tie = new ThreeIntegersEqual113();
+        tie = new ThreeIntegersEqualE113();
     }
 
     @Test
