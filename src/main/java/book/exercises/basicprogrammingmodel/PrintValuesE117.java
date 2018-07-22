@@ -44,4 +44,20 @@ public class PrintValuesE117 {
         StdOut.println((char) (4));
         StdOut.println('a' +4);
     }
+
+    public void print1112(){
+        int[] a = new int[10];
+        for(int i=0; i<a.length; i++){
+            a[i] = 9 -i;
+            StdOut.println(a[i]);
+        }
+        for(int i=0; i<a.length; i++){
+            a[i] = a[a[i]];
+            StdOut.println(a[i]);
+        }
+        for(int i=0; i<a.length; i++){
+            StdOut.println(i);
+        }
+
+    }
 }
