@@ -4,10 +4,12 @@ import edu.princeton.cs.introcs.StdOut;
 
 public class PrintTwoDimensionalBooleanArrayE1111 {
 
-    public void printArray() {
-        int M = 5;
-        int N = 7;
-        boolean[][] a;
+    int M, N;
+    boolean[][] a;
+
+    public PrintTwoDimensionalBooleanArrayE1111() {
+        M = 5;
+        N = 7;
         a = new boolean[M][N];
 //        StdOut.println(a.length);
 
@@ -17,10 +19,22 @@ public class PrintTwoDimensionalBooleanArrayE1111 {
                     a[i][j] = true;
             }
         }
+    }
+
+    public void printArray() {
         for (int i = 0; i < M; i++) {
             for (int j = 0; j < N; j++) {
                 String value = a[i][j] ? "*" : " ";
                 StdOut.println("rowNum: [" + i + "] colNum: [" + j + "] value: [" + value + "]");
+            }
+        }
+    }
+
+    public void printTranspositionE1113() {
+        for (int j = 0; j < N; j++) {
+            for (int i = 0; i < M; i++) {
+                String value = a[i][j] ? "*" : " ";
+                StdOut.println("rowNum: [" + j + "] colNum: [" + i + "] value: [" + value + "]");
             }
         }
     }

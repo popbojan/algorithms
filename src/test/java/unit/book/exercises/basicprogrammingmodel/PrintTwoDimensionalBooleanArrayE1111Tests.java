@@ -17,4 +17,9 @@ public class PrintTwoDimensionalBooleanArrayE1111Tests {
     public void printIt() {
         ptdba.printArray();
     }
+
+    @Test
+    public void printE1113() {
+        ptdba.printTranspositionE1113();
+    }
 }
