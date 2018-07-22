@@ -9,43 +9,42 @@ public class PrintValuesE117Tests {
     PrintValuesE117 pv;
 
     @Before
-    public void setup()
-    {
+    public void setup() {
         pv = new PrintValuesE117();
     }
 
     @Test
-    public void test_printA(){
+    public void test_printA() {
         pv.printA();
     }
 
     @Test
-    public void test_printB(){
+    public void test_printB() {
         pv.printB();
     }
 
     @Test
-    public void test_printC(){
+    public void test_printC() {
         pv.printC();
     }
 
     @Test
-    public void test_printChar(){
+    public void test_printChar() {
         pv.printChars();
     }
 
     @Test
-    public void test_print1112(){
+    public void test_print1112() {
         pv.print1112();
     }
 
     @Test
-    public void test_print1116(){
+    public void test_print1116() {
         pv.print1116();
     }
 
-    @Test
-    public void test_print1117(){
+    @Test(expected = StackOverflowError.class)
+    public void test_print1117() {
         pv.print1117();
     }
 }

@@ -36,47 +36,47 @@ public class PrintValuesE117 {
         StdOut.println(sum);
     }
 
-    public void printChars(){
+    public void printChars() {
         StdOut.println('b');
         StdOut.println((char) 'b');
-        StdOut.println('b'+'c');
-        StdOut.println((char) ('a' +4));
+        StdOut.println('b' + 'c');
+        StdOut.println((char) ('a' + 4));
         StdOut.println((char) (4));
-        StdOut.println('a' +4);
+        StdOut.println('a' + 4);
     }
 
-    public void print1112(){
+    public void print1112() {
         int[] a = new int[10];
-        for(int i=0; i<a.length; i++){
-            a[i] = 9 -i;
+        for (int i = 0; i < a.length; i++) {
+            a[i] = 9 - i;
             StdOut.println(a[i]);
         }
-        for(int i=0; i<a.length; i++){
+        for (int i = 0; i < a.length; i++) {
             a[i] = a[a[i]];
             StdOut.println(a[i]);
         }
-        for(int i=0; i<a.length; i++){
+        for (int i = 0; i < a.length; i++) {
             StdOut.println(i);
         }
 
     }
 
-    public void print1116(){
+    public void print1116() {
         int n = 6;
         StdOut.println(exR1(n));
     }
 
-    private String exR1(int n){
-        if (n <=0) {
+    private String exR1(int n) {
+        if (n <= 0) {
             return "";
         }
         //return exR1(n-3);
         //return exR1(n-3) + n;
 
-        return exR1(n-3) + n + exR1(n-2) +n;
+        return exR1(n - 3) + n + exR1(n - 2) + n;
     }
 
-    public void print1117(){
+    public void print1117() {
         int n = 6;
         StdOut.println(exR2(n));
     }
@@ -86,9 +86,9 @@ public class PrintValuesE117 {
      * recursive calls are executed
      * without ever hitting return statement
      */
-    private String exR2(int n){
-        String s = exR2(n-3) + n + exR2(n-2) + n;
-        if(n <=0){
+    private String exR2(int n) {
+        String s = exR2(n - 3) + n + exR2(n - 2) + n;
+        if (n <= 0) {
             return "";
         }
         return s;
