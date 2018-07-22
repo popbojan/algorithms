@@ -47,4 +47,9 @@ public class PrintValuesE117Tests {
     public void test_print1117() {
         pv.print1117();
     }
+
+    @Test
+    public void test_print1118() {
+        pv.print1118();
+    }
 }

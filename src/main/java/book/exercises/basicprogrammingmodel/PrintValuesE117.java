@@ -93,4 +93,26 @@ public class PrintValuesE117 {
         }
         return s;
     }
+
+    public void print1118() {
+        StdOut.println(mystery(2, 25));
+        StdOut.println(mystery(3, 11));
+    }
+
+    /**
+     * result value is +a, in last return,
+     * from a mystery argument in turn
+     * before another recursively mystery() is called
+     * e.g 2 + 16 + 32 = 50
+     * e.g 3 +  6 + 24 = 33
+     */
+    private int mystery(int a, int b) {
+        if (b == 0) {
+            return 0;
+        }
+        if (b % 2 == 0) {
+            return mystery(a + a, b / 2);
+        }
+        return mystery(a + a, b / 2) + a;
+    }
 }
