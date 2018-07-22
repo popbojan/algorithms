@@ -75,4 +75,22 @@ public class PrintValuesE117 {
 
         return exR1(n-3) + n + exR1(n-2) +n;
     }
+
+    public void print1117(){
+        int n = 6;
+        StdOut.println(exR2(n));
+    }
+
+    /**
+     * infinite loop
+     * recursive calls are executed
+     * without ever hitting return statement
+     */
+    private String exR2(int n){
+        String s = exR2(n-3) + n + exR2(n-2) + n;
+        if(n <=0){
+            return "";
+        }
+        return s;
+    }
 }
