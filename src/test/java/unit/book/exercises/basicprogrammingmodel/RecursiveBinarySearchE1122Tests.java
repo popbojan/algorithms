@@ -17,4 +17,14 @@ public class RecursiveBinarySearchE1122Tests {
     public void test_printRecursiveDepth(){
         rbs.printRecursiveDepth();
     }
+
+    @Test
+    public void test_printNotFoundNumbers(){
+        rbs.printNotFoundNumbers();
+    }
+
+    @Test
+    public void test_printFoundNumbers(){
+        rbs.printFoundNumbers();
+    }
 }
