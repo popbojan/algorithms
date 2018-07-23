@@ -2,6 +2,7 @@ package unit.book.exercises.basicprogrammingmodel;
 
 import book.exercises.basicprogrammingmodel.FibonacciRecursionE1119;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 
 public class FibonacciRecursionE1119Tests {
@@ -13,7 +14,8 @@ public class FibonacciRecursionE1119Tests {
         fr = new FibonacciRecursionE1119();
     }
 
-    @Test
+    @Test()
+    @Ignore
     public void test_F() {
         fr.print();
     }
