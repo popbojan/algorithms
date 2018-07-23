@@ -11,7 +11,7 @@ public class PrintFTableAverageValuesE1121Tests {
     TableRowObjectE1121 tro1, tro2, tro3, tro4;
 
     @Before
-    public void setup(){
+    public void setup() {
         pftav = new PrintFTableAverageValuesE1121();
         tro1 = new TableRowObjectE1121("aaa", 2, 3);
         tro2 = new TableRowObjectE1121("ddd", 4, 8);
@@ -20,7 +20,7 @@ public class PrintFTableAverageValuesE1121Tests {
     }
 
     @Test
-    public void test_printF(){
+    public void test_printF() {
         TableRowObjectE1121[] a = {tro1, tro2, tro3, tro4};
         pftav.printF(a);
     }
