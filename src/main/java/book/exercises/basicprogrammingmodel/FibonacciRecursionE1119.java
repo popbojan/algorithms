@@ -14,7 +14,7 @@ import edu.princeton.cs.introcs.StdOut;
  * 7 13
  * 8 21
  * 9 34
- *
+ * <p>
  * What is the secret?
  * The thing is that each recursion (N-1) has it's own subtraction to 1 or 0
  * however each of these steps has also recursion with (N-2) before 1 or 0 is reached
@@ -37,10 +37,15 @@ import edu.princeton.cs.introcs.StdOut;
  * F(2-2) returns 0 then
  * F(3-2) computes:
  * F(3-2) returns 1
- *
- *
  */
 public class FibonacciRecursionE1119 {
+
+    private final int LENGTH = 100;
+    private long[] savedComputations;
+
+    public FibonacciRecursionE1119() {
+        savedComputations = new long[LENGTH];
+    }
 
     private long F(int N) {
         if (N == 0) {
@@ -52,9 +57,30 @@ public class FibonacciRecursionE1119 {
         return F(N - 1) + F(N - 2);
     }
 
+    private long improvedF(int N) {
+        if (savedComputations[N] != 0) {
+            return savedComputations[N];
+        }
+        if (N == 0) {
+            return 0;
+        }
+        if (N == 1) {
+            return 1;
+        }
+        return improvedF(N - 1) + improvedF(N - 2);
+    }
+
     public void print() {
-        for (int N = 0; N < 10; N++) {
+        for (int N = 0; N < LENGTH; N++) {
             StdOut.println(N + " " + F(N));
+        }
+    }
+
+    public void printImproved() {
+        for (int N = 0; N < LENGTH; N++) {
+            long fibonacciNumber = improvedF(N);
+            savedComputations[N] = fibonacciNumber;
+            StdOut.println(N + " " + fibonacciNumber);
         }
     }
 }

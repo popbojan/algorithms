@@ -17,4 +17,9 @@ public class FibonacciRecursionE1119Tests {
     public void test_F() {
         fr.print();
     }
+
+    @Test
+    public void test_improvedF() {
+        fr.printImproved();
+    }
 }
