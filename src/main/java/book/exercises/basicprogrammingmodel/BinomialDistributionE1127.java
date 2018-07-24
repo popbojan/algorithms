@@ -43,7 +43,7 @@ public class BinomialDistributionE1127 {
      */
     private double binomial(int N, int k, double p) {
         // apply provided above formula
-        return binomialCoefficient(N, k) * Math.pow(p, k) * Math.pow(1-p, N-k);
+        return binomialCoefficient(N, k, p) * Math.pow(p, k) * Math.pow(1 - p, N - k);
     }
 
     /**
@@ -58,5 +58,27 @@ public class BinomialDistributionE1127 {
             return 1;
         }
         return binomialCoefficient(N - 1, k) + binomialCoefficient(N - 1, k - 1);
+    }
+
+    /**
+     *
+     * iteration over recursion
+     */
+    private double binomialCoefficient(int N, int k, double p) {
+        double[][] b = new double[N+1][k+1];
+
+        //base formula
+        for(int i=0; i<=N; i++){
+            b[i][0] = 1.0;
+        }
+        b[0][0] = 1.0;
+
+        // recursive formula
+        for (int i = 1; i <= N; i++) {
+            for (int j = 1; j <= k; j++) {
+                b[i][j] = b[i-1][j] + b[i-1][j-1];
+            }
+        }
+        return b[N][k];
     }
 }
