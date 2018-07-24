@@ -5,6 +5,7 @@ package book.exercises.basicprogrammingmodel;
  * that k object can be chosen from among n objects;
  * more formally,
  * the number of k-element subsets (or k-combinations) of an n-element set
+ * its formula for calculation is: n! / k!(n-k)!
  *
  * <p>
  * A Binomial Distribution can be thought of as simply the probability of a
@@ -51,7 +52,7 @@ public class BinomialDistributionE1127 {
      *
      * @param N (number of trials)
      * @param k (number of successful outcomes)
-     * @return int
+     * @return formula n! / k!(n-k)!
      */
     private int binomialCoefficient(int N, int k) {
         if ((k == 0) || (k == N)) {
@@ -63,6 +64,7 @@ public class BinomialDistributionE1127 {
     /**
      *
      * iteration over recursion
+     * return formula n! / k!(n-k)!
      */
     private double binomialCoefficient(int N, int k, double p) {
         double[][] b = new double[N+1][k+1];
