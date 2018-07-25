@@ -22,6 +22,6 @@ public class FibonacciRecursionE1119Tests {
 
     @Test
     public void test_improvedF() {
-        fr.printImproved();
+        fr.calculateFibonacciNumbersForGivenLength();
     }
 }

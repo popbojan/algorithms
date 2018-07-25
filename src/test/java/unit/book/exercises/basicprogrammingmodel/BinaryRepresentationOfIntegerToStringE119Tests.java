@@ -16,6 +16,6 @@ public class BinaryRepresentationOfIntegerToStringE119Tests {
 
     @Test
     public void test_toBinaryString(){
-        StdOut.println(broits.toBinaryString(10));
+        StdOut.println(broits.getBinaryStringOfGivenNumber(10));
     }
 }

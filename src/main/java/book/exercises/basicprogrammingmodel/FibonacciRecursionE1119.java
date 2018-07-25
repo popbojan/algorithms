@@ -39,25 +39,25 @@ import edu.princeton.cs.introcs.StdOut;
  * F(3-2) returns 1
  */
 public class FibonacciRecursionE1119 {
-
     private final int LENGTH = 100;
+
     private long[] savedComputations;
 
     public FibonacciRecursionE1119() {
         savedComputations = new long[LENGTH];
     }
 
-    private long F(int N) {
+    private long getF(int N) {
         if (N == 0) {
             return 0;
         }
         if (N == 1) {
             return 1;
         }
-        return F(N - 1) + F(N - 2);
+        return getF(N - 1) + getF(N - 2);
     }
 
-    private long improvedF(int N) {
+    private long getImprovedF(int N) {
         if (savedComputations[N] != 0) {
             return savedComputations[N];
         }
@@ -67,18 +67,18 @@ public class FibonacciRecursionE1119 {
         if (N == 1) {
             return 1;
         }
-        return improvedF(N - 1) + improvedF(N - 2);
+        return getImprovedF(N - 1) + getImprovedF(N - 2);
     }
 
     public void print() {
         for (int N = 0; N < LENGTH; N++) {
-            StdOut.println(N + " " + F(N));
+            StdOut.println(N + " " + getF(N));
         }
     }
 
-    public void printImproved() {
+    public void calculateFibonacciNumbersForGivenLength() {
         for (int N = 0; N < LENGTH; N++) {
-            long fibonacciNumber = improvedF(N);
+            long fibonacciNumber = getImprovedF(N);
             savedComputations[N] = fibonacciNumber;
             StdOut.println(N + " " + fibonacciNumber);
         }

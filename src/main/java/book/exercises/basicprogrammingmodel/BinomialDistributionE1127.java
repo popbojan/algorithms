@@ -33,7 +33,7 @@ public class BinomialDistributionE1127 {
         int k = 6;
         double p = 0.5;
 
-        System.out.println("Result " + binomial(N, k, p));
+        System.out.println("Result " + getBinomialPercentage(N, k, p));
     }
 
     /**
@@ -42,9 +42,9 @@ public class BinomialDistributionE1127 {
      * @param p probability of getting success (50% chance to get head when tossing a coin)
      * @return
      */
-    private double binomial(int N, int k, double p) {
-        // apply provided above formula
-        return binomialCoefficientA(N, k) * Math.pow(p, k) * Math.pow(1 - p, N - k);
+    private double getBinomialPercentage(int N, int k, double p) {
+        // apply above provided formula
+        return getBinomialCoefficientA(N, k) * Math.pow(p, k) * Math.pow(1 - p, N - k);
     }
 
     /**
@@ -54,18 +54,18 @@ public class BinomialDistributionE1127 {
      * @param k (number of successful outcomes)
      * @return formula n! / k!(n-k)!
      */
-    private int binomialCoefficientR(int N, int k) {
+    private int getBinomialCoefficientR(int N, int k) {
         if ((k == 0) || (k == N)) {
             return 1;
         }
-        return binomialCoefficientR(N - 1, k) + binomialCoefficientR(N - 1, k - 1);
+        return getBinomialCoefficientR(N - 1, k) + getBinomialCoefficientR(N - 1, k - 1);
     }
 
     /**
      * iteration over recursion
      * return formula n! / k!(n-k)!
      */
-    private double binomialCoefficientA(int N, int k) {
+    private double getBinomialCoefficientA(int N, int k) {
         double[][] b = new double[N + 1][k + 1];
 
         //base formula
