@@ -72,6 +72,16 @@ public class RecursiveBinarySearchE1122 {
         }
     }
 
+    public void printFoundNumbersAndCountOfSmallerNumbersThanTheFoundedOnePlusCountOfElementsEqualToTheKey() {
+        int[] keys = {1, 7, 9, 22, 17, 18, 25};
+        for (int i = 0; i < keys.length; i++) {
+            int rank = rank(keys[i], a);
+            if (rank >= 0) {
+                StdOut.println("Found: [" + keys[i] + "] Smaller numbers: [" + rank + "] Key equal: [" + getKeyDuplicatesCount(rank) + "]");
+            }
+        }
+    }
+
     private int[] getDistinctArray() {
         int[] distinctA = new int[a.length - countADuplicates()];
         int distinctIncrement = 1;
@@ -92,6 +102,16 @@ public class RecursiveBinarySearchE1122 {
         int counter = 0;
         for (int i = 0; i < a.length; i++) {
             if (i != 0 && a[i] == a[i - 1]) {
+                counter++;
+            }
+        }
+        return counter;
+    }
+
+    private int getKeyDuplicatesCount(int key) {
+        int counter = 0;
+        for (int i = key; i < a.length; i++) {
+            if (a[i] == a[key]) {
                 counter++;
             }
         }

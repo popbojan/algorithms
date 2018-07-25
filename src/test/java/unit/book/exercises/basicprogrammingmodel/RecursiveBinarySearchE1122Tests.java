@@ -9,27 +9,32 @@ public class RecursiveBinarySearchE1122Tests {
     RecursiveBinarySearchE1122 rbs;
 
     @Before
-    public void setup(){
+    public void setup() {
         rbs = new RecursiveBinarySearchE1122();
     }
 
     @Test
-    public void test_printRecursiveDepth(){
+    public void test_printRecursiveDepth() {
         rbs.printRecursiveDepth();
     }
 
     @Test
-    public void test_printNotFoundNumbers(){
+    public void test_printNotFoundNumbers() {
         rbs.printNotFoundNumbers();
     }
 
     @Test
-    public void test_printFoundNumbers(){
+    public void test_printFoundNumbers() {
         rbs.printFoundNumbers();
     }
 
     @Test
-    public void test_printFoundNumbersFromDistinctArray(){
+    public void test_printFoundNumbersFromDistinctArray() {
         rbs.printFoundNumbersFromDistinctArray();
+    }
+
+    @Test
+    public void test_printFoundNumbersAndCountOfSmallerNumbersThanTheFoundedOnePlusCountOfElementsEqualToTheKey() {
+        rbs.printFoundNumbersAndCountOfSmallerNumbersThanTheFoundedOnePlusCountOfElementsEqualToTheKey();
     }
 }
