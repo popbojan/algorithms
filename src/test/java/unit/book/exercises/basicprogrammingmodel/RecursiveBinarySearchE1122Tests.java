@@ -27,4 +27,9 @@ public class RecursiveBinarySearchE1122Tests {
     public void test_printFoundNumbers(){
         rbs.printFoundNumbers();
     }
+
+    @Test
+    public void test_printFoundNumbersFromDistinctArray(){
+        rbs.printFoundNumbersFromDistinctArray();
+    }
 }
