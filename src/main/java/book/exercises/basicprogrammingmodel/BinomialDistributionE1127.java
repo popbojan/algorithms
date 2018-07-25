@@ -29,7 +29,7 @@ public class BinomialDistributionE1127 {
     int counter = 0;
 
     public void numberOfRecursiveCalls() {
-        int N = 10;
+        int N = 108;
         int k = 6;
         double p = 0.5;
 
@@ -44,7 +44,7 @@ public class BinomialDistributionE1127 {
      */
     private double binomial(int N, int k, double p) {
         // apply provided above formula
-        return binomialCoefficient(N, k, p) * Math.pow(p, k) * Math.pow(1 - p, N - k);
+        return binomialCoefficientA(N, k) * Math.pow(p, k) * Math.pow(1 - p, N - k);
     }
 
     /**
@@ -54,31 +54,38 @@ public class BinomialDistributionE1127 {
      * @param k (number of successful outcomes)
      * @return formula n! / k!(n-k)!
      */
-    private int binomialCoefficient(int N, int k) {
+    private int binomialCoefficientR(int N, int k) {
         if ((k == 0) || (k == N)) {
             return 1;
         }
-        return binomialCoefficient(N - 1, k) + binomialCoefficient(N - 1, k - 1);
+        return binomialCoefficientR(N - 1, k) + binomialCoefficientR(N - 1, k - 1);
     }
 
     /**
-     *
      * iteration over recursion
      * return formula n! / k!(n-k)!
      */
-    private double binomialCoefficient(int N, int k, double p) {
-        double[][] b = new double[N+1][k+1];
+    private double binomialCoefficientA(int N, int k) {
+        double[][] b = new double[N + 1][k + 1];
 
         //base formula
-        for(int i=0; i<=N; i++){
+        for (int i = 0; i <= N; i++) {
             b[i][0] = 1.0;
         }
         b[0][0] = 1.0;
 
-        // recursive formula
+        /** recursive formula
+         * it is the same as recursion b(N - 1, k) + b(N - 1, k - 1);
+         * and 1 is returned for b[i][0] like above
+         * if ((k == 0) || (k == N)) {
+         *            return 1;
+         *        }
+         * however we save each calculation to two-dimensional array
+         * that's why it works a lot faster than recursion
+         */
         for (int i = 1; i <= N; i++) {
             for (int j = 1; j <= k; j++) {
-                b[i][j] = b[i-1][j] + b[i-1][j-1];
+                b[i][j] = b[i - 1][j] + b[i - 1][j - 1];
             }
         }
         return b[N][k];
