@@ -42,7 +42,7 @@ public class BinomialDistributionE1127 {
      * @param p probability of getting success (50% chance to get head when tossing a coin)
      * @return
      */
-    private double getBinomialPercentage(int N, int k, double p) {
+    public static double getBinomialPercentage(int N, int k, double p) {
         // apply above provided formula
         return getBinomialCoefficientA(N, k) * Math.pow(p, k) * Math.pow(1 - p, N - k);
     }
@@ -65,7 +65,7 @@ public class BinomialDistributionE1127 {
      * iteration over recursion
      * return formula n! / k!(n-k)!
      */
-    private double getBinomialCoefficientA(int N, int k) {
+    private static double getBinomialCoefficientA(int N, int k) {
         double[][] b = new double[N + 1][k + 1];
 
         //base formula
