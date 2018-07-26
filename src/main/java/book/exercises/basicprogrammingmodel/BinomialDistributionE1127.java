@@ -65,7 +65,7 @@ public class BinomialDistributionE1127 {
      * iteration over recursion
      * return formula n! / k!(n-k)!
      */
-    private static double getBinomialCoefficientA(int N, int k) {
+    public static double getBinomialCoefficientA(int N, int k) {
         double[][] b = new double[N + 1][k + 1];
 
         //base formula
