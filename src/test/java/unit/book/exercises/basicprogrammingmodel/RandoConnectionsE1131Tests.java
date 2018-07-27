@@ -2,6 +2,7 @@ package unit.book.exercises.basicprogrammingmodel;
 
 import book.exercises.basicprogrammingmodel.RandomConnectionsE1131;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 
 public class RandoConnectionsE1131Tests {
@@ -14,7 +15,8 @@ public class RandoConnectionsE1131Tests {
     }
 
     @Test
+    @Ignore
     public void test_connect() {
-        rc.connect();
+        rc.connect(13, 2, 0.3);
     }
 }
