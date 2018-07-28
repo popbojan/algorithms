@@ -1,5 +1,9 @@
 package book.exercises.basicprogrammingmodel;
 
+/**
+ * Got a lot of help form github olegkamuz
+ * https://github.com/olegkamuz/algorithms-sedgewick-wayne/
+ */
 public class DrawHistogramE1132 {
 
     private final int ONE = 1;
@@ -16,6 +20,25 @@ public class DrawHistogramE1132 {
     }
 
     public void draw() {
+
+        int[] count = getCountOfNumbersThatFallInEachOfNIntervals(stream, getIntervals(N, l, r), N);
+        for (int i = 0; i < count.length; i++) {
+            System.out.println(count[i]);
+        }
+    }
+
+    public int[] getCountOfNumbersThatFallInEachOfNIntervals(double[] stream, double[] intervals, int N){
+        int[] count = new int[N];
+        for(int i =0; i<N-1; i++){
+            int counterPerInterval = 0;
+            for(int j =0; j<stream.length; j++){
+                if(stream[j] >= intervals[i] && stream[j] <= intervals[i+1]){
+                    counterPerInterval++;
+                }
+            }
+            count[i] = counterPerInterval;
+        }
+        return count;
     }
 
     public double[] getIntervals(int N, double l, double r) {
