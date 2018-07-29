@@ -3,6 +3,7 @@ package unit.book.exercises.basicprogrammingmodel;
 import book.exercises.basicprogrammingmodel.DrawHistogramE1132;
 import org.junit.Assert;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 
 public class DrawHistogramE1132Tests {
@@ -23,6 +24,7 @@ public class DrawHistogramE1132Tests {
     }
 
     @Test
+    @Ignore
     public void test_draw(){
         dh.draw();
     }
