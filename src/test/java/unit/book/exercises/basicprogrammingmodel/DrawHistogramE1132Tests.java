@@ -16,7 +16,7 @@ public class DrawHistogramE1132Tests {
 
     @Before
     public void setup(){
-        double[] stream = new double[]{1.2, 3.5, 18.1, 0.3, 2, 58.1, 37,2, 1.2, 2, 7, 7, 7.3, 18.9, 32};
+        double[] stream = new double[]{1.2, 3.5, 18.1, 0.3, 2, 58.1, 36.1, 37,2, 1.2, 2, 7, 7, 7.3, 18.9, 28, 39.7};
         N = 5;
         l =  42.3;
         r = 25.2;
