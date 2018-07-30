@@ -100,7 +100,7 @@ public class DrawHistogramE1132 extends Application {
         dataSeries.setName("Stream numbers fall in N intervals");
 
         for (int i = 0; i < N; i++) {
-            dataSeries.getData().add(new XYChart.Data(String.valueOf(i), count[i]));
+            dataSeries.getData().add(new XYChart.Data(String.valueOf(i+1), count[i]));
         }
 
         barChart.getData().add(dataSeries);
