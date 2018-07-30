@@ -2,6 +2,12 @@ package book.exercises.basicprogrammingmodel;
 
 import edu.princeton.cs.introcs.StdDraw;
 import javafx.application.Application;
+import javafx.scene.Scene;
+import javafx.scene.chart.BarChart;
+import javafx.scene.chart.CategoryAxis;
+import javafx.scene.chart.NumberAxis;
+import javafx.scene.chart.XYChart;
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 import java.util.ArrayList;
@@ -39,6 +45,7 @@ public class DrawHistogramE1132 extends Application {
         for (int i = 0; i < count.length; i++) {
             System.out.println(count[i]);
         }
+
         String[] args = new String[2];
         List<String> list = new ArrayList();
         args[0] = Arrays.toString(count);
@@ -60,7 +67,11 @@ public class DrawHistogramE1132 extends Application {
                 count[countIterator++] = Character.getNumericValue(charCount[i]);
             }
         }
+        drawWithStdDraw(count, N);
+        drawWithBarChart(stage, count, N);
+    }
 
+    private void drawWithStdDraw(int[] count, int N) {
         StdDraw.setPenRadius(.006);
         StdDraw.line(0, 0, 1, 0);
         StdDraw.line(0, 0, 0, 1);
@@ -73,6 +84,36 @@ public class DrawHistogramE1132 extends Application {
 
             StdDraw.filledRectangle(x, y, halfWidth, halfHeight);
         }
+    }
+
+    private void drawWithBarChart(Stage stage, int[] count, int N) {
+
+        CategoryAxis xAxis = new CategoryAxis();
+        xAxis.setLabel("Numbers");
+
+        NumberAxis yAxis = new NumberAxis();
+        yAxis.setLabel("Counts");
+
+        BarChart barChart = new BarChart(xAxis, yAxis);
+
+        XYChart.Series dataSeries = new XYChart.Series();
+        dataSeries.setName("Stream numbers fall in N intervals");
+
+        for (int i = 0; i < N; i++) {
+            dataSeries.getData().add(new XYChart.Data(String.valueOf(i), count[i]));
+        }
+
+        barChart.getData().add(dataSeries);
+
+        VBox vbox = new VBox(barChart);
+
+        Scene scene = new Scene(vbox, 400, 200);
+
+        stage.setScene(scene);
+        stage.setHeight(300);
+        stage.setWidth(1200);
+        stage.setTitle("Histogram");
+        stage.show();
     }
 
     public int[] getCountOfNumbersThatFallInEachOfNIntervals(double[] stream, double[] intervals, int N) {
@@ -109,24 +150,5 @@ public class DrawHistogramE1132 extends Application {
             rangeStart = intervals[i];
         }
         return intervals;
-    }
-
-    /**
-     * copied form github olegkamuz
-     *
-     * @param countHistogram
-     * @param N
-     */
-    private static void drawHistogram(double[] countHistogram, int N) {
-        StdDraw.setCanvasSize(1024, 600);
-        StdDraw.setYscale(-1.0, 7.0);
-        StdDraw.setXscale(-0.1, 1.1);
-        for (int j = 0; j < N; j++) {
-            double x = 1.0 * j / N;
-            double y = countHistogram[j] / 2.0;
-            double hw = 0.25 / N;
-            double hh = countHistogram[j] / 2.0;
-            StdDraw.filledRectangle(x, y, hw, hh);
-        }
     }
 }
