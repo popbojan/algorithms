@@ -49,7 +49,5 @@ public class DrawHistogramE1132Tests {
 
         double[] intervals = dh.getIntervals(N, l, r);
         Assert.assertEquals(space, intervals[1] -intervals[0], inconsiderableDifference);
-
-
     }
 }

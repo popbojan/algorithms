@@ -2,11 +2,6 @@ package book.exercises.basicprogrammingmodel;
 
 import edu.princeton.cs.introcs.StdDraw;
 import javafx.application.Application;
-import javafx.scene.Scene;
-import javafx.scene.chart.LineChart;
-import javafx.scene.chart.NumberAxis;
-import javafx.scene.chart.XYChart;
-import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 import java.util.ArrayList;
@@ -28,7 +23,7 @@ public class DrawHistogramE1132 extends Application {
     /**
      * Default constructor is must have with JavaFX Application
      */
-    public DrawHistogramE1132(){
+    public DrawHistogramE1132() {
     }
 
     public DrawHistogramE1132(double[] stream, int N, double l, double r) {
@@ -53,58 +48,39 @@ public class DrawHistogramE1132 extends Application {
     }
 
     @Override
-    public void start(Stage stage){
+    public void start(Stage stage) {
         List<String> parameters = getParameters().getRaw();
         String stringCount = parameters.get(0);
         int N = Integer.parseInt(parameters.get(1));
         int[] count = new int[N];
         int countIterator = 0;
-        char[] charCount =stringCount.toCharArray();
-        for(int i=0; i<charCount.length; i++){
-            if(Character.isDigit(charCount[i])){
+        char[] charCount = stringCount.toCharArray();
+        for (int i = 0; i < charCount.length; i++) {
+            if (Character.isDigit(charCount[i])) {
                 count[countIterator++] = Character.getNumericValue(charCount[i]);
             }
         }
 
+        StdDraw.setPenRadius(.006);
+        StdDraw.line(0, 0, 1, 0);
+        StdDraw.line(0, 0, 0, 1);
 
-        
-        stage.setTitle("LineChart Experiments");
+        for (int i = 0; i < N; i++) {
+            double x = 1.0 * i / N;
+            double y = count[i] / 2.0;
+            double halfWidth = 0.25 / N;
+            double halfHeight = count[i] / 2.0;
 
-        NumberAxis xAxis = new NumberAxis();
-        xAxis.setLabel("No of employees");
-
-        NumberAxis yAxis = new NumberAxis();
-        yAxis.setLabel("Revenue per employee");
-
-        LineChart lineChart = new LineChart(xAxis, yAxis);
-
-        XYChart.Series dataSeries1 = new XYChart.Series();
-        dataSeries1.setName("2014");
-
-        dataSeries1.getData().add(new XYChart.Data( 1, 567));
-        dataSeries1.getData().add(new XYChart.Data( 5, 612));
-        dataSeries1.getData().add(new XYChart.Data(10, 800));
-        dataSeries1.getData().add(new XYChart.Data(20, 780));
-        dataSeries1.getData().add(new XYChart.Data(40, 810));
-        dataSeries1.getData().add(new XYChart.Data(80, 850));
-
-        lineChart.getData().add(dataSeries1);
-
-        VBox vbox = new VBox(lineChart);
-
-        Scene scene = new Scene(vbox, 400, 200);
-
-        stage.setTitle("Drawing a circle");
-        stage.setScene(scene);
-        stage.show();
+            StdDraw.filledRectangle(x, y, halfWidth, halfHeight);
+        }
     }
 
-    public int[] getCountOfNumbersThatFallInEachOfNIntervals(double[] stream, double[] intervals, int N){
+    public int[] getCountOfNumbersThatFallInEachOfNIntervals(double[] stream, double[] intervals, int N) {
         int[] count = new int[N];
-        for(int i =0; i<N-1; i++){
+        for (int i = 0; i < N - 1; i++) {
             int counterPerInterval = 0;
-            for(int j =0; j<stream.length; j++){
-                if(stream[j] >= intervals[i] && stream[j] <= intervals[i+1]){
+            for (int j = 0; j < stream.length; j++) {
+                if (stream[j] >= intervals[i] && stream[j] <= intervals[i + 1]) {
                     counterPerInterval++;
                 }
             }
@@ -137,6 +113,7 @@ public class DrawHistogramE1132 extends Application {
 
     /**
      * copied form github olegkamuz
+     *
      * @param countHistogram
      * @param N
      */
