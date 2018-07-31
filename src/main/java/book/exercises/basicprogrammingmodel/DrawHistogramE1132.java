@@ -41,15 +41,17 @@ public class DrawHistogramE1132 extends Application {
 
     public void draw() {
 
-        int[] count = getCountOfNumbersThatFallInEachOfNIntervals(stream, getIntervals(N, l, r), N);
+        double[] intervals = getIntervals(N, l, r);
+        int[] count = getCountOfNumbersThatFallInEachOfNIntervals(stream, intervals, N);
         for (int i = 0; i < count.length; i++) {
             System.out.println(count[i]);
         }
 
-        String[] args = new String[2];
+        String[] args = new String[3];
         List<String> list = new ArrayList();
         args[0] = Arrays.toString(count);
         args[1] = String.valueOf(N);
+        args[2] = Arrays.toString(intervals);
         launch(args);
 
     }
@@ -67,8 +69,16 @@ public class DrawHistogramE1132 extends Application {
                 count[countIterator++] = Character.getNumericValue(charCount[i]);
             }
         }
+        String stringIntervals = parameters.get(2);
+        stringIntervals = stringIntervals.replaceAll("^\\[|\\]$", "");
+        String[] stringIntervalsA = stringIntervals.split(", ");
+        double[] intervals = new double[N];
+        for(int i=0; i<stringIntervalsA.length; i++){
+            intervals[i] = Double.parseDouble(stringIntervalsA[i]);
+        }
+
         drawWithStdDraw(count, N);
-        drawWithBarChart(stage, count, N);
+        drawWithBarChart(stage, count, N, intervals);
     }
 
     private void drawWithStdDraw(int[] count, int N) {
@@ -86,7 +96,7 @@ public class DrawHistogramE1132 extends Application {
         }
     }
 
-    private void drawWithBarChart(Stage stage, int[] count, int N) {
+    private void drawWithBarChart(Stage stage, int[] count, int N, double[] intervals) {
 
         CategoryAxis xAxis = new CategoryAxis();
         xAxis.setLabel("Numbers");
@@ -99,8 +109,8 @@ public class DrawHistogramE1132 extends Application {
         XYChart.Series dataSeries = new XYChart.Series();
         dataSeries.setName("Stream numbers fall in N intervals");
 
-        for (int i = 0; i < N; i++) {
-            dataSeries.getData().add(new XYChart.Data(String.valueOf(i+1), count[i]));
+        for (int i = 0; i < N-1; i++) {
+            dataSeries.getData().add(new XYChart.Data("From: "+ String.valueOf(intervals[i]) + " To: " +String.valueOf(intervals[i+1]), count[i]));
         }
 
         barChart.getData().add(dataSeries);
