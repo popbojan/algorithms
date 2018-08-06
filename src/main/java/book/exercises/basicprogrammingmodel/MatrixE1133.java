@@ -26,13 +26,30 @@ public class MatrixE1133 {
             throw new IllegalArgumentException("No way in hell!");
         }
         double[][] result = new double[a.length][b[0].length];
-        for (int i = 0; i< a.length; i++) {
+        for (int i = 0; i < a.length; i++) {
             for (int j = 0; j < b[0].length; j++) {
                 for (int k = 0; k < a[0].length; k++) {
                     result[i][j] += a[i][k] * b[k][j];
                 }
             }
         }
+        return result;
+    }
+
+    public double[][] transpose(double[][] a) {
+        double[][] result = new double[a[0].length][a.length];
+        for (int i = 0; i < a.length; i++) {
+            for (int j = 0; j < a[0].length; j++) {
+                result[j][i] = a[i][j];
+                System.out.println(a[i][j]);
+            }
+        }
+//        for (int i = 0; i < result.length; i++) {
+//            for (int j = 0; j < result[0].length; j++) {
+//                System.out.println(result[i][j]);
+//            }
+//        }
+        
         return result;
     }
 }

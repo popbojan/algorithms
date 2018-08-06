@@ -28,20 +28,29 @@ public class MatrixE1133Tests {
         double[][] b =  new double[2][3];
         double inconsiderableDifference = 0.1;
 
-        int counter = 0;
-        for(int j =0; j<a[0].length; j++){
-            for(int i=0; i<a.length; i++){
-                a[i][j] = ++counter;
-            }
-        }
-
-        for(int j =0; j<b[0].length; j++){
-            for(int i=0; i<b.length; i++){
-                b[i][j] = ++counter;
-            }
-        }
+        populateTwoDimensionalArray(a, 0);
+        int lastNumberInA = (int)a[2][1];
+        populateTwoDimensionalArray(b, lastNumberInA);
 
         Assert.assertEquals(58, m.multiply(b,a)[0][0], inconsiderableDifference);
         Assert.assertEquals(64, m.multiply(b,a)[1][0], inconsiderableDifference);
+    }
+
+    @Test
+    public void test_transpose(){
+        double[][] a = new double[3][2];
+        double inconsiderableDifference = 0.1;
+        populateTwoDimensionalArray(a, 0);
+
+        Assert.assertEquals(6, m.transpose(a)[1][2], inconsiderableDifference);
+        Assert.assertEquals(2, m.transpose(a)[0][1], inconsiderableDifference);
+    }
+
+    private void populateTwoDimensionalArray(double[][] array, int counter){
+        for(int j =0; j<array[0].length; j++){
+            for(int i=0; i<array.length; i++){
+                array[i][j] = ++counter;
+            }
+        }
     }
 }
