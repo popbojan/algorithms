@@ -49,7 +49,43 @@ public class MatrixE1133 {
 //                System.out.println(result[i][j]);
 //            }
 //        }
-        
+
+        return result;
+    }
+
+    /**
+     * Multiply matrix by vector doing the Dot Product of columns and vector(rows)
+     * each column value is multiplied by row fellow (it's own vector pair)
+     */
+    public double[] multiply(double[][] a, double[] x) {
+        if (a == null || x == null || a.length == 0 || x.length == 0 || a.length != x.length) {
+            throw new IllegalArgumentException("No way in hell!");
+        }
+        double[] result = new double[a.length];
+        for (int row = 0; row < a[0].length; row++) {
+            for (int column = 0; column < a.length; column++) {
+                System.out.println(a[column][row]);
+                result[row] += a[column][row] * x[column];
+            }
+        }
+        return result;
+    }
+
+    /**
+     * Multiply vector by matrix doing the Dot Product of vector(rows) and columns
+     * each column value is multiplied by row fellow (it's own vector pair)
+     */
+    public double[] multiply(double[] x, double[][] a) {
+        if (a == null || x == null || a.length == 0 || x.length == 0 || a.length != x.length) {
+            throw new IllegalArgumentException("No way in hell!");
+        }
+        double[] result = new double[a.length];
+        for (int row = 0; row < a[0].length; row++) {
+            for (int column = 0; column < x.length; column++) {
+                System.out.println(a[column][row]);
+                result[row] += a[column][row] * x[column];
+            }
+        }
         return result;
     }
 }
