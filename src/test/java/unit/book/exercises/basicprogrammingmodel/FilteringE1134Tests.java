@@ -18,4 +18,16 @@ public class FilteringE1134Tests {
         double[] N = {0.8, 0.1, 0, 0.9, 0.754};
         f.printMaximumAndMinimum(N);
     }
+
+    @Test
+    public void test_printMedian_returnsMiddleNumber(){
+        double[] N = {0.8, 0.1, 0, 0.9, 0.754};
+        f.printMedian(N);
+    }
+
+    @Test
+    public void test_printMedian_returnsMiddleBetweenMedianPairs(){
+        double[] N = {0.8, 0.1, 0, 0.9, 0.754, 0.3};
+        f.printMedian(N);
+    }
 }
