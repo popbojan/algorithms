@@ -35,4 +35,8 @@ public class FilteringE1134 {
         }
         return N;
     }
+
+    public double printKthSmallestValue(double[] N, int k) {
+        return sort(N)[k];
+    }
 }
