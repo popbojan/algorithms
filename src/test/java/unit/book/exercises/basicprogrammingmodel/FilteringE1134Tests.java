@@ -39,4 +39,10 @@ public class FilteringE1134Tests {
         int k = 8;
         Assert.assertEquals(21, f.printKthSmallestValue(N, k), INCONSIDERABLE_DIFFERENCE);
     }
+
+    @Test
+    public void test_printSumOfTheSquaresOfTheNumbers() {
+        double[] N = {1, 10, 3, 44, 28, 59, 77, 88, 21, 23, 6, 9, 11, 17, 33, 18};
+        f.printSumOfTheSquaresOfTheNumbers(N);
+    }
 }

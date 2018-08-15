@@ -39,4 +39,12 @@ public class FilteringE1134 {
     public double printKthSmallestValue(double[] N, int k) {
         return sort(N)[k];
     }
+
+    public void printSumOfTheSquaresOfTheNumbers(double[] N){
+        double sum  =0;
+        for(double d  : N){
+            sum+= d * d;
+        }
+        System.out.println(sum);
+    }
 }
