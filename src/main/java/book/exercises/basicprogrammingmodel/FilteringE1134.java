@@ -47,4 +47,13 @@ public class FilteringE1134 {
         }
         System.out.println(sum);
     }
+
+    public void printTheAverageOfTheNNumbers(double[] N){
+        double sum = 0;
+        for(double d : N){
+            sum+= d;
+        }
+        double average = sum /N.length;
+        System.out.println(average);
+    }
 }

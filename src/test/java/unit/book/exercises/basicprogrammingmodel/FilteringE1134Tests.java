@@ -45,4 +45,10 @@ public class FilteringE1134Tests {
         double[] N = {1, 10, 3, 44, 28, 59, 77, 88, 21, 23, 6, 9, 11, 17, 33, 18};
         f.printSumOfTheSquaresOfTheNumbers(N);
     }
+
+    @Test
+    public void test_printTheAverageOfTheNNumbers() {
+        double[] N = {1, 10, 3, 44, 28, 59, 77, 88, 21, 23, 6, 9, 11, 17, 33, 18};
+        f.printTheAverageOfTheNNumbers(N);
+    }
 }
