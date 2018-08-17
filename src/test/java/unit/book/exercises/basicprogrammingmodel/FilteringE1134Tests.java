@@ -47,8 +47,15 @@ public class FilteringE1134Tests {
     }
 
     @Test
-    public void test_printTheAverageOfTheNNumbers() {
+    public void test_getAverageOfTheNNumbers() {
         double[] N = {1, 10, 3, 44, 28, 59, 77, 88, 21, 23, 6, 9, 11, 17, 33, 18};
-        f.printTheAverageOfTheNNumbers(N);
+        double average = f.getAverageOfTheNNumbers(N);
+        System.out.println(average);
+    }
+
+    @Test
+    public void test_printThePercentageOfTheNumbersGreaterThanTheAverage() {
+        double[] N = {1, 10, 3, 44, 28, 59, 77, 88, 21, 23, 6, 9, 11, 17, 33, 18};
+        f.printThePercentageOfTheNumbersGreaterThanTheAverage(N);
     }
 }

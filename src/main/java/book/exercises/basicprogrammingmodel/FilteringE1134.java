@@ -48,12 +48,25 @@ public class FilteringE1134 {
         System.out.println(sum);
     }
 
-    public void printTheAverageOfTheNNumbers(double[] N){
+    public double getAverageOfTheNNumbers(double[] N){
         double sum = 0;
         for(double d : N){
             sum+= d;
         }
         double average = sum /N.length;
-        System.out.println(average);
+        return average;
+    }
+
+    public void printThePercentageOfTheNumbersGreaterThanTheAverage(double[] N){
+        double average = getAverageOfTheNNumbers(N);
+        int counter = 0;
+        for(double d : N){
+            if(d > average){
+                counter++;
+            }
+        }
+        double percentage = counter*100 / N.length;
+
+        System.out.println(percentage);
     }
 }
