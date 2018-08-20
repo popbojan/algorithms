@@ -1,5 +1,7 @@
 package book.exercises.basicprogrammingmodel;
 
+import java.util.Random;
+
 public class FilteringE1134 {
 
 
@@ -23,6 +25,50 @@ public class FilteringE1134 {
 
     }
 
+    public double printKthSmallestValue(double[] N, int k) {
+        return sort(N)[k];
+    }
+
+    public void printSumOfTheSquaresOfTheNumbers(double[] N) {
+        double sum = 0;
+        for (double d : N) {
+            sum += d * d;
+        }
+        System.out.println(sum);
+    }
+
+    public double getAverageOfTheNNumbers(double[] N) {
+        double sum = 0;
+        for (double d : N) {
+            sum += d;
+        }
+        double average = sum / N.length;
+        return average;
+    }
+
+    public void printThePercentageOfTheNumbersGreaterThanTheAverage(double[] N) {
+        double average = getAverageOfTheNNumbers(N);
+        int counter = 0;
+        for (double d : N) {
+            if (d > average) {
+                counter++;
+            }
+        }
+        double percentage = counter * 100 / N.length;
+
+        System.out.println(percentage);
+    }
+
+    public void printNNumbersInIncreasingOrder(double[] N) {
+        double[] sorted = sort(N);
+        print(N);
+    }
+
+    public void printNNumbersInRandomOrder(double[] N) {
+        double[] shuffled = shuffle(N);
+        print(N);
+    }
+
     private double[] sort(double[] N) {
         for (int j = 0; j < N.length; j++) {
             for (int i = 0; i < N.length - 1; i++) {
@@ -36,37 +82,22 @@ public class FilteringE1134 {
         return N;
     }
 
-    public double printKthSmallestValue(double[] N, int k) {
-        return sort(N)[k];
+    private double[] shuffle(double[] N) {
+        Random r = new Random();
+        for (int i = 0; i < N.length; i++) {
+            int lastIndexInArray = N.length - 1;
+            int i1 = r.nextInt(lastIndexInArray);
+            int i2 = r.nextInt(lastIndexInArray);
+            double temp = N[i1];
+            N[i1] = N[i2];
+            N[i2] = temp;
+        }
+        return N;
     }
 
-    public void printSumOfTheSquaresOfTheNumbers(double[] N){
-        double sum  =0;
-        for(double d  : N){
-            sum+= d * d;
+    private void print(double[] N) {
+        for (double d : N) {
+            System.out.println(d);
         }
-        System.out.println(sum);
-    }
-
-    public double getAverageOfTheNNumbers(double[] N){
-        double sum = 0;
-        for(double d : N){
-            sum+= d;
-        }
-        double average = sum /N.length;
-        return average;
-    }
-
-    public void printThePercentageOfTheNumbersGreaterThanTheAverage(double[] N){
-        double average = getAverageOfTheNNumbers(N);
-        int counter = 0;
-        for(double d : N){
-            if(d > average){
-                counter++;
-            }
-        }
-        double percentage = counter*100 / N.length;
-
-        System.out.println(percentage);
     }
 }
