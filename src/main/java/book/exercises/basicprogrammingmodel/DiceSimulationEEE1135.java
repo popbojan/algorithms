@@ -32,12 +32,18 @@ public class DiceSimulationEEE1135 {
     }
 
     public void diceIt(int N) {
+        int[] valueFrequency = new int[SIDES+1];
         for (int i = 0; i < N; i++) {
             Random r = new Random();
-            int d1 = r.nextInt(SIDES);
-            int d2 = r.nextInt(SIDES);
+            int d1 = r.nextInt(SIDES+1);
+            int d2 = r.nextInt(SIDES+1);
+            valueFrequency[d1]++;
+            valueFrequency[d2]++;
             double dist = getProbabilityDistributionForTheSumOfTwoDice(d1, d2);
             System.out.println(dist);
+        }
+        for (int k = 1; k <= SIDES; k++) {
+            System.out.println("value:["+k+"] frequency:["+valueFrequency[k]+"]");
         }
     }
 }
