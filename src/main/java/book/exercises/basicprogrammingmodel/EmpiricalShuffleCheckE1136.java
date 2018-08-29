@@ -24,7 +24,7 @@ public class EmpiricalShuffleCheckE1136 {
             shuffle(numbers);
 
             for (int j = 0; j < M; j++) {
-                numberPositionFrequency[j][getNumberIndex(numbers[j])]++;
+                numberPositionFrequency[j][getPosition(numbers[j])]++;
             }
         }
     }
@@ -57,7 +57,7 @@ public class EmpiricalShuffleCheckE1136 {
         }
     }
 
-    private int getNumberIndex(double number) {
+    private int getPosition(double number) {
         for (int i = 0; i < initPositions.length; i++) {
             if (initPositions[i] == number) {
                 return i;
