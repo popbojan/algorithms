@@ -7,7 +7,7 @@ public class EmpiricalShuffleCheckE1136 {
     Random random;
     private double[] numbers;
     private double[] initPositions;
-    private double[][] numberPositionFrequency;
+    private int[][] numberPositionFrequency;
 
     public EmpiricalShuffleCheckE1136() {
         random = new Random();
@@ -16,7 +16,7 @@ public class EmpiricalShuffleCheckE1136 {
     public void Nshuffles(int M, int N) {
         numbers = new double[M];
         initPositions = new double[M];
-        numberPositionFrequency = new double[M][M];
+        numberPositionFrequency = new int[M][M];
 
         populateArrays(numbers, initPositions);
 
@@ -27,12 +27,16 @@ public class EmpiricalShuffleCheckE1136 {
                 numberPositionFrequency[j][getPosition(numbers[j])]++;
             }
         }
+
+        printMbyM();
     }
 
-    private void printMbyM(double[] a) {
-        for (int i = 0; i < a.length; i++) {
-            for (int j = 0; j < a.length; j++) {
-
+    private void printMbyM() {
+        for (int i = 0; i < numberPositionFrequency.length; i++) {
+            System.out.println("Position: " + "[" + i + "]");
+            for (int j = 0; j < numberPositionFrequency.length; j++) {
+                System.out.println();
+                System.out.printf("Number: " + "[" + numbers[j] + "]" + " Times: " + "[" + numberPositionFrequency[i][j] + "]");
             }
         }
     }

@@ -17,6 +17,6 @@ public class EmpiricalShuffleCheckTestsE1136 {
     @Test
     @Ignore
     public void test_Nshuffles() {
-        esc.Nshuffles(4, 10);
+        esc.Nshuffles(4, 20);
     }
 }
