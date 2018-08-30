@@ -33,9 +33,9 @@ public class EmpiricalShuffleCheckE1136 {
 
     private void printMbyM() {
         for (int i = 0; i < numberPositionFrequency.length; i++) {
+            System.out.println();
             System.out.println("Position: " + "[" + i + "]");
             for (int j = 0; j < numberPositionFrequency.length; j++) {
-                System.out.println();
                 System.out.println("Number: " + "[" + numbers[j] + "]" + " Times: " + "[" + numberPositionFrequency[i][j] + "]");
             }
         }
