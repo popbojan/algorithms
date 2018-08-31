@@ -4,7 +4,7 @@ import book.exercises.basicprogrammingmodel.E1138_BinaryVsBruteForceSearch;
 import org.junit.Before;
 import org.junit.Test;
 
-public class E1138_BinaryVsBruteForceSearch_Tests {
+public class E1138_BinaryVsBruteForceSearchTests {
 
     E1138_BinaryVsBruteForceSearch bvbfs;
 
