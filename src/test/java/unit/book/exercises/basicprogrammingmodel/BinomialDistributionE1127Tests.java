@@ -1,16 +1,16 @@
 package unit.book.exercises.basicprogrammingmodel;
 
-import book.exercises.basicprogrammingmodel.BinomialDistributionE1127;
+import book.exercises.basicprogrammingmodel.E1127_BinomialDistribution;
 import org.junit.Before;
 import org.junit.Test;
 
 public class BinomialDistributionE1127Tests {
 
-    BinomialDistributionE1127 bd;
+    E1127_BinomialDistribution bd;
 
     @Before
     public void setup(){
-        bd = new BinomialDistributionE1127();
+        bd = new E1127_BinomialDistribution();
     }
 
     @Test

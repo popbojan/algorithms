@@ -2,7 +2,7 @@ package book.exercises.basicprogrammingmodel;
 
 import java.util.Random;
 
-public class DiceSimulationEEE1135 {
+public class E1135_DiceSimulation {
 
     final int SIDES = 6;
 

@@ -1,6 +1,6 @@
 package book.exercises.basicprogrammingmodel;
 
-public class DoublesAreBetween0And1E115 {
+public class E115_DoublesAreBetween0And1 {
 
     public boolean areBetween0And1(double[] doubles) {
 

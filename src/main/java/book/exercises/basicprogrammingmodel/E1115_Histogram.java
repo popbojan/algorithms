@@ -1,6 +1,6 @@
 package book.exercises.basicprogrammingmodel;
 
-public class HistogramE1115 {
+public class E1115_Histogram {
 
     public int[] histogram(int[] a, int M)
     {

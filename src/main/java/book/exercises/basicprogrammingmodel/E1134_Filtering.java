@@ -2,7 +2,7 @@ package book.exercises.basicprogrammingmodel;
 
 import java.util.Random;
 
-public class FilteringE1134 {
+public class E1134_Filtering {
 
 
     public void printMaximumAndMinimum(double[] N) {

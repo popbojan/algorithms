@@ -1,17 +1,17 @@
 package unit.book.exercises.basicprogrammingmodel;
 
-import book.exercises.basicprogrammingmodel.EmpiricalShuffleCheckE1136;
+import book.exercises.basicprogrammingmodel.E1136_EmpiricalShuffleCheck;
 import org.junit.Before;
 import org.junit.Ignore;
 import org.junit.Test;
 
 public class EmpiricalShuffleCheckTestsE1136 {
 
-    private EmpiricalShuffleCheckE1136 esc;
+    private E1136_EmpiricalShuffleCheck esc;
 
     @Before
     public void setup() {
-        esc = new EmpiricalShuffleCheckE1136();
+        esc = new E1136_EmpiricalShuffleCheck();
     }
 
     @Test

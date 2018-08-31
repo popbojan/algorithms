@@ -1,6 +1,6 @@
 package book.exercises.basicprogrammingmodel;
 
-public class ThreeIntegersEqualE113 {
+public class E113_ThreeIntegersEqual {
 
     public boolean areEqual(int first, int second, int third) {
         if (first == second && first == third)

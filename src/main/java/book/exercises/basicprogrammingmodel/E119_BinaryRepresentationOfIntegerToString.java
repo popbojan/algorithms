@@ -1,6 +1,6 @@
 package book.exercises.basicprogrammingmodel;
 
-public class BinaryRepresentationOfIntegerToStringE119 {
+public class E119_BinaryRepresentationOfIntegerToString {
 
     public String getBinaryStringOfGivenNumber(int N){
         String s = "";

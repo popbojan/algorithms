@@ -2,12 +2,12 @@ package book.exercises.basicprogrammingmodel;
 
 import edu.princeton.cs.introcs.StdOut;
 
-public class RecursiveBinarySearchE1122 {
+public class E1122_RecursiveBinarySearch {
 
     int[] a;
     final boolean PRINT_DEPTH = false;
 
-    public RecursiveBinarySearchE1122() {
+    public E1122_RecursiveBinarySearch() {
         a = new int[]{1, 2, 3, 3, 3, 4, 5, 6, 7, 7, 8, 9, 10, 11, 12, 13, 14, 14, 15, 16, 17, 17, 17, 17};
     }
 

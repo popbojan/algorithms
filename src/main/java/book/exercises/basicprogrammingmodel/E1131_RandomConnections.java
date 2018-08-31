@@ -11,13 +11,13 @@ import javafx.stage.Stage;
 
 import java.util.List;
 
-public class RandomConnectionsE1131 extends Application {
+public class E1131_RandomConnections extends Application {
 
     int N;
     int k;
     double p;
 
-    public RandomConnectionsE1131() {
+    public E1131_RandomConnections() {
         N = 27;
         k = 2;
         p = 0.3;
@@ -52,7 +52,7 @@ public class RandomConnectionsE1131 extends Application {
         Point2D center = new Point2D(circleCircumference.getCenterX(), circleCircumference.getCenterY());
         Point2D[] points = getCirclePoints(N, circleCircumference.getRadiusX(), center);
 
-        double binomialCoefficient = BinomialDistributionE1127.getBinomialCoefficientA(N, k);
+        double binomialCoefficient = E1127_BinomialDistribution.getBinomialCoefficientA(N, k);
         Line[] lines = getCircleLines(points, binomialCoefficient);
         for (int i = 0; i < lines.length; i++) {
             root.getChildren().add(lines[i]);

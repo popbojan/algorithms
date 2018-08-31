@@ -38,12 +38,12 @@ import edu.princeton.cs.introcs.StdOut;
  * F(3-2) computes:
  * F(3-2) returns 1
  */
-public class FibonacciRecursionE1119 {
+public class E1119_FibonacciRecursion {
     private final int LENGTH = 100;
 
     private long[] savedComputations;
 
-    public FibonacciRecursionE1119() {
+    public E1119_FibonacciRecursion() {
         savedComputations = new long[LENGTH];
     }
 

@@ -2,12 +2,12 @@ package book.exercises.basicprogrammingmodel;
 
 import edu.princeton.cs.introcs.StdOut;
 
-public class PrintTwoDimensionalBooleanArrayE1111 {
+public class E1111_PrintTwoDimensionalBooleanArray {
 
     int M, N;
     boolean[][] a;
 
-    public PrintTwoDimensionalBooleanArrayE1111() {
+    public E1111_PrintTwoDimensionalBooleanArray() {
         M = 5;
         N = 7;
         a = new boolean[M][N];

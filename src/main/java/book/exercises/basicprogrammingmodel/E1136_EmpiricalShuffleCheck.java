@@ -2,14 +2,14 @@ package book.exercises.basicprogrammingmodel;
 
 import java.util.Random;
 
-public class BadShufflingE1137 {
+public class E1136_EmpiricalShuffleCheck {
 
     Random random;
     private double[] numbers;
     private double[] initPositions;
     private int[][] numberPositionFrequency;
 
-    public BadShufflingE1137() {
+    public E1136_EmpiricalShuffleCheck() {
         random = new Random();
     }
 
@@ -45,7 +45,7 @@ public class BadShufflingE1137 {
         int N = a.length;
         for (int i = 0; i < N; i++) {
             // exchange a[i] with random element in a[i..N-1]
-            int r = 0 + random.nextInt(N - i);
+            int r = i + random.nextInt(N - i);
             double temp = a[i];
             a[i] = a[r];
             a[r] = temp;

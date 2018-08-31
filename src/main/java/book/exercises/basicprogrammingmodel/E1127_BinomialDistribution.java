@@ -24,7 +24,7 @@ package book.exercises.basicprogrammingmodel;
  * Binomial Distribution formula uses combination-coefficient formula (nCx) = C(n, x)
  * </p>
  */
-public class BinomialDistributionE1127 {
+public class E1127_BinomialDistribution {
 
     int counter = 0;
 

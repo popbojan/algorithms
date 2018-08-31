@@ -1,6 +1,6 @@
 package unit.book.exercises.basicprogrammingmodel;
 
-import book.exercises.basicprogrammingmodel.DoublesAreBetween0And1E115;
+import book.exercises.basicprogrammingmodel.E115_DoublesAreBetween0And1;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -8,13 +8,13 @@ import org.mockito.MockitoAnnotations;
 
 public class DoublesAreBetween0And1E115Tests {
 
-    DoublesAreBetween0And1E115 dab0a1;
+    E115_DoublesAreBetween0And1 dab0a1;
 
     @Before
     public void setup() {
         MockitoAnnotations.initMocks(this);
 
-        dab0a1 = new DoublesAreBetween0And1E115();
+        dab0a1 = new E115_DoublesAreBetween0And1();
     }
 
     @Test

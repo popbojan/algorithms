@@ -1,16 +1,16 @@
 package unit.book.exercises.basicprogrammingmodel;
 
-import book.exercises.basicprogrammingmodel.SortingThreeNumbersE1126;
+import book.exercises.basicprogrammingmodel.E1126_SortingThreeNumbers;
 import org.junit.Before;
 import org.junit.Test;
 
 public class SortingThreeNumbersE1126Tests {
 
-    SortingThreeNumbersE1126 stn;
+    E1126_SortingThreeNumbers stn;
 
     @Before
     public void setup(){
-        stn = new SortingThreeNumbersE1126();
+        stn = new E1126_SortingThreeNumbers();
     }
 
     @Test

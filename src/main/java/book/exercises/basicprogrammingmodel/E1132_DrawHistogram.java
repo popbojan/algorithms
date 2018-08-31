@@ -18,7 +18,7 @@ import java.util.List;
  * Got a lot of help form github olegkamuz
  * https://github.com/olegkamuz/algorithms-sedgewick-wayne/
  */
-public class DrawHistogramE1132 extends Application {
+public class E1132_DrawHistogram extends Application {
 
     private final int ONE = 1;
     double[] stream;
@@ -29,10 +29,10 @@ public class DrawHistogramE1132 extends Application {
     /**
      * Default constructor is must have with JavaFX Application
      */
-    public DrawHistogramE1132() {
+    public E1132_DrawHistogram() {
     }
 
-    public DrawHistogramE1132(double[] stream, int N, double l, double r) {
+    public E1132_DrawHistogram(double[] stream, int N, double l, double r) {
         this.stream = stream;
         this.N = N;
         this.l = l;

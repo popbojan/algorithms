@@ -1,17 +1,17 @@
 package unit.book.exercises.basicprogrammingmodel;
 
-import book.exercises.basicprogrammingmodel.RandomConnectionsE1131;
+import book.exercises.basicprogrammingmodel.E1131_RandomConnections;
 import org.junit.Before;
 import org.junit.Ignore;
 import org.junit.Test;
 
 public class RandoConnectionsE1131Tests {
 
-    RandomConnectionsE1131 rc;
+    E1131_RandomConnections rc;
 
     @Before
     public void setup() {
-        rc = new RandomConnectionsE1131();
+        rc = new E1131_RandomConnections();
     }
 
     @Test

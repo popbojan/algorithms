@@ -1,17 +1,17 @@
 package unit.book.exercises.basicprogrammingmodel;
 
-import book.exercises.basicprogrammingmodel.BadShufflingE1137;
+import book.exercises.basicprogrammingmodel.E1137_BadShuffling;
 import org.junit.Before;
 import org.junit.Ignore;
 import org.junit.Test;
 
 public class BadShufflingTestsE1137 {
 
-    private BadShufflingE1137 bs;
+    private E1137_BadShuffling bs;
 
     @Before
     public void setup() {
-        bs = new BadShufflingE1137();
+        bs = new E1137_BadShuffling();
     }
 
     @Test

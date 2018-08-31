@@ -1,16 +1,16 @@
 package unit.book.exercises.basicprogrammingmodel;
 
-import book.exercises.basicprogrammingmodel.CommonDivisorByEuclidE1124;
+import book.exercises.basicprogrammingmodel.E1124_CommonDivisorByEuclid;
 import org.junit.Before;
 import org.junit.Test;
 
 public class CommonDivisorByEuclidE1124Tests {
 
-    CommonDivisorByEuclidE1124 cdbe;
+    E1124_CommonDivisorByEuclid cdbe;
 
     @Before
     public void setup(){
-        cdbe = new CommonDivisorByEuclidE1124();
+        cdbe = new E1124_CommonDivisorByEuclid();
     }
 
     @Test

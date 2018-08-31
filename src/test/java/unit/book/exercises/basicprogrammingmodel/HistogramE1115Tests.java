@@ -1,17 +1,17 @@
 package unit.book.exercises.basicprogrammingmodel;
 
-import book.exercises.basicprogrammingmodel.HistogramE1115;
+import book.exercises.basicprogrammingmodel.E1115_Histogram;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
 public class HistogramE1115Tests {
 
-    HistogramE1115 h;
+    E1115_Histogram h;
 
     @Before
     public void setup(){
-        h = new HistogramE1115();
+        h = new E1115_Histogram();
     }
 
     @Test

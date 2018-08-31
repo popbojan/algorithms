@@ -2,7 +2,7 @@ package book.exercises.basicprogrammingmodel;
 
         import edu.princeton.cs.introcs.StdOut;
 
-public class PrintFibonacciNumbersE116 {
+public class E116_PrintFibonacciNumbers {
 
     public void printIt() {
         int f = 0;

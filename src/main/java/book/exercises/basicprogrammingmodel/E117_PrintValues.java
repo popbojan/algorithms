@@ -2,7 +2,7 @@ package book.exercises.basicprogrammingmodel;
 
 import edu.princeton.cs.introcs.StdOut;
 
-public class PrintValuesE117 {
+public class E117_PrintValues {
 
     public void printA() {
         double t = 9.0;

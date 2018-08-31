@@ -1,17 +1,17 @@
 package unit.book.exercises.basicprogrammingmodel;
 
-import book.exercises.basicprogrammingmodel.TheLargestIntNotLargerThanBase2LogarithmE1114;
+import book.exercises.basicprogrammingmodel.E1114_TheLargestIntNotLargerThanBase2Logarithm;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
 public class TheLargestIntNotLargerThanBase2LogarithmE1114Tests {
 
-    TheLargestIntNotLargerThanBase2LogarithmE1114 tlinltb2l;
+    E1114_TheLargestIntNotLargerThanBase2Logarithm tlinltb2l;
 
     @Before
     public void setup(){
-        tlinltb2l = new TheLargestIntNotLargerThanBase2LogarithmE1114();
+        tlinltb2l = new E1114_TheLargestIntNotLargerThanBase2Logarithm();
     }
 
     @Test

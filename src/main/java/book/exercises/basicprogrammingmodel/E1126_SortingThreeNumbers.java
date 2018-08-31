@@ -1,6 +1,6 @@
 package book.exercises.basicprogrammingmodel;
 
-public class SortingThreeNumbersE1126 {
+public class E1126_SortingThreeNumbers {
 
     public void sort(int a, int b, int c){
         int temp;

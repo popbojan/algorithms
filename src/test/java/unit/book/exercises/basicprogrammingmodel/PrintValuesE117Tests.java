@@ -1,16 +1,16 @@
 package unit.book.exercises.basicprogrammingmodel;
 
-import book.exercises.basicprogrammingmodel.PrintValuesE117;
+import book.exercises.basicprogrammingmodel.E117_PrintValues;
 import org.junit.Before;
 import org.junit.Test;
 
 public class PrintValuesE117Tests {
 
-    PrintValuesE117 pv;
+    E117_PrintValues pv;
 
     @Before
     public void setup() {
-        pv = new PrintValuesE117();
+        pv = new E117_PrintValues();
     }
 
     @Test

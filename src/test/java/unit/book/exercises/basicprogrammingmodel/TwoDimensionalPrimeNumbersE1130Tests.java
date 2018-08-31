@@ -1,16 +1,16 @@
 package unit.book.exercises.basicprogrammingmodel;
 
-import book.exercises.basicprogrammingmodel.TwoDimensionalPrimeNumbersE1130;
+import book.exercises.basicprogrammingmodel.E1130_TwoDimensionalPrimeNumbers;
 import org.junit.Before;
 import org.junit.Test;
 
 public class TwoDimensionalPrimeNumbersE1130Tests {
 
-    TwoDimensionalPrimeNumbersE1130 tdpn;
+    E1130_TwoDimensionalPrimeNumbers tdpn;
 
     @Before
     public void setup(){
-        tdpn = new TwoDimensionalPrimeNumbersE1130();
+        tdpn = new E1130_TwoDimensionalPrimeNumbers();
     }
 
     @Test

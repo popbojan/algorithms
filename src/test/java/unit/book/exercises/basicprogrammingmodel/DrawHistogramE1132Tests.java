@@ -1,6 +1,6 @@
 package unit.book.exercises.basicprogrammingmodel;
 
-import book.exercises.basicprogrammingmodel.DrawHistogramE1132;
+import book.exercises.basicprogrammingmodel.E1132_DrawHistogram;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Ignore;
@@ -8,7 +8,7 @@ import org.junit.Test;
 
 public class DrawHistogramE1132Tests {
 
-    DrawHistogramE1132 dh;
+    E1132_DrawHistogram dh;
     int N;
     double l;
     double r;
@@ -20,7 +20,7 @@ public class DrawHistogramE1132Tests {
         N = 5;
         l =  42.3;
         r = 25.2;
-        dh = new DrawHistogramE1132(stream, N, l, r);
+        dh = new E1132_DrawHistogram(stream, N, l, r);
     }
 
     @Test

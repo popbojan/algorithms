@@ -1,16 +1,16 @@
 package unit.book.exercises.basicprogrammingmodel;
 
-import book.exercises.basicprogrammingmodel.RecursiveBinarySearchE1122;
+import book.exercises.basicprogrammingmodel.E1122_RecursiveBinarySearch;
 import org.junit.Before;
 import org.junit.Test;
 
 public class RecursiveBinarySearchE1122Tests {
 
-    RecursiveBinarySearchE1122 rbs;
+    E1122_RecursiveBinarySearch rbs;
 
     @Before
     public void setup() {
-        rbs = new RecursiveBinarySearchE1122();
+        rbs = new E1122_RecursiveBinarySearch();
     }
 
     @Test

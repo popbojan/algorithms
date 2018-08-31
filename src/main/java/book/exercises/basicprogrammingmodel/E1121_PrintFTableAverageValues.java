@@ -2,9 +2,9 @@ package book.exercises.basicprogrammingmodel;
 
 import edu.princeton.cs.introcs.StdOut;
 
-public class PrintFTableAverageValuesE1121 {
+public class E1121_PrintFTableAverageValues {
 
-    public void printF(TableRowObjectE1121[] a) {
+    public void printF(E1121_TableRowObject[] a) {
         StdOut.printf("name: " + " A: " + " B: " + " Average: \n");
 
         for (int i = 0; i < a.length; i++) {

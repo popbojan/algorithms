@@ -1,17 +1,17 @@
 package unit.book.exercises.basicprogrammingmodel;
 
-import book.exercises.basicprogrammingmodel.FibonacciRecursionE1119;
+import book.exercises.basicprogrammingmodel.E1119_FibonacciRecursion;
 import org.junit.Before;
 import org.junit.Ignore;
 import org.junit.Test;
 
 public class FibonacciRecursionE1119Tests {
 
-    FibonacciRecursionE1119 fr;
+    E1119_FibonacciRecursion fr;
 
     @Before
     public void setup() {
-        fr = new FibonacciRecursionE1119();
+        fr = new E1119_FibonacciRecursion();
     }
 
     @Test()

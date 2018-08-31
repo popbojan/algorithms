@@ -1,17 +1,17 @@
 package unit.book.exercises.basicprogrammingmodel;
 
-import book.exercises.basicprogrammingmodel.BinaryRepresentationOfIntegerToStringE119;
+import book.exercises.basicprogrammingmodel.E119_BinaryRepresentationOfIntegerToString;
 import edu.princeton.cs.introcs.StdOut;
 import org.junit.Before;
 import org.junit.Test;
 
 public class BinaryRepresentationOfIntegerToStringE119Tests {
 
-    BinaryRepresentationOfIntegerToStringE119 broits;
+    E119_BinaryRepresentationOfIntegerToString broits;
 
     @Before
     public void setup(){
-        broits = new BinaryRepresentationOfIntegerToStringE119();
+        broits = new E119_BinaryRepresentationOfIntegerToString();
     }
 
     @Test

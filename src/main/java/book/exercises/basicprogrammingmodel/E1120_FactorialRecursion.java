@@ -1,6 +1,6 @@
 package book.exercises.basicprogrammingmodel;
 
-public class FactorialRecursionE1120 {
+public class E1120_FactorialRecursion {
 
     public int ln(int N){
         if(N ==1)

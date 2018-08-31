@@ -1,6 +1,6 @@
 package book.exercises.basicprogrammingmodel;
 
-public class TheLargestIntNotLargerThanBase2LogarithmE1114 {
+public class E1114_TheLargestIntNotLargerThanBase2Logarithm {
 
     private int myPower(int base, int exponent) {
         int c = 1;

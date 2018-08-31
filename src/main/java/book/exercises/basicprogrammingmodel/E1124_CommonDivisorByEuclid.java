@@ -2,7 +2,7 @@ package book.exercises.basicprogrammingmodel;
 
 import edu.princeton.cs.introcs.StdOut;
 
-public class CommonDivisorByEuclidE1124 {
+public class E1124_CommonDivisorByEuclid {
 
     public void commonDivisor() {
         int p = 8;

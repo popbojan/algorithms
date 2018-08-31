@@ -1,18 +1,18 @@
 package unit.book.exercises.basicprogrammingmodel;
 
-import book.exercises.basicprogrammingmodel.MatrixE1133;
+import book.exercises.basicprogrammingmodel.E1133_Matrix;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
 public class MatrixE1133Tests {
 
-    MatrixE1133 m;
+    E1133_Matrix m;
     final double INCONSIDERABLE_DIFFERENCE = 0.1;
 
     @Before
     public void setup() {
-        m = new MatrixE1133();
+        m = new E1133_Matrix();
     }
 
     @Test

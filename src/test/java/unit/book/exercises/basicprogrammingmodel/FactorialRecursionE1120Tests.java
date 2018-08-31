@@ -1,17 +1,17 @@
 package unit.book.exercises.basicprogrammingmodel;
 
-import book.exercises.basicprogrammingmodel.FactorialRecursionE1120;
+import book.exercises.basicprogrammingmodel.E1120_FactorialRecursion;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
 public class FactorialRecursionE1120Tests {
 
-    FactorialRecursionE1120 fr;
+    E1120_FactorialRecursion fr;
 
     @Before
     public void setup(){
-        fr = new FactorialRecursionE1120();
+        fr = new E1120_FactorialRecursion();
     }
 
     @Test

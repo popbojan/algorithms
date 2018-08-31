@@ -1,6 +1,6 @@
 package unit.book.exercises.basicprogrammingmodel;
 
-import book.exercises.basicprogrammingmodel.ThreeIntegersEqualE113;
+import book.exercises.basicprogrammingmodel.E113_ThreeIntegersEqual;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -8,14 +8,14 @@ import org.mockito.MockitoAnnotations;
 
 public class ThreeIntegersEqualE113Tests {
 
-    ThreeIntegersEqualE113 tie;
+    E113_ThreeIntegersEqual tie;
 
     @Before
     public void setup()
     {
         MockitoAnnotations.initMocks(this);
 
-        tie = new ThreeIntegersEqualE113();
+        tie = new E113_ThreeIntegersEqual();
     }
 
     @Test

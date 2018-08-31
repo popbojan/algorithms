@@ -1,16 +1,16 @@
 package unit.book.exercises.basicprogrammingmodel;
 
-import book.exercises.basicprogrammingmodel.DiceSimulationEEE1135;
+import book.exercises.basicprogrammingmodel.E1135_DiceSimulation;
 import org.junit.Before;
 import org.junit.Test;
 
 public class DiceSimulationE1135Tests {
 
-    DiceSimulationEEE1135 ds;
+    E1135_DiceSimulation ds;
 
     @Before
     public void setup(){
-        ds = new DiceSimulationEEE1135();
+        ds = new E1135_DiceSimulation();
     }
 
     @Test

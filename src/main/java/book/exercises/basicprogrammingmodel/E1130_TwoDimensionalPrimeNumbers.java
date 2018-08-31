@@ -1,6 +1,6 @@
 package book.exercises.basicprogrammingmodel;
 
-public class TwoDimensionalPrimeNumbersE1130 {
+public class E1130_TwoDimensionalPrimeNumbers {
 
     private final int LENGTH = 10;
 
@@ -17,7 +17,7 @@ public class TwoDimensionalPrimeNumbersE1130 {
         boolean[][] schema = new boolean[LENGTH][LENGTH];
         for (int i = 1; i < LENGTH; i++) {
             for (int j = 1; j < LENGTH; j++) {
-                schema[i][j] = CommonDivisorByEuclidE1124.getCommonDivisor(i, j) > 1 ? false : true;
+                schema[i][j] = E1124_CommonDivisorByEuclid.getCommonDivisor(i, j) > 1 ? false : true;
             }
         }
 

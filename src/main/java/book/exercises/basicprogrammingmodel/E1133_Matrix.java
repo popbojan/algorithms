@@ -1,6 +1,6 @@
 package book.exercises.basicprogrammingmodel;
 
-public class MatrixE1133 {
+public class E1133_Matrix {
 
     /**
      * Calculate (scalar) Dot Product from a vector

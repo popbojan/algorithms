@@ -1,18 +1,18 @@
 package unit.book.exercises.basicprogrammingmodel;
 
-import book.exercises.basicprogrammingmodel.FilteringE1134;
+import book.exercises.basicprogrammingmodel.E1134_Filtering;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
 public class FilteringE1134Tests {
 
-    FilteringE1134 f;
+    E1134_Filtering f;
     final double INCONSIDERABLE_DIFFERENCE = 0.1;
 
     @Before
     public void setup() {
-        f = new FilteringE1134();
+        f = new E1134_Filtering();
     }
 
     @Test

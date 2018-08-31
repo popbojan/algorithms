@@ -1,12 +1,12 @@
 package book.exercises.basicprogrammingmodel;
 
-public class TableRowObjectE1121 {
+public class E1121_TableRowObject {
 
     String name;
     int a;
     int b;
 
-    public TableRowObjectE1121(String name, int a, int b){
+    public E1121_TableRowObject(String name, int a, int b){
         this.name = name;
         this.a = a;
         this.b = b;
