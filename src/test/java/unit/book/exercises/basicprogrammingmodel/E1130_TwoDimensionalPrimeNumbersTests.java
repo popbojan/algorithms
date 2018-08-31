@@ -4,7 +4,7 @@ import book.exercises.basicprogrammingmodel.E1130_TwoDimensionalPrimeNumbers;
 import org.junit.Before;
 import org.junit.Test;
 
-public class TwoDimensionalPrimeNumbersE1130Tests {
+public class E1130_TwoDimensionalPrimeNumbersTests {
 
     E1130_TwoDimensionalPrimeNumbers tdpn;
 

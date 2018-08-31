@@ -5,7 +5,7 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-public class TheLargestIntNotLargerThanBase2LogarithmE1114Tests {
+public class E1114_TheLargestIntNotLargerThanBase2LogarithmTests {
 
     E1114_TheLargestIntNotLargerThanBase2Logarithm tlinltb2l;
 

@@ -5,7 +5,7 @@ import book.exercises.basicprogrammingmodel.E1121_TableRowObject;
 import org.junit.Before;
 import org.junit.Test;
 
-public class PrintFTableAverageValuesE1121Tests {
+public class E1121_PrintFTableAverageValuesTests {
 
     E1121_PrintFTableAverageValues pftav;
     E1121_TableRowObject tro1, tro2, tro3, tro4;

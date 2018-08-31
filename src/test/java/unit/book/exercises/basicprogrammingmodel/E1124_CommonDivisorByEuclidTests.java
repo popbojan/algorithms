@@ -4,7 +4,7 @@ import book.exercises.basicprogrammingmodel.E1124_CommonDivisorByEuclid;
 import org.junit.Before;
 import org.junit.Test;
 
-public class CommonDivisorByEuclidE1124Tests {
+public class E1124_CommonDivisorByEuclidTests {
 
     E1124_CommonDivisorByEuclid cdbe;
 

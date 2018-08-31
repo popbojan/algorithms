@@ -5,7 +5,7 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-public class FactorialRecursionE1120Tests {
+public class E1120_FactorialRecursionTests {
 
     E1120_FactorialRecursion fr;
 

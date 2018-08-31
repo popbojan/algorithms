@@ -5,7 +5,7 @@ import org.junit.Before;
 import org.junit.Test;
 import org.mockito.MockitoAnnotations;
 
-public class PrintFibonacciNumbersE116Tests {
+public class E116_PrintFibonacciNumbersTests {
 
     E116_PrintFibonacciNumbers flp;
 

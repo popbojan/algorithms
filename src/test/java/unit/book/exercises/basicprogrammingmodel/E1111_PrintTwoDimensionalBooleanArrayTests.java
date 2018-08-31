@@ -4,7 +4,7 @@ import book.exercises.basicprogrammingmodel.E1111_PrintTwoDimensionalBooleanArra
 import org.junit.Before;
 import org.junit.Test;
 
-public class PrintTwoDimensionalBooleanArrayE1111Tests {
+public class E1111_PrintTwoDimensionalBooleanArrayTests {
 
     E1111_PrintTwoDimensionalBooleanArray ptdba;
 

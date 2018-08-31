@@ -4,7 +4,7 @@ import book.exercises.basicprogrammingmodel.E117_PrintValues;
 import org.junit.Before;
 import org.junit.Test;
 
-public class PrintValuesE117Tests {
+public class E117_PrintValuesTests {
 
     E117_PrintValues pv;
 

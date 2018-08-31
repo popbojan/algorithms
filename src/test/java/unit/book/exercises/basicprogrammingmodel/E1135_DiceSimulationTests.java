@@ -4,7 +4,7 @@ import book.exercises.basicprogrammingmodel.E1135_DiceSimulation;
 import org.junit.Before;
 import org.junit.Test;
 
-public class DiceSimulationE1135Tests {
+public class E1135_DiceSimulationTests {
 
     E1135_DiceSimulation ds;
 

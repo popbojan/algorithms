@@ -5,7 +5,7 @@ import org.junit.Before;
 import org.junit.Ignore;
 import org.junit.Test;
 
-public class FibonacciRecursionE1119Tests {
+public class E1119_FibonacciRecursionTests {
 
     E1119_FibonacciRecursion fr;
 

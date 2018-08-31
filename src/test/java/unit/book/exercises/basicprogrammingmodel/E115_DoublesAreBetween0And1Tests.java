@@ -6,7 +6,7 @@ import org.junit.Before;
 import org.junit.Test;
 import org.mockito.MockitoAnnotations;
 
-public class DoublesAreBetween0And1E115Tests {
+public class E115_DoublesAreBetween0And1Tests {
 
     E115_DoublesAreBetween0And1 dab0a1;
 

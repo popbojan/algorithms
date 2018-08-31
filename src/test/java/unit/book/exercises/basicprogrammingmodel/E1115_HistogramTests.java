@@ -5,7 +5,7 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-public class HistogramE1115Tests {
+public class E1115_HistogramTests {
 
     E1115_Histogram h;
 

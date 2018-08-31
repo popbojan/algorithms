@@ -5,7 +5,7 @@ import org.junit.Before;
 import org.junit.Ignore;
 import org.junit.Test;
 
-public class BadShufflingTestsE1137 {
+public class E1137_BadShufflingTests {
 
     private E1137_BadShuffling bs;
 

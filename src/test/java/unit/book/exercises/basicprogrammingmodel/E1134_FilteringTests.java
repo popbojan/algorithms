@@ -5,7 +5,7 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-public class FilteringE1134Tests {
+public class E1134_FilteringTests {
 
     E1134_Filtering f;
     final double INCONSIDERABLE_DIFFERENCE = 0.1;

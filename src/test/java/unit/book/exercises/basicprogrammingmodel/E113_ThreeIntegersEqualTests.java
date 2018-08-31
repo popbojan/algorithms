@@ -6,7 +6,7 @@ import org.junit.Before;
 import org.junit.Test;
 import org.mockito.MockitoAnnotations;
 
-public class ThreeIntegersEqualE113Tests {
+public class E113_ThreeIntegersEqualTests {
 
     E113_ThreeIntegersEqual tie;
 

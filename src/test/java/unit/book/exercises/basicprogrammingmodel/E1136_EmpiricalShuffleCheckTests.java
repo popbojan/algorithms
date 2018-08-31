@@ -5,7 +5,7 @@ import org.junit.Before;
 import org.junit.Ignore;
 import org.junit.Test;
 
-public class EmpiricalShuffleCheckTestsE1136 {
+public class E1136_EmpiricalShuffleCheckTests {
 
     private E1136_EmpiricalShuffleCheck esc;
 

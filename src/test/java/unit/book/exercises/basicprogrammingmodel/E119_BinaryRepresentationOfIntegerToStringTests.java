@@ -5,7 +5,7 @@ import edu.princeton.cs.introcs.StdOut;
 import org.junit.Before;
 import org.junit.Test;
 
-public class BinaryRepresentationOfIntegerToStringE119Tests {
+public class E119_BinaryRepresentationOfIntegerToStringTests {
 
     E119_BinaryRepresentationOfIntegerToString broits;
 

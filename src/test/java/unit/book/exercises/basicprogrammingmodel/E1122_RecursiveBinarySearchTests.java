@@ -4,7 +4,7 @@ import book.exercises.basicprogrammingmodel.E1122_RecursiveBinarySearch;
 import org.junit.Before;
 import org.junit.Test;
 
-public class RecursiveBinarySearchE1122Tests {
+public class E1122_RecursiveBinarySearchTests {
 
     E1122_RecursiveBinarySearch rbs;
 

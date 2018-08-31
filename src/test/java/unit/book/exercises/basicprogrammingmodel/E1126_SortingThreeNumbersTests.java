@@ -4,7 +4,7 @@ import book.exercises.basicprogrammingmodel.E1126_SortingThreeNumbers;
 import org.junit.Before;
 import org.junit.Test;
 
-public class SortingThreeNumbersE1126Tests {
+public class E1126_SortingThreeNumbersTests {
 
     E1126_SortingThreeNumbers stn;
 

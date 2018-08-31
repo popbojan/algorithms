@@ -5,7 +5,7 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-public class MatrixE1133Tests {
+public class E1133_MatrixTests {
 
     E1133_Matrix m;
     final double INCONSIDERABLE_DIFFERENCE = 0.1;

@@ -6,7 +6,7 @@ import org.junit.Before;
 import org.junit.Ignore;
 import org.junit.Test;
 
-public class DrawHistogramE1132Tests {
+public class E1132_DrawHistogramTests {
 
     E1132_DrawHistogram dh;
     int N;

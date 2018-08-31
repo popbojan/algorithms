@@ -5,7 +5,7 @@ import org.junit.Before;
 import org.junit.Ignore;
 import org.junit.Test;
 
-public class RandoConnectionsE1131Tests {
+public class E1131_RandoConnectionsTests {
 
     E1131_RandomConnections rc;
 
