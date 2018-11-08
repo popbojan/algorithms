@@ -9,7 +9,7 @@ public class BinarySearch {
             if (less(key, a[mid])){
                 hi = mid -1;
             }
-            else if (greater(key, a[mid])){
+            else if (greaterThan(key, a[mid])){
                 lo = mid +1;
             }
             else  return mid;
@@ -21,7 +21,7 @@ public class BinarySearch {
         return v.compareTo(w) < 0;
     }
 
-    public boolean greater(Comparable v, Comparable w) {
+    public boolean greaterThan(Comparable v, Comparable w) {
         return v.compareTo(w) > 0;
     }
 }
