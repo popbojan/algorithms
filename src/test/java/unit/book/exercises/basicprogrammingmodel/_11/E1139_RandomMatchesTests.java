@@ -7,8 +7,8 @@ import org.junit.Test;
 public class E1139_RandomMatchesTests {
 
     private E1139_RandomMatches rm;
-    private final int T = 3;
-    private final int POWERS = 4;
+    private final int T = 1;
+    private final int POWERS = 2;
 
     @Before
     public void setup(){
@@ -25,7 +25,7 @@ public class E1139_RandomMatchesTests {
 	{
     	int[] arrays = new int[POWERS];
     	for(int i=0; i<arrays.length; i++) {
-			arrays[i] = (int) Math.pow(10, 3+i);
+			arrays[i] = (int) Math.pow(10, 2+i);
 		}
 		rm.printAverageValueOfQuantityOverTheTTrialsForEachValueOfN(T, arrays);
 	}
