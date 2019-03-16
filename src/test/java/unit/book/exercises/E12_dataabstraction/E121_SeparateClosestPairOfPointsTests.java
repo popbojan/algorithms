@@ -29,9 +29,8 @@ public class E121_SeparateClosestPairOfPointsTests {
     }
 
     @Test
-    public void test_calculateTheDistanceOfPoints()
-    {
-        Point2D[] points =  scpop.generateRandomPointsInTheUnitSquare(N);
+    public void test_calculateTheDistanceOfPoints() {
+        Point2D[] points = scpop.generateRandomPointsInTheUnitSquare(N);
         scpop.calculateTheDistanceOfPoints(points);
     }
 }
