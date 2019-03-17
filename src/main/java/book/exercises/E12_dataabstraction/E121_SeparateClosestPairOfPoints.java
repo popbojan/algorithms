@@ -5,8 +5,16 @@ import javafx.geometry.Point2D;
 import java.util.Random;
 
 /**
+ *
+ * Exercise 1.2.1:
+ * Write a Point2D client that takes an integer value N from the command line,
+ * generates N random points in the unit square,
+ * and computes the distance separating the closest pair of points
+ *
+ *
  * In mathematics, a unit square is a square whose sides have length 1.
  * Often, "the" unit square refers specifically to the square in the Cartesian plane with corners at the four points (0, 0), (1, 0), (0, 1), and (1, 1).
+ *
  */
 public class E121_SeparateClosestPairOfPoints {
 
