@@ -5,6 +5,16 @@ import video.examples.sort.MergeSort;
 
 import java.util.Random;
 
+/**
+ *
+ * Exercise 1.1.39:
+ * Random matches. Write a BinarySearch client that takes an int value T as command-line argument
+ * and returns T trials of the following experiment for N = pow(10, 3), pow(10, 4), pow(10, 5), pow(10, 6):
+ * generate two arrays of N randomly generated positive six-digit int values,
+ * and find the number of values that appear in both arrays. Print a table giving the average value of
+ * this quantity over the T trials for each value of N
+ *
+ */
 public class E1139_RandomMatches {
 
     private MergeSort ms = new MergeSort();
