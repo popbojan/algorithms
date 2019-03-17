@@ -9,7 +9,7 @@ import java.util.Random;
  * Exercise 1.2.1:
  * Write a Point2D client that takes an integer value N from the command line,
  * generates N random points in the unit square,
- * and computes the distance separating the closest pair of points
+ * and computes the distance separating the closest pair of points.
  *
  *
  * In mathematics, a unit square is a square whose sides have length 1.
