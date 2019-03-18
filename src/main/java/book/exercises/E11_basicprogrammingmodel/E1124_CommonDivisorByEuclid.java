@@ -12,6 +12,10 @@ import edu.princeton.cs.introcs.StdOut;
  * call on the recursive method. Use your program to compute the greatest common divisor
  * or 1111111 and 1234567.
  *
+ * Exercise 1.1.25:
+ * Use mathematical induction to prove that Euclid's algorithm computes the greatest common
+ * divisor of any pair of non negative integers p and q.
+ *
  */
 public class E1124_CommonDivisorByEuclid {
 
