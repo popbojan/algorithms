@@ -2,7 +2,7 @@ package book.exercises.E11_basicprogrammingmodel;
 
 /**
  *
- * Exercise 1.1.30:
+ * Exercise 1.1.27:
  * Binomial distribution. Estimate the number of recursive calls that would be used by the code:
  *
  *  public static double binomial(int N, int k, double p)
