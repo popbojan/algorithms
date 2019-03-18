@@ -1,6 +1,19 @@
 package book.exercises.E11_basicprogrammingmodel;
 
 /**
+ *
+ * Exercise 1.1.30:
+ * Binomial distribution. Estimate the number of recursive calls that would be used by the code:
+ *
+ *  public static double binomial(int N, int k, double p)
+ *  {
+ *      if ((N == 0) || (k < 0)) return 1.0;
+ *      return (1.0 - p) * binomial (N-1, k) + p * binomial * (N - 1, k - 1);
+ *  }
+ *
+ * to compute binomial(100, 50). Develop a better implementation that is based on saving computed
+ * values in an array.
+ *
  * A binomial coefficient C(n, k) gives the number of ways, disregarding order,
  * that k object can be chosen from among n objects;
  * more formally,
