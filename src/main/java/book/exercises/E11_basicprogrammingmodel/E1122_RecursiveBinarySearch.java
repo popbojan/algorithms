@@ -13,7 +13,11 @@ import edu.princeton.cs.introcs.StdOut;
  * Exercise 1.1.23:
  * Add to the BinarySearch test client the ability to respond to a second argument: + to print
  * numbers from standard input that are not in the whitelist, - to print number that are in the
- * whitelist
+ * whitelist.
+ *
+ * Exercise 1.1.28:
+ * Remove duplicates. Modify the test client in BinarySearch to remove any duplicate keys in the
+ * whitelist after the sort.
  *
  * Exercise 1.1.29:
  * Equal keys. Add to BinarySearch a static method rank() that takes a key and a sorted array
