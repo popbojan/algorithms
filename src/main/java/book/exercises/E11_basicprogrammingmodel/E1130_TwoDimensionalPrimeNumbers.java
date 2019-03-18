@@ -1,5 +1,13 @@
 package book.exercises.E11_basicprogrammingmodel;
 
+/**
+ *
+ * Exercise 1.1.30:
+ * Array exercise. Write a code fragment that creates an N-by-N boolean array a[][]
+ * such that a [i][j] is true if i and j are relatively prime (have no common factors),
+ * and false otherwise.
+ *
+ */
 public class E1130_TwoDimensionalPrimeNumbers {
 
     private final int LENGTH = 10;
