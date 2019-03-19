@@ -2,6 +2,17 @@ package book.exercises.E11_basicprogrammingmodel;
 
 import edu.princeton.cs.introcs.StdOut;
 
+/**
+ *
+ * Exercise 1.1.11:
+ * Write a code fragment that prints the contents of a two-dimensional boolean array,
+ * using * to represent true and a space to represent false. Include row and column numbers.
+ *
+ * Exercise 1.1.13:
+ * Write a code fragment to pint the transposition (rows and columns changed) of a two-dimensional
+ * array with M rows and N columns
+ *
+ */
 public class E1111_PrintTwoDimensionalBooleanArray {
 
     int M, N;
