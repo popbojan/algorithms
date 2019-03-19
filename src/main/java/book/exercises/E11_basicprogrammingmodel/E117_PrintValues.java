@@ -55,9 +55,31 @@ import edu.princeton.cs.introcs.StdOut;
  *    return exR1(n - 3) + n + exR1(n - 2) + n;
  *
  * Exercise 1.1.17:
+ * Criticize the following recursive function:
  *
+ *    public static String exR2(int n)
+ *    {
+ *        String s = exR2(n-3) + n + exR2(n-2) + n;
+ *        if (n <= 0) return "";
+ *        return s;
+ *    }
+ *
+ * Answer: The base case will never be reached. A call to exR2(3) will result in calls to
+ * exR2(2), exR2(-3), exR3(-6) and so forth until a StackOverFlowError occurs.
  *
  * Exercise 1.1.18:
+ * Consider the following recursive function:
+ *
+ *    public static int mystery(int a, int b)
+ *    {
+ *        if(b == 0) return 0;
+ *        if(b % 2 == 0) return mystery(a+a, b/2);
+ *        return mystery(a+a, b/2) + a;
+ *    }
+ *
+ * What are the values of mystery(2, 25) and mystery(3, 11)? Given the positive integers a
+ * and b, describe what value mystery(a, b) computes. Answer the sam question, but replace
+ * + with * and replace return 0 with return 1.
  *
  */
 public class E117_PrintValues {
