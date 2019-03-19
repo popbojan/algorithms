@@ -2,6 +2,64 @@ package book.exercises.E11_basicprogrammingmodel;
 
 import edu.princeton.cs.introcs.StdOut;
 
+/**
+ * Exercise: 1.1.7:
+ * Give the value printed by each of the following code fragments:
+ *
+ * a.
+ *    double t = 9.0
+ *    while (Math.abs(t - 9.0/t) > .001)
+ *        t = (9.0/t + t) / 2.0;
+ *    StdOut.printf("%.5f\n", t);
+ *
+ * b.
+ *    int sum = 0;
+ *    for (int i = 1; i < 1000; i++)
+ *        for (int j = 0; j < i; j++)
+ *            sum++;
+ *    StdOut.println(sum);
+ *
+ * c.
+ *    int sum = 0;
+ *    for (int i = 1; i < 1000; i *= 2) {
+ *        for (int j = 0; j < 1000; j++) {
+ *            sum++;
+ *    StdOut.println(sum);
+ *
+ * Exercise 1.1.8:
+ * What do each of the following print?
+ *
+ * a.
+ *    System.out.println('b');
+ * b.
+ *    System.out.println('b' + 'c');
+ * c.
+ *    System.out.println((char) ('a' + 4));
+ *
+ * Exercise 1.1.12:
+ * What does the following code fragment print?
+ *
+ *    int[] a = new int[10];
+ *    for (int i = 0; i < 10; i++)
+ *        a[i] = 9 - i;
+ *    for (int i = 0; i < 10; i++) {
+ *        a[i] = a[a[i]];
+ *    for (int i = 0; i < 10; i++) {
+ *        System.out.println(i);
+ *
+ * Exercise 1.1.16:
+ * Give the value of exR1(6):
+ *
+ *    public static String exR1(int n) {
+ *        if (n <= 0) return "";
+ *    return exR1(n - 3) + n + exR1(n - 2) + n;
+ *
+ * Exercise 1.1.17:
+ *
+ *
+ * Exercise 1.1.18:
+ *
+ */
 public class E117_PrintValues {
 
     public void printA() {
