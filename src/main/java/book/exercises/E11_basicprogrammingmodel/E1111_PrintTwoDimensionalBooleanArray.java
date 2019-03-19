@@ -10,7 +10,7 @@ import edu.princeton.cs.introcs.StdOut;
  *
  * Exercise 1.1.13:
  * Write a code fragment to pint the transposition (rows and columns changed) of a two-dimensional
- * array with M rows and N columns
+ * array with M rows and N columns.
  *
  */
 public class E1111_PrintTwoDimensionalBooleanArray {
