@@ -1,5 +1,6 @@
 package book.exercises.E11_basicprogrammingmodel;
 
+import book.exercises.E11_basicprogrammingmodel.helper.E1121_TableRowObject;
 import edu.princeton.cs.introcs.StdOut;
 
 /**

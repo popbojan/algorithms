@@ -1,7 +1,7 @@
 package unit.book.exercises.E11_basicprogrammingmodel;
 
 import book.exercises.E11_basicprogrammingmodel.E1121_PrintFTableAverageValues;
-import book.exercises.E11_basicprogrammingmodel.E1121_TableRowObject;
+import book.exercises.E11_basicprogrammingmodel.helper.E1121_TableRowObject;
 import org.junit.Before;
 import org.junit.Test;
 

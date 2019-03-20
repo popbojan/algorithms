@@ -1,4 +1,4 @@
-package book.exercises.E11_basicprogrammingmodel;
+package book.exercises.E11_basicprogrammingmodel.helper;
 
 /**
  *
