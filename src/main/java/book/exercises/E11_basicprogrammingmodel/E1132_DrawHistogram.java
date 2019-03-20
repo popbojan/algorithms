@@ -149,15 +149,18 @@ public class E1132_DrawHistogram extends Application {
     }
 
     public double[] getIntervals(int N, double l, double r) {
-        double[] intervals = getIntervalsFrom(N, l, r);
+        double[] intervals = getNIntervalsFromRange(N, l, r);
         for (int i = 0; i < intervals.length; i++) {
             System.out.println(intervals[i]);
         }
         return intervals;
     }
 
-    private double[] getIntervalsFrom(int N, double l, double r) {
-        double range = (l > r) ? (l - r) : (r - l);
+    /**
+     * yields N intervals in the range from l to r
+     */
+    private double[] getNIntervalsFromRange(int N, double l, double r) {
+        double range = Math.abs(r - l);
         double rangeStart = (l > r) ? r : l;
         double steps = N - ONE; // always one less than the total amount of numbers
         double step = range / steps;
