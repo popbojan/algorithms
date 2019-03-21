@@ -22,8 +22,9 @@ public class E122_PrintAllIntervalPairsThatIntersectTests {
     @Test
     public void test_readNIntervalsEachDefinedByAPairOfDoubleValues() {
 
-        double[][] arrayWithPairOfDoubleValues = new double[][]{{1.0, 2.2}, {2.7, 12.3}, {4.8, 5.1}, {6.0, 6.1}, {11.9, 10.3}, {10.9, 8.4}};
+        double[][] arrayWithPairOfDoubleValues = new double[][]{{1.0, 2.2}, {2.7, 12.3}, {4.8, 5.1}, {6.0, 6.1}, {11.9, 10.3}, {10.9, 8.4},
+                {3.1, 3.3}, {8.7, 8.5}, {9.1, 6.1}, {7.0, 4.5}, {11.1, 10.0}, {10.7, 10.6}};
 
-        paipti.printPairsThatIntersect(N);
+        paipti.printPairsThatIntersect(N, arrayWithPairOfDoubleValues);
     }
 }
