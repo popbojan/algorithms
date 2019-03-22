@@ -1,22 +1,20 @@
 package unit.book.exercises.E12_dataabstraction;
 
-import book.exercises.E12_dataabstraction.E122_PrintAllIntervalPairsThatIntersect;
+import book.exercises.E12_dataabstraction.E122_Interval1D;
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.MockitoAnnotations;
 
-import java.lang.reflect.Array;
+public class E122_Interval1DTests {
 
-public class E122_PrintAllIntervalPairsThatIntersectTests {
-
-    private E122_PrintAllIntervalPairsThatIntersect paipti;
+    private E122_Interval1D paipti;
     private final int N = 10;
 
     @Before
     public void setup() {
         MockitoAnnotations.initMocks(this);
 
-        paipti = new E122_PrintAllIntervalPairsThatIntersect();
+        paipti = new E122_Interval1D();
     }
 
     @Test

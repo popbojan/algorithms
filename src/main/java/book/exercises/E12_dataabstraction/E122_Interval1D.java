@@ -6,7 +6,7 @@ package book.exercises.E12_dataabstraction;
  * reads N intervals (each defined by a pair of double values) from standard input,
  * and prints all pairs that intersect.
  */
-public class E122_PrintAllIntervalPairsThatIntersect {
+public class E122_Interval1D {
 
     final int LEFT = 0;
     final int RIGHT = 1;
