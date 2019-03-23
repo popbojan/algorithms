@@ -2,7 +2,15 @@ package book.exercises.E12_dataabstraction;
 
 import book.exercises.E12_dataabstraction.helper.MyInterval2D;
 import edu.princeton.cs.algorithms.Interval1D;
+import javafx.application.Application;
+import javafx.scene.Group;
+import javafx.scene.PerspectiveCamera;
+import javafx.scene.Scene;
+import javafx.scene.paint.Color;
+import javafx.scene.shape.Rectangle;
+import javafx.stage.Stage;
 
+import java.util.List;
 import java.util.Random;
 
 /**
@@ -30,12 +38,54 @@ import java.util.Random;
  * The uniform distribution is a continuous probability distribution and is
  * concerned with events that are equally likely to occur.
  */
-public class E123_Interval2DClient {
+public class E123_Interval2DClient extends Application {
 
     private Random random;
 
     public E123_Interval2DClient() {
         random = new Random();
+    }
+
+    @Override
+    public void start(Stage stage) throws Exception {
+        List<String> parameters = getParameters().getRaw();
+        int N = Integer.parseInt(parameters.get(0));
+        double min = Double.parseDouble(parameters.get(1));
+        double max = Double.parseDouble(parameters.get(2));
+
+        Rectangle uniteSquare = new Rectangle();
+        uniteSquare.setFill(null);
+        uniteSquare.setX(0.0);
+        uniteSquare.setY(0.0);
+        uniteSquare.setWidth(600.0);
+        uniteSquare.setHeight(600.0);
+
+        Group root = new Group(uniteSquare);
+
+        MyInterval2D[] intervals2D = getN2DIntervals(N, min, max);
+        for (int i = 0; i < N; i++) {
+            Rectangle r = new Rectangle();
+            r.setFill(null);
+            r.setStroke(Color.BLACK);
+            r.setX(intervals2D[i].getX().left());
+            r.setY(intervals2D[i].getY().left());
+            r.setWidth(intervals2D[i].getX().right() - intervals2D[i].getX().left());
+            r.setHeight(intervals2D[i].getY().right() - intervals2D[i].getY().left());
+            root.getChildren().add(r);
+        }
+
+        Scene scene = new Scene(root, 600, 600);
+        stage.setTitle("Drawing 2D intervals");
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    public void drawNRandom2DIntervals(int N, double min, double max) {
+        String[] args = new String[3];
+        args[0] = String.valueOf(N);
+        args[1] = String.valueOf(min);
+        args[2] = String.valueOf(max);
+        launch(args);
     }
 
     public void printIntervalsThatIntersectAndThatAreContainedInOneAnother(int N, double min, double max) {
