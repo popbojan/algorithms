@@ -3,11 +3,13 @@ package book.exercises.E12_dataabstraction;
 import book.exercises.E12_dataabstraction.helper.MyInterval2D;
 import edu.princeton.cs.algorithms.Interval1D;
 import javafx.application.Application;
-import javafx.scene.Group;
-import javafx.scene.PerspectiveCamera;
+import javafx.beans.binding.Bindings;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
+import javafx.scene.transform.Scale;
 import javafx.stage.Stage;
 
 import java.util.List;
@@ -53,14 +55,16 @@ public class E123_Interval2DClient extends Application {
         double min = Double.parseDouble(parameters.get(1));
         double max = Double.parseDouble(parameters.get(2));
 
+        Pane root = new Pane();
+        transformPane(root);
+
         Rectangle uniteSquare = new Rectangle();
         uniteSquare.setFill(null);
         uniteSquare.setX(0.0);
         uniteSquare.setY(0.0);
         uniteSquare.setWidth(600.0);
         uniteSquare.setHeight(600.0);
-
-        Group root = new Group(uniteSquare);
+        root.getChildren().add(uniteSquare);
 
         MyInterval2D[] intervals2D = getN2DIntervals(N, min, max);
         for (int i = 0; i < N; i++) {
@@ -78,6 +82,19 @@ public class E123_Interval2DClient extends Application {
         stage.setTitle("Drawing 2D intervals");
         stage.setScene(scene);
         stage.show();
+    }
+
+    private void transformPane(Parent root) {
+        Scale scale = new Scale();
+        scale.setX(1);
+        scale.setY(-1);
+        scale.pivotYProperty().bind(Bindings.createDoubleBinding(() ->
+                        root.getBoundsInLocal().getMinY() + root.getBoundsInLocal().getHeight() / 2,
+                root.boundsInLocalProperty()));
+        root.getTransforms().add(scale);
+
+        root.setOnMouseClicked(e ->
+                System.out.printf("Mouse clicked at [%.1f, %.1f]%n", e.getX(), e.getY()));
     }
 
     public void drawNRandom2DIntervals(int N, double min, double max) {

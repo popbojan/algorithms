@@ -31,7 +31,7 @@ public class E123_Interval2DClientTests {
     @Ignore
     public void test_drawNRandom2DIntervals() {
 
-        i2dc.drawNRandom2DIntervals(10, 128.2, 566.67);
+        i2dc.drawNRandom2DIntervals(10, 128.2, 466.67);
     }
 
 }
