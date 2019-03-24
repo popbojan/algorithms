@@ -10,6 +10,9 @@ package book.exercises.E12_dataabstraction;
  */
 public class E126_CircularRotationString {
 
-    public void check() {
+    public boolean check(String s, String t) {
+        return s != null && t != null && s.length() == t.length() && (s + s).contains(t);
+
+
     }
 }
