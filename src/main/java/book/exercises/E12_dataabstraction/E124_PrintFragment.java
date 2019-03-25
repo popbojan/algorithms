@@ -23,6 +23,17 @@ package book.exercises.E12_dataabstraction;
  * object that was used to invoke them). This code ignores the objects returned and
  * just prints the original string. To print "WORLD", use s = s.toUpperCase() and
  * s = s.substring(6, 11).
+ * <p>
+ * Exercise 1.2.7:
+ * What does the following recursive function return?
+ * public static String mystery(String s)
+ * {
+ * int N = s.length();
+ * if(N <= 1) return s;
+ * String a = s.substring(0, N/2);
+ * String b = s.substring(N/2, N);
+ * return mystery(b) + mystery(a);
+ * }
  */
 public class E124_PrintFragment {
 
@@ -39,5 +50,13 @@ public class E124_PrintFragment {
         s.toUpperCase();
         s.substring(6, 11);
         System.out.println(s);
+    }
+
+    public String e_127_mystery(String s) {
+        int N = s.length();
+        if (N <= 1) return s;
+        String a = s.substring(0, N / 2);
+        String b = s.substring(N / 2, N);
+        return e_127_mystery(b) + e_127_mystery(a);
     }
 }

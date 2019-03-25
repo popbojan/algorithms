@@ -1,6 +1,7 @@
 package unit.book.exercises.E12_dataabstraction;
 
 import book.exercises.E12_dataabstraction.E124_PrintFragment;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.MockitoAnnotations;
@@ -26,6 +27,13 @@ public class E124_PrintFragmentTests {
     public void test_e_125_printFragment() {
 
         pf.e_125_printFragment();
+    }
+
+    @Test
+    public void test_e_127_mystery() {
+
+        String result = pf.e_127_mystery("pera");
+        Assert.assertEquals("arep", result);
     }
 
 }
