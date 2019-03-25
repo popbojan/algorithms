@@ -34,6 +34,14 @@ package book.exercises.E12_dataabstraction;
  * String b = s.substring(N/2, N);
  * return mystery(b) + mystery(a);
  * }
+ *
+ * Exercise 1.2.8:
+ * Suppose that a[] and b[] are each inter arrays consisting of millions of integers.
+ * What does the follow code do? Is it reasonably efficient?
+ * int[] t = a; a = b; b = t;
+ *
+ * Answer: It swaps them. It could hardly be more efficient because it does so by
+ * copying references, so that it is not necessary to copy millions of elements.
  */
 public class E124_PrintFragment {
 
