@@ -22,5 +22,11 @@ public class E126_CircularRotationStringTests {
         boolean result =crs.check("erazderap", "perazdera" );
         Assert.assertTrue(result);
     }
+
+    @Test
+    public void test_checkStrngsByTheBookHint() {
+        boolean result =crs.checkByTheBookHint("erazderap", "perazdera" );
+        Assert.assertTrue(result);
+    }
 }
 
