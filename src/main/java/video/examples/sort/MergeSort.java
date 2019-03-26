@@ -8,7 +8,7 @@ public class MergeSort extends Sort {
 
         for (int k = lo; k <= hi; k++) {
             aux[k] = a[k];
-            System.out.println(aux[k]);
+            //System.out.println(aux[k]);
         }
 
         int i = lo, j = mid + 1;
@@ -18,12 +18,12 @@ public class MergeSort extends Sort {
             } else if (j > hi) { // if j element is exhausted move to i
                 a[k] = aux[i++];
             } else if (less(aux[j], aux[i])) {
-                System.out.println("aux of  i" + aux[i]);
-                System.out.println("aux of j" + aux[j]);
+                //System.out.println("aux of  i" + aux[i]);
+                //System.out.println("aux of j" + aux[j]);
                 a[k] = aux[j++];
             } else {
-                System.out.println("aux of  i" + aux[i]);
-                System.out.println("aux of j" + aux[j]);
+                //System.out.println("aux of  i" + aux[i]);
+                //System.out.println("aux of j" + aux[j]);
                 a[k] = aux[i++];
             }
         }
