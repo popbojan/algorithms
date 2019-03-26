@@ -11,6 +11,7 @@ import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.transform.Scale;
 import javafx.stage.Stage;
+import utils.FXDrawHelper;
 
 import java.util.List;
 import java.util.Random;
@@ -56,7 +57,7 @@ public class E123_Interval2DClient extends Application {
         double max = Double.parseDouble(parameters.get(2));
 
         Pane root = new Pane();
-        transformPane(root);
+        FXDrawHelper.transformPane(root);
 
         Rectangle uniteSquare = new Rectangle();
         uniteSquare.setFill(null);
@@ -82,19 +83,6 @@ public class E123_Interval2DClient extends Application {
         stage.setTitle("Drawing 2D intervals");
         stage.setScene(scene);
         stage.show();
-    }
-
-    private void transformPane(Parent root) {
-        Scale scale = new Scale();
-        scale.setX(1);
-        scale.setY(-1);
-        scale.pivotYProperty().bind(Bindings.createDoubleBinding(() ->
-                        root.getBoundsInLocal().getMinY() + root.getBoundsInLocal().getHeight() / 2,
-                root.boundsInLocalProperty()));
-        root.getTransforms().add(scale);
-
-        root.setOnMouseClicked(e ->
-                System.out.printf("Mouse clicked at [%.1f, %.1f]%n", e.getX(), e.getY()));
     }
 
     public void drawNRandom2DIntervals(int N, double min, double max) {
