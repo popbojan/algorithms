@@ -2,12 +2,15 @@ package unit.book.exercises.E12_dataabstraction;
 
 import book.exercises.E12_dataabstraction.E1210_VisualCounter;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.mockito.MockitoAnnotations;
 
 public class E1210_VisualCounterTests {
 
     E1210_VisualCounter vc;
+    final int N = 100;
+    final int max = 10;
 
     @Before
     public void setup() {
@@ -17,10 +20,15 @@ public class E1210_VisualCounterTests {
     }
 
     @Test
-    public void test_createTallyPlot() {
-        vc.createTallyPlot();
+    @Ignore
+    public void test_drawTallyPlot() {
+        vc.drawTallyPlot(N, max);
     }
 
+    @Test
+    public void test_printTallyPlot() {
+        vc.printTallyPlot(N, max);
+    }
 }
 
 
