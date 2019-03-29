@@ -4,12 +4,10 @@ import book.exercises.E12_dataabstraction.E1211_SmartDate;
 import book.exercises.E12_dataabstraction.helper.SmartDate;
 import book.exercises.E12_dataabstraction.helper.SmartDateException;
 import org.junit.Before;
-import org.junit.Ignore;
 import org.junit.Test;
 import org.mockito.MockitoAnnotations;
 
-import static junit.framework.Assert.assertEquals;
-import static junit.framework.Assert.fail;
+import static junit.framework.Assert.*;
 
 public class E1211_SmartDateTests {
 
@@ -23,8 +21,7 @@ public class E1211_SmartDateTests {
     }
 
     @Test
-    @Ignore
-    public void test_creteInvalidDate() {
+    public void test_creteDate_dateInvalid_throwsException() {
         try {
             SmartDate result = sd.createDate(2, 30, 1984);
             System.out.println(result.toString());
@@ -35,9 +32,20 @@ public class E1211_SmartDateTests {
     }
 
     @Test
-    @Ignore
-    public void test_creteValidDate() throws SmartDateException {
+    public void test_creteDate() throws SmartDateException {
         SmartDate result = sd.createDate(2, 29, 1984);
         System.out.println(result.toString());
+    }
+
+    @Test
+    public void test_createDate_dayOfTheWeek_wrong() throws SmartDateException {
+        SmartDate result = sd.createDate(8, 12, 2002);
+        assertNotSame("Sunday", result.dayOfTheWeek());
+    }
+
+    @Test
+    public void test_createDate_dayOfTheWeek() throws SmartDateException {
+        SmartDate result = sd.createDate(8, 12, 2001);
+        assertEquals("Sunday", result.dayOfTheWeek());
     }
 }

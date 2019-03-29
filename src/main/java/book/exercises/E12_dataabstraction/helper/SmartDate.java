@@ -14,7 +14,7 @@ public class SmartDate extends DateAPIFromTheBook {
     }
 
     private static boolean valid(int month, int day, int year) {
-        int[] maxNumberOfDaysPerMonth = {31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+        final int[] maxNumberOfDaysPerMonth = {31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
         if (year < 0) {
             return false;
         }
@@ -32,5 +32,16 @@ public class SmartDate extends DateAPIFromTheBook {
             }
         }
         return true;
+    }
+
+    public String dayOfTheWeek() {
+        final String[] DAYSOFTHEWEEK = {"Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"};
+        int tmpMonth = month;
+        int tmpYaer = year;
+        if (tmpMonth < 3) {
+            tmpMonth += 12;
+            tmpYaer -= 1;
+        }
+        return DAYSOFTHEWEEK[((day + (((tmpMonth + 1) * 26) / 10) + tmpYaer % 100 + (tmpYaer % 100 / 4) + (tmpYaer / 400)) + (tmpYaer / 20) - 1) % 7];
     }
 }
