@@ -44,4 +44,28 @@ public class Transaction {
     public String toString() {
         return "Article: [" + article + "] Amount: [" + amount + "] Price: [" + price + "]";
     }
+
+    @Override
+    public boolean equals(Object x) {
+        if (this == x) {
+            return true;
+        }
+        if (x == null) {
+            return false;
+        }
+        if (this.getClass() != x.getClass()) {
+            return false;
+        }
+        Transaction that = (Transaction) x;
+        if (!this.article.equals(that.article)) {
+            return false;
+        }
+        if (this.amount != that.amount) {
+            return false;
+        }
+        if (this.price != that.price) {
+            return false;
+        }
+        return true;
+    }
 }

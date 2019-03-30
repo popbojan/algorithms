@@ -3,12 +3,12 @@ package unit.book.exercises.E12_dataabstraction;
 import book.exercises.E12_dataabstraction.E1213_Transaction;
 import book.exercises.E12_dataabstraction.TransactionException;
 import book.exercises.E12_dataabstraction.helper.Transaction;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.MockitoAnnotations;
 
-import static junit.framework.Assert.assertEquals;
-import static junit.framework.Assert.fail;
+import static junit.framework.Assert.*;
 
 public class E1213_TransactionTests {
 
@@ -47,5 +47,33 @@ public class E1213_TransactionTests {
     public void test_creteTransaction() throws TransactionException {
         Transaction result = t.createTransaction("Salt", 29, 200.03);
         System.out.println(result.toString());
+    }
+
+    @Test
+    public void test_creteTransaction_t2IsObject_transactionAreNotEqual() throws TransactionException {
+        Transaction t1 = t.createTransaction("Salt", 29, 200.03);
+        Object t2 = new Object();
+        System.out.println(t1.toString());
+        System.out.println(t2.toString());
+        assertFalse(t1.equals(t2));
+    }
+
+    @Test
+    public void test_creteTransaction_differentAmount_transactionAreNotEqual() throws TransactionException {
+        Transaction t1 = t.createTransaction("Salt", 29, 200.03);
+        Transaction t2 = t.createTransaction("Salt", 22, 200.03);
+        System.out.println(t1.toString());
+        System.out.println(t2.toString());
+        assertFalse(t1.equals(t2));
+    }
+
+
+    @Test
+    public void test_creteTransaction_transactionsAreEqual() throws TransactionException {
+        Transaction t1 = t.createTransaction("Salt", 29, 200.03);
+        Transaction t2 = t.createTransaction("Salt", 29, 200.03);
+        System.out.println(t1.toString());
+        System.out.println(t2.toString());
+        assertTrue(t1.equals(t2));
     }
 }
