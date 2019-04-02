@@ -1,9 +1,8 @@
 package unit.book.exercises.E12_dataabstraction;
 
 import book.exercises.E12_dataabstraction.E1213_Transaction;
-import book.exercises.E12_dataabstraction.TransactionException;
+import book.exercises.E11_basicprogrammingmodel.helper.TransactionException;
 import book.exercises.E12_dataabstraction.helper.Transaction;
-import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.MockitoAnnotations;

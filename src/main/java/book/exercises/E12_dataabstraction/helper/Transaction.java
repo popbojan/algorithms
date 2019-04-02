@@ -1,6 +1,6 @@
 package book.exercises.E12_dataabstraction.helper;
 
-import book.exercises.E12_dataabstraction.TransactionException;
+import book.exercises.E11_basicprogrammingmodel.helper.TransactionException;
 
 import java.util.Arrays;
 

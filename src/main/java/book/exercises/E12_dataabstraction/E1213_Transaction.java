@@ -1,5 +1,6 @@
 package book.exercises.E12_dataabstraction;
 
+import book.exercises.E11_basicprogrammingmodel.helper.TransactionException;
 import book.exercises.E12_dataabstraction.helper.Transaction;
 
 /**
