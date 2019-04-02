@@ -7,7 +7,7 @@ import org.junit.Before;
 import org.junit.Test;
 import org.mockito.MockitoAnnotations;
 
-import static junit.framework.Assert.*;
+import static org.junit.Assert.*;
 
 public class E1211_SmartDateTests {
 
