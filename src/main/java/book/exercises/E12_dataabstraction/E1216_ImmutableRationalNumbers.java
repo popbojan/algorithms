@@ -13,9 +13,9 @@ package book.exercises.E12_dataabstraction;
  * boolean equals(Rational that) is this number equal to that?
  * String toString() string representation
  * <p>
- * You do not have to worry about testing for overflow (seee EXERCISE 1.2.17), but use as
+ * You do not have to worry about testing for overflow (see EXERCISE 1.2.17), but use as
  * instance variables two long values that represent the numerator and denominator to
- * limit the possibility of overflow. Use Euclid's algorith (see page 4) to ensure that the
+ * limit the possibility of overflow. Use Euclid's algorithm (see page 4) to ensure that the
  * numerator and denominator never have any common factors. Include a test client that
  * exercises all of your methods.
  */
