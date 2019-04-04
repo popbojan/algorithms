@@ -2,7 +2,7 @@ package unit.book.exercises.E12_dataabstraction;
 
 import book.exercises.E12_dataabstraction.E1211_SmartDate;
 import book.exercises.E12_dataabstraction.helper.SmartDate;
-import book.exercises.E12_dataabstraction.helper.SmartDateException;
+import book.exercises.E12_dataabstraction.helper.exception.SmartDateException;
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.MockitoAnnotations;

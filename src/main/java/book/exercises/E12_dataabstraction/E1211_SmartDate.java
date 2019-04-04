@@ -1,7 +1,7 @@
 package book.exercises.E12_dataabstraction;
 
 import book.exercises.E12_dataabstraction.helper.SmartDate;
-import book.exercises.E12_dataabstraction.helper.SmartDateException;
+import book.exercises.E12_dataabstraction.helper.exception.SmartDateException;
 
 /**
  * Exercise 1.2.11:

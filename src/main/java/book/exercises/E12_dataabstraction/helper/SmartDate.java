@@ -1,5 +1,7 @@
 package book.exercises.E12_dataabstraction.helper;
 
+import book.exercises.E12_dataabstraction.helper.exception.SmartDateException;
+
 public class SmartDate extends DateAPIFromTheBook {
 
     private SmartDate(int month, int day, int year) {
