@@ -1,5 +1,7 @@
 package book.exercises.E12_dataabstraction.helper;
 
+import book.exercises.E12_dataabstraction.helper.exception.CommonFactorsException;
+
 /**
  * Rational Number can be made by dividing two integers.
  * Rational Number is a number that can be in the form p/q
@@ -17,10 +19,20 @@ public class Rational {
     private int numerator;
     private int denominator;
 
-    Rational(int numerator, int denominator) {
-        //TODO:
-        // make constructor private and the static method which checks common factors and
-        // that can get instance of this object
+    private Rational(int numerator, int denominator){
+    }
+
+    public static Rational getRational(int numerator, int denominator) throws CommonFactorsException {
+        if(haveCommonFactors(numerator, denominator)){
+            throw new CommonFactorsException("Numerator and denominator can't have any commom factors!");
+        }
+        return new Rational(numerator, denominator);
+
+    }
+
+    private static boolean haveCommonFactors(int numerator, int denominator) {
+        // TODO: Implement commom factors check
+        return false;
     }
 
     public Rational plus(Rational b) {
