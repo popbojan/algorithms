@@ -24,7 +24,7 @@ public class Rational {
 
     public static Rational getRational(int numerator, int denominator) throws CommonFactorsException {
         if(haveCommonFactors(numerator, denominator)){
-            throw new CommonFactorsException("Numerator and denominator can't have any commom factors!");
+            throw new CommonFactorsException("Numerator and denominator can't have any common factors!");
         }
         return new Rational(numerator, denominator);
 
