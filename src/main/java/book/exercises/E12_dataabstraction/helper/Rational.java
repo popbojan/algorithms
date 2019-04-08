@@ -6,10 +6,10 @@ import book.exercises.E12_dataabstraction.helper.exception.CommonFactorsExceptio
  * Rational Number can be made by dividing two integers.
  * Rational Number is a number that can be in the form p/q
  * where p and q are integers and q is not equal to zero.
- *
+ * <p>
  * Square root of 2 and Pi are irrational, cause they cannot be written
  * as a simple fraction(p/q).
- *
+ * <p>
  * Numerator (p) is the top number in a faction. Shows how many parts we have.
  * Denominator (q) is the bottom number and it shows how many equal parts the
  * item is divided into
@@ -19,23 +19,22 @@ public class Rational {
     private int numerator;
     private int denominator;
 
-    private Rational(int numerator, int denominator){
+    private Rational(int numerator, int denominator) {
+        this.numerator = numerator;
+        this.denominator = denominator;
     }
 
     public static Rational getRational(int numerator, int denominator) throws CommonFactorsException {
-        if(haveCommonFactors(numerator, denominator)){
+        if (haveCommonFactors(numerator, denominator)) {
             throw new CommonFactorsException("Numerator and denominator can't have any common factors!");
         }
         return new Rational(numerator, denominator);
 
     }
 
-    private static boolean haveCommonFactors(int numerator, int denominator) {
-        // TODO: Implement commom factors check
-        return false;
-    }
-
-    public Rational plus(Rational b) {
+    public Rational plus(Rational that) {
+        int result = leastCommonMultiplier(this.denominator, that.denominator);
+        System.out.println(result);
         throw new RuntimeException("Not implemented yet");
     }
 
@@ -59,5 +58,54 @@ public class Rational {
     @Override
     public String toString() {
         throw new RuntimeException("Not implemented yet");
+    }
+
+    public int getNumerator() {
+        return numerator;
+    }
+
+    public int getDenominator() {
+        return denominator;
+    }
+
+    private static boolean haveCommonFactors(int numerator, int denominator) {
+        int commonDivisor = gcd(numerator, denominator);
+        //System.out.println(commonDivisor);
+        return commonDivisor > 1;
+    }
+
+    /**
+     * Note* When dividend(e.g. 8) is smaller than divisor (e.g.32),
+     * then mod is always equal to the dividend, because
+     * bigger number cannot be inserted into smaller
+     * and get quotient
+     * e.g 7-inches screw cannot be inserted into 3-inches metal hole
+     */
+    private static int gcd(int p, int q) {
+        //StdOut.println("p: [" + p + "]  q: [" + q + "]");
+        if (q == 0) {
+            return p;
+        }
+        int r = p % q;
+        return gcd(q, r);
+    }
+
+    /**
+     * @param p
+     * @param q
+     * @return leastCommonMultiplier if there is one, if not return -1
+     */
+    private int leastCommonMultiplier(int p, int q) {
+        // swap
+        if (p < q) {
+            int temp = p;
+            p = q;
+            q = temp;
+        }
+        int r = p % q;
+        if (r == 0) {
+            return p / q;
+        } else
+            return -1;
     }
 }

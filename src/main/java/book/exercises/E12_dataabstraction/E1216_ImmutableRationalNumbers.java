@@ -1,5 +1,8 @@
 package book.exercises.E12_dataabstraction;
 
+import book.exercises.E12_dataabstraction.helper.Rational;
+import book.exercises.E12_dataabstraction.helper.exception.CommonFactorsException;
+
 /**
  * Rational numbers. Implement an immutable data type Rational for rational numbers
  * that supports addition, subtraction, multiplication and division.
@@ -21,6 +24,11 @@ package book.exercises.E12_dataabstraction;
  */
 public class E1216_ImmutableRationalNumbers {
 
-    public void plus() {
+    public Rational createRational(int numerator, int denominator) throws CommonFactorsException {
+        return Rational.getRational(numerator, denominator);
+    }
+
+    public Rational plus(Rational r1, Rational r2) {
+        return r1.plus(r2);
     }
 }
