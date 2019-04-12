@@ -32,10 +32,20 @@ public class Rational {
 
     }
 
-    public Rational plus(Rational that) {
-        int result = leastCommonMultiplier(this.denominator, that.denominator);
-        System.out.println(result);
-        throw new RuntimeException("Not implemented yet");
+    private Rational plus(Rational that) {
+
+        // Find gcd of numerators and denominators
+        int numeratorCommonFactor = gcd(this.numerator, that.numerator);
+        int denominatorCommonFactor = gcd(this.denominator, that.denominator);
+
+        // add cross-product terms for numerator
+        int numeratorA = (this.numerator / numeratorCommonFactor) * (that.denominator / denominatorCommonFactor);
+        int numeratorB = (that.numerator / numeratorCommonFactor) * (this.denominator / denominatorCommonFactor);
+
+        int resultNumerator = (numeratorA + numeratorB) * numeratorCommonFactor;
+        int resultDenominator = (this.denominator * that.denominator) / denominatorCommonFactor;
+
+        return new Rational(resultNumerator, resultDenominator);
     }
 
     public Rational minus(Rational b) {

@@ -4,7 +4,6 @@ import book.exercises.E12_dataabstraction.E1216_ImmutableRationalNumbers;
 import book.exercises.E12_dataabstraction.helper.Rational;
 import book.exercises.E12_dataabstraction.helper.exception.CommonFactorsException;
 import org.junit.Before;
-import org.junit.Ignore;
 import org.junit.Test;
 import org.mockito.MockitoAnnotations;
 
@@ -38,12 +37,12 @@ public class E1216_ImmutableRationalNumbersTests {
     }
 
     @Test
-    @Ignore
     public void test_plus() throws CommonFactorsException {
         Rational r1 = irn.createRational(7, 2);
         Rational r2 = irn.createRational(51, 8);
         Rational result = irn.plus(r1, r2);
-        assertEquals(2, result.getNumerator());
+        assertEquals(79, result.getNumerator());
+        assertEquals(8, result.getDenominator());
     }
 
 }
