@@ -43,4 +43,8 @@ public class E1216_ImmutableRationalNumbers {
     public Rational divides(Rational r1, Rational r2) {
         return r1.divides(r2);
     }
+
+    public boolean equals(Rational r1, Rational r2) {
+        return r1.equals(r2);
+    }
 }

@@ -68,13 +68,29 @@ public class Rational {
     }
 
     @Override
-    public boolean equals(Object obj) {
-        throw new RuntimeException("Not implemented yet");
+    public boolean equals(Object x) {
+        if (this == x) {
+            return true;
+        }
+        if (x == null) {
+            return false;
+        }
+        if (this.getClass() != x.getClass()) {
+            return false;
+        }
+        Rational that = (Rational) x;
+        if (this.numerator != that.numerator) {
+            return false;
+        }
+        if (this.denominator != that.denominator) {
+            return false;
+        }
+        return true;
     }
 
     @Override
     public String toString() {
-        throw new RuntimeException("Not implemented yet");
+        return "Numerator: [" + numerator + "] Denominator: [" + denominator + "]";
     }
 
     public int getNumerator() {

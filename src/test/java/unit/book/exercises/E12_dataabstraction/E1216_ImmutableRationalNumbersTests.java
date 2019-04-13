@@ -72,4 +72,24 @@ public class E1216_ImmutableRationalNumbersTests {
         assertEquals(51, result.getDenominator());
     }
 
+    @Test
+    public void test_equals() throws CommonFactorsException {
+        Rational r1 = irn.createRational(7, 2);
+        Rational r2 = irn.createRational(7, 2);
+        assertTrue(irn.equals(r1, r2));
+    }
+
+    @Test
+    public void test_equals_notEqual_returnFalse() throws CommonFactorsException {
+        Rational r1 = irn.createRational(7, 2);
+        Rational r2 = irn.createRational(51, 8);
+        assertFalse(irn.equals(r1, r2));
+    }
+
+    @Test
+    public void test_toString() throws CommonFactorsException {
+        Rational r1 = irn.createRational(7, 2);
+        assertEquals("Numerator: [" + 7 + "] Denominator: [" + 2 + "]", r1.toString());
+    }
+
 }
