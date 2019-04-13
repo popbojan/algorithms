@@ -68,8 +68,8 @@ public class E1216_ImmutableRationalNumbersTests {
         Rational r1 = irn.createRational(7, 2);
         Rational r2 = irn.createRational(51, 8);
         Rational result = irn.divides(r1, r2);
-        assertEquals(56, result.getNumerator());
-        assertEquals(102, result.getDenominator());
+        assertEquals(28, result.getNumerator());
+        assertEquals(51, result.getDenominator());
     }
 
 }

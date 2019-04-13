@@ -53,21 +53,18 @@ public class Rational {
     }
 
     public Rational times(Rational that) {
-        // TODO: Improve times to divide rational by it's common factor, if any
+        int aCommonFactor = gcd(this.numerator, that.denominator);
+        int bCommonFactor = gcd(this.denominator, that.numerator);
 
-        int resultNumerator = this.numerator * that.numerator;
-        int resultDenominator = this.denominator * that.denominator;
+        int resultNumerator = (this.numerator / aCommonFactor) * (that.numerator / bCommonFactor);
+        int resultDenominator = (this.denominator / bCommonFactor) * (that.denominator / aCommonFactor);
 
         return new Rational(resultNumerator, resultDenominator);
     }
 
     public Rational divides(Rational that) {
-
-        // this times that reciprocal
-        int resultNumerator = this.numerator * that.denominator;
-        int resultDenominator = this.denominator * that.numerator;
-
-        return new Rational(resultNumerator, resultDenominator);
+        Rational reciprocal = new Rational(that.denominator, that.numerator);
+        return times(reciprocal);
     }
 
     @Override
