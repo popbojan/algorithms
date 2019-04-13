@@ -48,8 +48,8 @@ public class Rational {
         return new Rational(resultNumerator, resultDenominator);
     }
 
-    public Rational minus(Rational b) {
-        throw new RuntimeException("Not implemented yet");
+    public Rational minus(Rational that) {
+        return this.plus(that.negate());
     }
 
     public Rational times(Rational b) {
@@ -117,5 +117,12 @@ public class Rational {
             return p / q;
         } else
             return -1;
+    }
+
+    /**
+     * @return -this
+     */
+    public Rational negate() {
+        return new Rational(-this.numerator, this.denominator);
     }
 }

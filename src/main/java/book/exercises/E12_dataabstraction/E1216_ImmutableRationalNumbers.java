@@ -31,4 +31,8 @@ public class E1216_ImmutableRationalNumbers {
     public Rational plus(Rational r1, Rational r2) {
         return r1.plus(r2);
     }
+
+    public Rational minus(Rational r1, Rational r2) {
+        return r1.minus(r2);
+    }
 }

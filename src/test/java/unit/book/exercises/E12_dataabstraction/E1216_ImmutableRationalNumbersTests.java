@@ -45,4 +45,13 @@ public class E1216_ImmutableRationalNumbersTests {
         assertEquals(8, result.getDenominator());
     }
 
+    @Test
+    public void test_minus() throws CommonFactorsException {
+        Rational r1 = irn.createRational(7, 2);
+        Rational r2 = irn.createRational(51, 8);
+        Rational result = irn.minus(r1, r2);
+        assertEquals(-23, result.getNumerator());
+        assertEquals(8, result.getDenominator());
+    }
+
 }
