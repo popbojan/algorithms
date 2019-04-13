@@ -63,4 +63,13 @@ public class E1216_ImmutableRationalNumbersTests {
         assertEquals(16, result.getDenominator());
     }
 
+    @Test
+    public void test_divides() throws CommonFactorsException {
+        Rational r1 = irn.createRational(7, 2);
+        Rational r2 = irn.createRational(51, 8);
+        Rational result = irn.divides(r1, r2);
+        assertEquals(56, result.getNumerator());
+        assertEquals(102, result.getDenominator());
+    }
+
 }

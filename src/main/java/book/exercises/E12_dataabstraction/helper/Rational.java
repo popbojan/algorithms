@@ -53,6 +53,7 @@ public class Rational {
     }
 
     public Rational times(Rational that) {
+        // TODO: Improve times to divide rational by it's common factor, if any
 
         int resultNumerator = this.numerator * that.numerator;
         int resultDenominator = this.denominator * that.denominator;
@@ -60,8 +61,13 @@ public class Rational {
         return new Rational(resultNumerator, resultDenominator);
     }
 
-    public Rational divides(Rational b) {
-        throw new RuntimeException("Not implemented yet");
+    public Rational divides(Rational that) {
+
+        // this times that reciprocal
+        int resultNumerator = this.numerator * that.denominator;
+        int resultDenominator = this.denominator * that.numerator;
+
+        return new Rational(resultNumerator, resultDenominator);
     }
 
     @Override

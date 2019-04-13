@@ -39,4 +39,8 @@ public class E1216_ImmutableRationalNumbers {
     public Rational times(Rational r1, Rational r2) {
         return r1.times(r2);
     }
+
+    public Rational divides(Rational r1, Rational r2) {
+        return r1.divides(r2);
+    }
 }
