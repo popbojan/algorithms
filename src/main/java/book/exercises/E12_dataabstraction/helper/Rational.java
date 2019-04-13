@@ -32,7 +32,7 @@ public class Rational {
 
     }
 
-    private Rational plus(Rational that) {
+    public Rational plus(Rational that) {
 
         // Find gcd of numerators and denominators
         int numeratorCommonFactor = gcd(this.numerator, that.numerator);
