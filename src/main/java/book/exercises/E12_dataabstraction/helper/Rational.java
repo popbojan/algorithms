@@ -52,8 +52,12 @@ public class Rational {
         return this.plus(that.negate());
     }
 
-    public Rational times(Rational b) {
-        throw new RuntimeException("Not implemented yet");
+    public Rational times(Rational that) {
+
+        int resultNumerator = this.numerator * that.numerator;
+        int resultDenominator = this.denominator * that.denominator;
+
+        return new Rational(resultNumerator, resultDenominator);
     }
 
     public Rational divides(Rational b) {
