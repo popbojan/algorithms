@@ -16,10 +16,10 @@ import book.exercises.E12_dataabstraction.helper.exception.CommonFactorsExceptio
  */
 public class Rational {
 
-    private int numerator;
-    private int denominator;
+    protected int numerator;
+    protected int denominator;
 
-    private Rational(int numerator, int denominator) {
+    protected Rational(int numerator, int denominator) {
         this.numerator = numerator;
         this.denominator = denominator;
     }
@@ -101,7 +101,7 @@ public class Rational {
         return denominator;
     }
 
-    private static boolean haveCommonFactors(int numerator, int denominator) {
+    protected static boolean haveCommonFactors(int numerator, int denominator) {
         int commonDivisor = gcd(numerator, denominator);
         //System.out.println(commonDivisor);
         return commonDivisor > 1;
@@ -114,7 +114,7 @@ public class Rational {
      * and get quotient
      * e.g 7-inches screw cannot be inserted into 3-inches metal hole
      */
-    private static int gcd(int p, int q) {
+    protected static int gcd(int p, int q) {
         //StdOut.println("p: [" + p + "]  q: [" + q + "]");
         if (q == 0) {
             return p;
