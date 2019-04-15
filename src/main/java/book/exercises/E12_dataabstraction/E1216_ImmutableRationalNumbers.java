@@ -4,6 +4,7 @@ import book.exercises.E12_dataabstraction.helper.Rational;
 import book.exercises.E12_dataabstraction.helper.exception.CommonFactorsException;
 
 /**
+ * Exercise 1.2.16:
  * Rational numbers. Implement an immutable data type Rational for rational numbers
  * that supports addition, subtraction, multiplication and division.
  * <p>
