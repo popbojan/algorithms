@@ -18,6 +18,7 @@ public class Rational {
 
     protected int numerator;
     protected int denominator;
+    private final static String ASSERT_AVOIDING_OVERFLOW_MESSAGE = "Operation would cause overflow!";
 
     protected Rational(int numerator, int denominator) {
         this.numerator = numerator;
@@ -38,6 +39,11 @@ public class Rational {
         int numeratorCommonFactor = gcd(this.numerator, that.numerator);
         int denominatorCommonFactor = gcd(this.denominator, that.denominator);
 
+        //check overflow
+        assert ((this.numerator / numeratorCommonFactor) * (that.denominator / denominatorCommonFactor))
+                + ((that.numerator / numeratorCommonFactor) * (this.denominator / denominatorCommonFactor)) <= Integer.MAX_VALUE : ASSERT_AVOIDING_OVERFLOW_MESSAGE;
+        assert (this.denominator * that.denominator) / denominatorCommonFactor <= Integer.MAX_VALUE : ASSERT_AVOIDING_OVERFLOW_MESSAGE;
+
         // add cross-product terms for numerator
         int numeratorA = (this.numerator / numeratorCommonFactor) * (that.denominator / denominatorCommonFactor);
         int numeratorB = (that.numerator / numeratorCommonFactor) * (this.denominator / denominatorCommonFactor);
@@ -55,6 +61,12 @@ public class Rational {
     public Rational times(Rational that) {
         int aCommonFactor = gcd(this.numerator, that.denominator);
         int bCommonFactor = gcd(this.denominator, that.numerator);
+
+        //check overflow
+        assert (this.numerator / aCommonFactor) * (that.numerator / bCommonFactor) <= Integer.MAX_VALUE : ASSERT_AVOIDING_OVERFLOW_MESSAGE;
+        assert (this.numerator / aCommonFactor) * (that.numerator / bCommonFactor) >= Integer.MIN_VALUE : ASSERT_AVOIDING_OVERFLOW_MESSAGE;
+        assert (this.denominator / bCommonFactor) * (that.denominator / aCommonFactor) <= Integer.MAX_VALUE : ASSERT_AVOIDING_OVERFLOW_MESSAGE;
+        assert (this.denominator / bCommonFactor) * (that.denominator / aCommonFactor) >= Integer.MIN_VALUE : ASSERT_AVOIDING_OVERFLOW_MESSAGE;
 
         int resultNumerator = (this.numerator / aCommonFactor) * (that.numerator / bCommonFactor);
         int resultDenominator = (this.denominator / bCommonFactor) * (that.denominator / aCommonFactor);

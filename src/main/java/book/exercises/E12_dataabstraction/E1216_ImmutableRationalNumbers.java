@@ -22,6 +22,10 @@ import book.exercises.E12_dataabstraction.helper.exception.CommonFactorsExceptio
  * limit the possibility of overflow. Use Euclid's algorithm (see page 4) to ensure that the
  * numerator and denominator never have any common factors. Include a test client that
  * exercises all of your methods.
+ * <p>
+ * Exercise 1.2.17:
+ * Robust implementation of rational numbers. Use assertions to develop an implementation
+ * of Rational (SEE EXERCISE 1.2.16) that is immune to overflow.
  */
 public class E1216_ImmutableRationalNumbers {
 

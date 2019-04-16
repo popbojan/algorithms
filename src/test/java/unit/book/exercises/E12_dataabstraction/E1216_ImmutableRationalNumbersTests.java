@@ -4,6 +4,7 @@ import book.exercises.E12_dataabstraction.E1216_ImmutableRationalNumbers;
 import book.exercises.E12_dataabstraction.helper.Rational;
 import book.exercises.E12_dataabstraction.helper.exception.CommonFactorsException;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.mockito.MockitoAnnotations;
 
@@ -46,6 +47,14 @@ public class E1216_ImmutableRationalNumbersTests {
     }
 
     @Test
+    @Ignore // cannot reproduce overflow
+    public void test_plus_overflow() throws CommonFactorsException {
+        Rational r1 = irn.createRational(1993621333, 1999252172);
+        Rational r2 = irn.createRational(1934111111, 1561715333);
+        Rational result = irn.plus(r1, r2);
+    }
+
+    @Test
     public void test_minus() throws CommonFactorsException {
         Rational r1 = irn.createRational(7, 2);
         Rational r2 = irn.createRational(51, 8);
@@ -61,6 +70,14 @@ public class E1216_ImmutableRationalNumbersTests {
         Rational result = irn.times(r1, r2);
         assertEquals(357, result.getNumerator());
         assertEquals(16, result.getDenominator());
+    }
+
+    @Test
+    @Ignore // cannot reproduce overflow
+    public void test_times_overflow() throws CommonFactorsException {
+        Rational r1 = irn.createRational(1993621333, 1999252172);
+        Rational r2 = irn.createRational(1934111111, 1561715333);
+        Rational result = irn.times(r1, r2);
     }
 
     @Test
