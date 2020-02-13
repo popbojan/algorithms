@@ -41,6 +41,8 @@ package book.exercises.E12_dataabstraction;
  * of accumulators could be used on a big system. This performance characteristic is
  * subtle and might be specified in the API, because an implementation that does save the
  * values might cause an application to run out of memory.
+ *
+ * @See page 92.
  */
 public class E1218_VarianceForAccumulator {
 
