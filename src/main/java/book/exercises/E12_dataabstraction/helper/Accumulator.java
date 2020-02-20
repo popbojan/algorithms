@@ -1,9 +1,9 @@
 package book.exercises.E12_dataabstraction.helper;
 
 public class Accumulator {
-    private double m;
-    private double s;
-    private int N;
+    private double m; // average
+    private double s; // sum
+    private int N; // count
 
 
     public void addDataValue(double x) {

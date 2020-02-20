@@ -1,5 +1,7 @@
 package book.exercises.E12_dataabstraction;
 
+import book.exercises.E12_dataabstraction.helper.Accumulator;
+
 /**
  * Exercise 1.2.18:
  * Variance for accumulator. Validate that the following code, which adds the methods
@@ -46,6 +48,25 @@ package book.exercises.E12_dataabstraction;
  */
 public class E1218_VarianceForAccumulator {
 
-    public void validate() {
+    private Accumulator accumulator;
+
+    public E1218_VarianceForAccumulator(){
+        accumulator = new Accumulator();
+    }
+
+    public void addDataValue(double x){
+        accumulator.addDataValue(x);
+    }
+
+    public double validateVar() {
+        return accumulator.var();
+    }
+
+    public double validateMean(){
+        return accumulator.mean();
+    }
+
+    public double validateStdev() {
+        return accumulator.stddev();
     }
 }
