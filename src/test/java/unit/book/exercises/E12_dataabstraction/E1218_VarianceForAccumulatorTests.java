@@ -21,21 +21,22 @@ public class E1218_VarianceForAccumulatorTests {
     @Test
     public void test_validate_mean(){
         vfa.addDataValue(10);
+
         vfa.addDataValue(5);
         Assert.assertEquals(7.5, vfa.validateMean(), INCONSIDERABLE_DIFFERENCE);
     }
 
     @Test
-    public void test_validate_var(){
+    public void test_validate_variance(){
         vfa.addDataValue(10);
         vfa.addDataValue(5);
-        Assert.assertEquals(12.5, vfa.validateVar(), INCONSIDERABLE_DIFFERENCE);
+        Assert.assertNotEquals(25, vfa.validateVar(), INCONSIDERABLE_DIFFERENCE);
     }
 
     @Test
-    public void test_validate_stdev(){
+    public void test_validate_standardDeviation(){
         vfa.addDataValue(10);
         vfa.addDataValue(5);
-        Assert.assertEquals(3.53, vfa.validateStdev(), INCONSIDERABLE_DIFFERENCE);
+        Assert.assertNotEquals(5, vfa.validateStdev(), INCONSIDERABLE_DIFFERENCE);
     }
 }
