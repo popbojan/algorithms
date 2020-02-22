@@ -2,6 +2,7 @@ package book.exercises.E12_dataabstraction.helper;
 
 /**
  * https://www.mathsisfun.com/data/standard-deviation.html
+ * https://www.wikihow.com/Calculate-Variance (better and more precise with n-1)
  *
  * try out this one:
  * https://github.com/kevin-wayne/algs4/blob/master/src/main/java/edu/princeton/cs/algs4/Accumulator.java
