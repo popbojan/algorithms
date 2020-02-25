@@ -8,7 +8,19 @@ public class SmartDate extends DateAPIFromTheBook {
         super(month, day, year);
     }
 
-    public static SmartDate getSmartDate(int month, int day, int year) throws SmartDateException {
+    public static SmartDate getInstance(int month, int day, int year) throws SmartDateException {
+        if (!valid(month, day, year)) {
+            throw new SmartDateException("Date is not valid");
+        }
+        return new SmartDate(month, day, year);
+    }
+
+    public static SmartDate getInstance(String date) throws SmartDateException {
+        String[] fields = date.split("/");
+        int month = Integer.parseInt(fields[0]);
+        int day = Integer.parseInt(fields[1]);
+        int year = Integer.parseInt(fields[2]);
+
         if (!valid(month, day, year)) {
             throw new SmartDateException("Date is not valid");
         }

@@ -15,6 +15,6 @@ import book.exercises.E12_dataabstraction.helper.Transaction;
 public class E1213_Transaction {
 
     public Transaction createTransaction(String article, int amount, double price) throws TransactionException {
-        return Transaction.getTransaction(article, amount, price);
+        return Transaction.getInstance(article, amount, price);
     }
 }

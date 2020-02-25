@@ -17,15 +17,28 @@ public class Transaction {
         this.price = price;
     }
 
-    public static Transaction getTransaction(String article, int amount, double price) throws TransactionException {
-        String statusMessage = validate(article, amount, price);
-        if (!statusMessage.equals(STATUS_OK)) {
-            throw new TransactionException(statusMessage);
+    public static Transaction getInstance(String article, int amount, double price) throws TransactionException {
+        String status = getStatus(article, amount, price);
+        if (!status.equals(STATUS_OK)) {
+            throw new TransactionException(status);
         }
         return new Transaction(article, amount, price);
     }
 
-    private static String validate(String article, int amount, double price) {
+    public static Transaction getInstance(String transaction) throws TransactionException {
+        String[] fields = transaction.split(" ");
+        String article = fields[0];
+        int amount = Integer.parseInt(fields[1]);
+        double price = Double.parseDouble(fields[2]);
+
+        String status = getStatus(article, amount, price);
+        if (!status.equals(STATUS_OK)) {
+            throw new TransactionException(status);
+        }
+        return new Transaction(article, amount, price);
+    }
+
+    private static String getStatus(String article, int amount, double price) {
         String status = STATUS_OK;
         String[] articles = {"Apple", "Bread", "Salt", "Sugar"};
         if (!Arrays.stream(articles).anyMatch(x -> x.equals(article))) {

@@ -15,6 +15,6 @@ import book.exercises.E12_dataabstraction.helper.exception.SmartDateException;
 public class E1211_SmartDate {
 
     public SmartDate createDate(int month, int day, int year) throws SmartDateException {
-        return SmartDate.getSmartDate(month, day, year);
+        return SmartDate.getInstance(month, day, year);
     }
 }
