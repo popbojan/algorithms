@@ -1,5 +1,7 @@
 package book.exercises.E13_bagsqueuesandstacks;
 
+import book.exercises.E13_bagsqueuesandstacks.helper.JavaStack;
+
 /**
  * Exercise 1.3.3:
  * Suppose that a client performs an intermixed sequence of (stack) push and pop operations. The push operations put the integers
@@ -14,4 +16,14 @@ package book.exercises.E13_bagsqueuesandstacks;
  * h) 2 1 4 3 6 5 8 7 9 0
  */
 public class E_133_IntermixedSequenceOfStackOperations {
+
+    private JavaStack<Integer> stack;
+
+    public E_133_IntermixedSequenceOfStackOperations(){
+        stack = new JavaStack<>();
+    }
+
+    public JavaStack<Integer> getStack() {
+        return stack;
+    }
 }
