@@ -9,11 +9,11 @@ import book.exercises.E13_bagsqueuesandstacks.helper.JavaStack;
  *
  * checkout page 129 in the book
  */
-public class E_134_Parentheses {
+public class E134_Parentheses {
 
     private JavaStack<String> stack;
 
-    public E_134_Parentheses(){
+    public E134_Parentheses(){
         stack = new JavaStack<>();
     }
 

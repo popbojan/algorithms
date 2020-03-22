@@ -15,11 +15,11 @@ import book.exercises.E13_bagsqueuesandstacks.helper.JavaStack;
  * g) 1 4 7 9 8 6 5 3 0 2
  * h) 2 1 4 3 6 5 8 7 9 0
  */
-public class E_133_IntermixedSequenceOfStackOperations {
+public class E133_IntermixedSequenceOfStackOperations {
 
     private JavaStack<Integer> stack;
 
-    public E_133_IntermixedSequenceOfStackOperations(){
+    public E133_IntermixedSequenceOfStackOperations(){
         stack = new JavaStack<>();
     }
 

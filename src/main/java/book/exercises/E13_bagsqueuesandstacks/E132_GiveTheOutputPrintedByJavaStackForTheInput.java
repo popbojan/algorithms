@@ -7,11 +7,11 @@ import book.exercises.E13_bagsqueuesandstacks.helper.JavaStack;
  * Give the output printed by java stack for the input:
  * it was - the best - of times - - - it was - the - -
  */
-public class E_132_GiveTheOutputPrintedByJavaStackForTheInput {
+public class E132_GiveTheOutputPrintedByJavaStackForTheInput {
 
     private JavaStack<String> stack;
 
-    public E_132_GiveTheOutputPrintedByJavaStackForTheInput(){
+    public E132_GiveTheOutputPrintedByJavaStackForTheInput(){
         stack = new JavaStack<>();
     }
 
