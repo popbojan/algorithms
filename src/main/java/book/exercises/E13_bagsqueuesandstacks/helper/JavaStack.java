@@ -22,6 +22,10 @@ public class JavaStack<T> {
         return stack.size();
     }
 
+    public boolean isEmpty(){
+        return stack.isEmpty();
+    }
+
     public void printAllItemsInStack(){
         for(T item : stack){
             System.out.println(item);
