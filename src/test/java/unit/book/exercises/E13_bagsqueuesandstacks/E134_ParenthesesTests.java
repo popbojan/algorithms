@@ -1,18 +1,18 @@
 package unit.book.exercises.E13_bagsqueuesandstacks;
 
-import book.exercises.E13_bagsqueuesandstacks.E_134_Parentheses;
+import book.exercises.E13_bagsqueuesandstacks.E134_Parentheses;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-public class E_134_ParenthesesTests {
+public class E134_ParenthesesTests {
 
-    E_134_Parentheses p;
+    E134_Parentheses p;
 
     @Before
     public void setup(){
 
-        p  = new E_134_Parentheses();
+        p  = new E134_Parentheses();
     }
 
     @Test

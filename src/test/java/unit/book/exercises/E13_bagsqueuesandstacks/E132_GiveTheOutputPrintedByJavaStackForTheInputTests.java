@@ -1,22 +1,22 @@
 package unit.book.exercises.E13_bagsqueuesandstacks;
 
-import book.exercises.E13_bagsqueuesandstacks.E_132_GiveTheOutputPrintedByJavaStackForTheInput;
+import book.exercises.E13_bagsqueuesandstacks.E132_GiveTheOutputPrintedByJavaStackForTheInput;
 import book.exercises.E13_bagsqueuesandstacks.helper.JavaStack;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.MockitoAnnotations;
 
-public class E_132_GiveTheOutputPrintedByJavaStackForTheInputTests {
+public class E132_GiveTheOutputPrintedByJavaStackForTheInputTests {
 
-    private E_132_GiveTheOutputPrintedByJavaStackForTheInput gtopbjsfti;
+    private E132_GiveTheOutputPrintedByJavaStackForTheInput gtopbjsfti;
     private JavaStack<String> stack;
 
     @Before
     public void setup(){
         MockitoAnnotations.initMocks(this);
 
-        gtopbjsfti = new E_132_GiveTheOutputPrintedByJavaStackForTheInput();
+        gtopbjsfti = new E132_GiveTheOutputPrintedByJavaStackForTheInput();
         stack = gtopbjsfti.getStack();
     }
 
