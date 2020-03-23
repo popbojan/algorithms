@@ -11,6 +11,8 @@ import book.exercises.E13_bagsqueuesandstacks.helper.MyQueue;
  * stack.push(q.dequeue());
  * while(!stack.isEmpty())
  * q.enqueue(stack.pop());
+ *
+ * Check out page 151 for Queue
  */
 public class E136_StackAndQueuePrint {
 
