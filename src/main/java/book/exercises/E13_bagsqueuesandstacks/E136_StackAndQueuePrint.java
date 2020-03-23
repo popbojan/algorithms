@@ -6,7 +6,7 @@ import book.exercises.E13_bagsqueuesandstacks.helper.MyQueue;
 /**
  * Exercise 1.3.6:
  * What does the following fragment do to the queue q?
- * Stack<String> stack - new Stack<String>();
+ * Stack<String> stack = new Stack<String>();
  * while(!q.isEmpty())
  * stack.push(q.dequeue());
  * while(!stack.isEmpty())
