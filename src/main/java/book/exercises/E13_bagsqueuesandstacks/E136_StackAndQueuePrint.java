@@ -24,10 +24,24 @@ public class E136_StackAndQueuePrint {
         queue = new MyQueue<>();
     }
 
+    public void pushToStack(String item){
+        stack.pushToStack(item);
+    }
+
+    public void enqueueToQueue(String item){
+        queue.enqueue(item);
+    }
+
     public void print() {
-        while(!queue.isEmpty())
-        stack.pushToStack(queue.dequeue());
-        while(!stack.isEmpty())
-        queue.enqueue(stack.popFromStack());
+        while(!queue.isEmpty()) {
+            stack.pushToStack(queue.dequeue());
+        }
+        while(!stack.isEmpty()) {
+            queue.enqueue(stack.popFromStack());
+        }
+
+        for(String item: queue){
+            System.out.println(item);
+        }
     }
 }

@@ -14,7 +14,19 @@ public class E136_StackAndQueuePrintTests {
     }
 
     @Test
-    public void test_code_printsSomething(){
+    public void test_code_printsOutQueue(){
+        saqp.pushToStack("Stack_First");
+        saqp.pushToStack("Stack_Second");
+        saqp.pushToStack("Stack_Third");
+        saqp.pushToStack("Stack_Forth");
+        saqp.pushToStack("Stack_Fifth");
+
+        saqp.enqueueToQueue("Queue_First");
+        saqp.enqueueToQueue("Queue_Second");
+        saqp.enqueueToQueue("Queue_Third");
+        saqp.enqueueToQueue("Queue_Forth");
+        saqp.enqueueToQueue("Queue_Fifth");
+
         saqp.print();
     }
 }
