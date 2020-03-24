@@ -25,6 +25,10 @@ public class FixedCapacityStackOfStrings {
         return a[--N];
     }
 
+    public String peek(){
+        return a[N-1];
+    }
+
     public boolean isFull(){
         return N == a.length;
     }
