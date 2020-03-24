@@ -1,8 +1,9 @@
 package book.exercises.E13_bagsqueuesandstacks.helper;
 
+import java.util.Iterator;
 import java.util.Stack;
 
-public class JavaStack<T> {
+public class JavaStack<T> implements Iterable<T>{
 
     private Stack<T> stack;
 
@@ -30,5 +31,10 @@ public class JavaStack<T> {
         for(T item : stack){
             System.out.println(item);
         }
+    }
+
+    @Override
+    public Iterator<T> iterator() {
+        return stack.iterator();
     }
 }

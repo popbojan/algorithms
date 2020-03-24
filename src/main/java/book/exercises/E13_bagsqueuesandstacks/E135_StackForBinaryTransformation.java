@@ -22,16 +22,23 @@ public class E135_StackForBinaryTransformation {
 
     private JavaStack<Integer> stack;
 
-    public E135_StackForBinaryTransformation(){
+    public E135_StackForBinaryTransformation() {
         stack = new JavaStack<>();
     }
 
     public void print(int N) {
-        while(N > 0){
+        while (N > 0) {
             stack.pushToStack(N % 2);
             N = N / 2;
         }
-        while(stack.size() > 0) {
+
+        for (Integer item : stack) {
+            StdOut.print(item);
+        }
+
+        StdOut.println();
+
+        while (stack.size() > 0) {
             StdOut.print(stack.popFromStack());
         }
     }
