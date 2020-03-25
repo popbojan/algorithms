@@ -5,50 +5,56 @@ public class DoublingStackOfStrings {
     private String a[]; //stack of entries
     private int N; //size
 
-    public DoublingStackOfStrings(int cap){
+    public DoublingStackOfStrings(int cap) {
         a = new String[cap];
     }
 
-    public boolean isEmpty(){
+    public boolean isEmpty() {
         return N == 0;
     }
 
-    public int size(){
+    public int size() {
         return N;
     }
 
-    public void push(String item){
+    public void push(String item) {
         // Add item to the top of stack
-        if(N == a.length){
-            resize(2*a.length);
+        if (N == a.length) {
+            resize(2 * a.length);
         }
         a[N++] = item;
     }
 
-    public String pop(){
+    public String pop() {
         // Remove item from top of stack
-        String item =  a[--N];
+        String item = a[--N];
         a[N] = null; // Avoid loitering (see page 137)
-        if(N > 0 && N == a.length/4) {
-            resize(a.length/2);
+        if (N > 0 && N == a.length / 4) {
+            resize(a.length / 2);
         }
         return item;
     }
 
-    public String peek(){
-        return a[N-1];
+    public String peek() {
+        return a[N - 1];
     }
 
-    public boolean isFull(){
+    public boolean isFull() {
         return N == a.length;
     }
 
-    private void resize(int max){
+    private void resize(int max) {
         // Move stack of size N <= max to a new array of size max
         String[] temp = new String[max];
-        for(int i = 0; i< N; i++){
+        for (int i = 0; i < N; i++) {
             temp[i] = a[i];
         }
         a = temp;
+    }
+
+    public void printAllItemsInStack() {
+        for (int i = 0; i< N; i++) {
+            System.out.println(a[i]);
+        }
     }
 }
