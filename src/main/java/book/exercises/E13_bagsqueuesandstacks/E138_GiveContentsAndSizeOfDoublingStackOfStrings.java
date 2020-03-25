@@ -6,6 +6,7 @@ package book.exercises.E13_bagsqueuesandstacks;
  *
  * it was - the best - of times - - - it  was - the - -
  *
+ * Check out page 136
  */
 public class E138_GiveContentsAndSizeOfDoublingStackOfStrings {
 }
