@@ -9,6 +9,9 @@ import book.exercises.E13_bagsqueuesandstacks.helper.JavaStack;
  * 1 + 2 ) * 3 - 4 ) * 5 - 6 ) ) )
  * your program should print
  * ( ( 1 + 2 ) * ( ( 3 - 4 ) * ( 5 - 6 ) ) )
+ *
+ * figured last part with multiple parentheses thanks to the reneargento:
+ * https://github.com/reneargento/algorithms-sedgewick-wayne/blob/master/src/chapter1/section3/Exercise9.java
  */
 public class E139_InfixParentheses {
 
