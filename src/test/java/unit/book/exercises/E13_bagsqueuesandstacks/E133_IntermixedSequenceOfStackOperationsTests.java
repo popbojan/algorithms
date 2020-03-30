@@ -114,10 +114,10 @@ public class E133_IntermixedSequenceOfStackOperationsTests {
         Assert.assertEquals(5, (int) stack.popFromStack());
         Assert.assertEquals(6, (int) stack.popFromStack());
 
+        Assert.assertEquals(0, (int) stack.popFromStack());
         Assert.assertEquals(9, (int) stack.popFromStack());
         Assert.assertEquals(8, (int) stack.popFromStack());
         Assert.assertEquals(7, (int) stack.popFromStack());
-        Assert.assertEquals(0, (int) stack.popFromStack());
 
     }
 

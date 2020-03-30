@@ -13,6 +13,7 @@ public class E1312_CopyIterableStackTests {
     @Before
     public void setup() {
         cis = new E1312_CopyIterableStack();
+        stack = new JavaStack<>();
     }
 
     @Test
