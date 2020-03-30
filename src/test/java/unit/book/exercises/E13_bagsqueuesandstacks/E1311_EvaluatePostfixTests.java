@@ -11,14 +11,20 @@ public class E1311_EvaluatePostfixTests {
     final double INCONSIDERABLE_DIFFERENCE = 0.1;
 
     @Before
-    public void setup(){
+    public void setup() {
         ep = new E1311_EvaluatePostfix();
     }
 
     @Test
-    public void test_evaluate(){
-        double result = ep.evaluate();
-        Assert.assertEquals(100.23, result, INCONSIDERABLE_DIFFERENCE);
+    public void test_evaluate_returnsRightNumber() {
+        double result = ep.evaluate("1 2 3 * +");
+        Assert.assertEquals(7, result, INCONSIDERABLE_DIFFERENCE);
+    }
+
+    @Test
+    public void test_evaluate_anotherExpression_returnsRightNumber() {
+        double result = ep.evaluate("1 2 * 3 4 * +");
+        Assert.assertEquals(14, result, INCONSIDERABLE_DIFFERENCE);
     }
 
 }
