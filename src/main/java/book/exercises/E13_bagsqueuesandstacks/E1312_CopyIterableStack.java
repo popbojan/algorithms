@@ -7,7 +7,7 @@ import book.exercises.E13_bagsqueuesandstacks.helper.JavaStack;
  * Write an iterable Stack client that has a static method copy() that takes a stack of stings as argument
  * and returns a copy of the stack. Note: This ability is a prime example of the value of having an iterator,
  * because it allows development of such functionality without changing the basic API.
- * Checkout page 141 in the book
+ * Check out page 141 in the book
  */
 public class E1312_CopyIterableStack {
 
