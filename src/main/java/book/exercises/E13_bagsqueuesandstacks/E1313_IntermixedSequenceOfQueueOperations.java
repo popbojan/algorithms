@@ -19,4 +19,8 @@ public class E1313_IntermixedSequenceOfQueueOperations {
     public E1313_IntermixedSequenceOfQueueOperations() {
         queue = new MyQueue<>();
     }
+
+    public MyQueue<Integer> getQueue() {
+        return queue;
+    }
 }
