@@ -39,12 +39,12 @@ public class ResizingArrayStack<Item> implements Iterable<Item> {
     }
 
     @Override
-    public Iterator<Item> iterator() {
+§    public Iterator<Item> iterator() {
         return new ReverseArrayIterator();
     }
 
     private void resize(int max) {
-        // Move stack ti a new array of size max
+        // Move stack to a new array of size max
         Item[] temp = (Item[]) new Object[max];
         for (int i = 0; i < N; i++) {
             temp[i] = a[i];
