@@ -9,7 +9,7 @@ public class ResizingArrayQueue<Item> implements Iterable<Item> {
     private int index = 0;
 
     public ResizingArrayQueue() {
-        a = (Item[]) new Object[7];
+        a = (Item[]) new Object[1];
     }
 
     public int size() {
