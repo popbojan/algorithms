@@ -39,7 +39,7 @@ public class ResizingArrayStack<Item> implements Iterable<Item> {
     }
 
     @Override
-§    public Iterator<Item> iterator() {
+    public Iterator<Item> iterator() {
         return new ReverseArrayIterator();
     }
 
