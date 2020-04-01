@@ -48,9 +48,8 @@ public class ResizingArrayQueue<Item> implements Iterable<Item> {
 
     private void resizeArray(int maxSize) {
         Item[] temp = (Item[]) new Object[maxSize];
-        for (int i = 0; i < maxSize && index < N; i++) {
-            temp[i] = a[index];
-            a[index++] = null;
+        for (int i = 0; i < N; i++) {
+            temp[i] = a[i+index];
         }
         a = temp;
         index = 0;

@@ -32,7 +32,7 @@ public class E1314_ResizingArrayQueueTests {
         queue.enqueue("elf");
         queue.enqueue("zwölf");
 
-        //Assert.assertEquals(3, queue.size());
+        Assert.assertEquals(12, queue.size());
         Assert.assertEquals("eins", queue.dequeue());
         Assert.assertEquals("zwei", queue.dequeue());
         Assert.assertEquals("drei", queue.dequeue());
@@ -41,9 +41,43 @@ public class E1314_ResizingArrayQueueTests {
         Assert.assertEquals("sechs", queue.dequeue());
         Assert.assertEquals("sieben", queue.dequeue());
         Assert.assertEquals("acht", queue.dequeue());
-        //Assert.assertEquals(0, queue.size());
-        //Assert.assertEquals(7, queue.arraySize());
+        Assert.assertEquals(4, queue.size());
+    }
 
+    @Test
+    public void test_queue_doesArrayResizeProperly() {
+        queue.enqueue("eins");
+        queue.enqueue("zwei");
+        queue.enqueue("drei");
+        queue.enqueue("vier");
+        queue.enqueue("fünf");
 
+        Assert.assertEquals(5, queue.size());
+        Assert.assertEquals(8, queue.arraySize());
+
+        queue.dequeue();
+        queue.dequeue();
+        queue.dequeue();
+        queue.dequeue();
+
+        Assert.assertEquals(1, queue.size());
+        Assert.assertEquals(4, queue.arraySize());
+    }
+
+    @Test
+    public void test_dequeue_moreThanEnqueued_doesntExplode() {
+        queue.enqueue("eins");
+        queue.enqueue("zwei");
+        queue.enqueue("drei");
+        queue.enqueue("vier");
+        queue.enqueue("fünf");
+
+        Assert.assertEquals("eins", queue.dequeue());
+        Assert.assertEquals("zwei", queue.dequeue());
+        Assert.assertEquals("drei", queue.dequeue());
+        Assert.assertEquals("vier", queue.dequeue());
+        Assert.assertEquals("fünf", queue.dequeue());
+        Assert.assertEquals(null, queue.dequeue());
+        Assert.assertEquals(null, queue.dequeue());
     }
 }
