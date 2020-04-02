@@ -49,7 +49,7 @@ public class ResizingArrayQueue<Item> implements Iterable<Item> {
     private void resizeArray(int maxSize) {
         Item[] temp = (Item[]) new Object[maxSize];
         for (int i = 0; i < N; i++) {
-            temp[i] = a[i+index];
+            temp[i] = a[i + index];
         }
         a = temp;
         index = 0;
@@ -57,14 +57,16 @@ public class ResizingArrayQueue<Item> implements Iterable<Item> {
 
     private class ArrayIterator implements Iterator<Item> {
 
+        private int i = 0;
+
         @Override
         public boolean hasNext() {
-            return false;
+            return i < N;
         }
 
         @Override
         public Item next() {
-            return null;
+            return a[i++];
         }
 
         @Override
