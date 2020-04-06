@@ -2,7 +2,7 @@ package book.exercises.E13_bagsqueuesandstacks.helper;
 
 import java.util.Iterator;
 
-public class MyQueue<Item> implements Iterable<Item> {
+public class MyLinkedList<Item> implements Iterable<Item> {
     private Node<Item> first = null;
     private Node<Item> last = null;
     private int N = 0;
@@ -15,7 +15,7 @@ public class MyQueue<Item> implements Iterable<Item> {
         return N;
     }
 
-    public Item dequeue() {
+    public Item get() {
         // remove the item from the beginning of the list
         Item item = first.item;
         first = first.next;
@@ -26,16 +26,15 @@ public class MyQueue<Item> implements Iterable<Item> {
         return item;
     }
 
-    public void enqueue(Item item) {
+    public void add(Item item) {
         // add item to the end of the list
         Node oldLast = last;
         last = new Node<>();
         last.item = item;
         last.next = null;
-        if(isEmpty()) {
+        if (isEmpty()) {
             first = last;
-        }
-        else {
+        } else {
             oldLast.next = last;
         }
         N++;
@@ -66,7 +65,7 @@ public class MyQueue<Item> implements Iterable<Item> {
         @Override
         public Item next() {
             Item item = current.item;
-            current = current.next;
+            current = current.next.next;
             return item;
         }
     }
