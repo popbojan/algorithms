@@ -2,7 +2,7 @@ package book.exercises.E13_bagsqueuesandstacks.helper;
 
 import java.util.Iterator;
 
-public class MyLinkedList<Item> implements Iterable<Item> {
+public class NextNextLinkedList<Item> implements Iterable<Item> {
     private Node<Item> first = null;
     private Node<Item> last = null;
     private int N = 0;

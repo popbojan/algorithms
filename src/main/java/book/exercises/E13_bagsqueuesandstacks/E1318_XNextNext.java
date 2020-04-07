@@ -1,6 +1,6 @@
 package book.exercises.E13_bagsqueuesandstacks;
 
-import book.exercises.E13_bagsqueuesandstacks.helper.MyLinkedList;
+import book.exercises.E13_bagsqueuesandstacks.helper.NextNextLinkedList;
 
 /**
  * Exercise 1.3.18:
@@ -10,13 +10,13 @@ import book.exercises.E13_bagsqueuesandstacks.helper.MyLinkedList;
  */
 public class E1318_XNextNext {
 
-    private MyLinkedList<String> myLinkedList;
+    private NextNextLinkedList<String> linkedList;
 
     public E1318_XNextNext() {
-        myLinkedList = new MyLinkedList<>();
+        linkedList = new NextNextLinkedList<>();
     }
 
-    public MyLinkedList<String> getMyLinkedList() {
-        return myLinkedList;
+    public NextNextLinkedList<String> getMyLinkedList() {
+        return linkedList;
     }
 }
