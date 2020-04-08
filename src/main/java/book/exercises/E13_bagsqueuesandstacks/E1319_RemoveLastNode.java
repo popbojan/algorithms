@@ -10,7 +10,7 @@ public class E1319_RemoveLastNode {
 
     private MyLinkedList<String> linkedList;
 
-    public E1319_RemoveLastNode(){
+    public E1319_RemoveLastNode() {
         linkedList = new MyLinkedList<>();
     }
 

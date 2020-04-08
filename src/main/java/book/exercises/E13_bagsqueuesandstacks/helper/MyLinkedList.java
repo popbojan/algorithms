@@ -17,8 +17,11 @@ public class MyLinkedList<Item> implements Iterable<Item> {
 
     public Item dequeue() {
         // remove the item from the beginning of the list
-        Item item = first.item;
-        first = first.next;
+        Item item = null;
+        if (first != null) {
+            item = first.item;
+            first = first.next;
+        }
         if (isEmpty()) {
             last = null;
         }
@@ -32,26 +35,26 @@ public class MyLinkedList<Item> implements Iterable<Item> {
         last = new Node<>();
         last.item = item;
         last.next = null;
-        if(isEmpty()) {
+        if (isEmpty()) {
             first = last;
-        }
-        else {
+        } else {
             oldLast.next = last;
         }
         N++;
     }
 
-    public void removeLast(){
-        for(Node x = first; x != null; x = x.next){
-            if(x.next == last){
+    public void removeLast() {
+        for (Node x = first; x != null; x = x.next) {
+            if (x.next == last) {
                 last = x;
                 x.next = null;
-            }
-            if(x == last){
+                N--;
+            } else if (x == last) {
                 last = null;
+                first = null;
+                N--;
             }
         }
-        N--;
     }
 
     @Override
