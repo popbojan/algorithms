@@ -58,6 +58,16 @@ public class MyLinkedList<Item> implements Iterable<Item> {
         }
     }
 
+    public boolean findItem(Item item) {
+        boolean hasItem = false;
+        for (Node x = first; x != null; x = x.next) {
+            if (x.item.equals(item)) {
+                hasItem = true;
+            }
+
+        }
+        return hasItem;
+    }
 
     public void deleteItem(int k) {
         int counter = 0;
