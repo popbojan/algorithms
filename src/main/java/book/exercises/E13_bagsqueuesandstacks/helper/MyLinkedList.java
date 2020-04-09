@@ -58,6 +58,17 @@ public class MyLinkedList<Item> implements Iterable<Item> {
         }
     }
 
+    public void insertAfter(Item item, Item after) {
+        for (Node x = first; x != null; x = x.next) {
+            if (x.item.equals(after)) {
+                Node<Item> t = new Node();
+                t.item = item;
+                t.next = x.next;
+                x.next = t;
+            }
+        }
+    }
+
     public boolean findItem(Item item) {
         boolean hasItem = false;
         for (Node x = first; x != null; x = x.next) {
