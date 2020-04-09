@@ -58,6 +58,17 @@ public class MyLinkedList<Item> implements Iterable<Item> {
         }
     }
 
+    public void pointToItself(Item item, Item after) {
+        for (Node x = first; x != null; x = x.next) {
+            if (x.item.equals(after)) {
+                Node<Item> t = new Node<>();
+                x.next = t;
+                t.next = x.next;
+                break;
+            }
+        }
+    }
+
     public void insertAfter(Item item, Item after) {
         for (Node x = first; x != null; x = x.next) {
             if (x.item.equals(after)) {
@@ -65,6 +76,7 @@ public class MyLinkedList<Item> implements Iterable<Item> {
                 t.item = item;
                 t.next = x.next;
                 x.next = t;
+                break;
             }
         }
     }
