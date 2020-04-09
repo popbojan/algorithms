@@ -3,7 +3,7 @@ package book.exercises.E13_bagsqueuesandstacks;
 import book.exercises.E13_bagsqueuesandstacks.helper.MyLinkedList;
 
 /**
- * Exercise 1.3.21:
+ * Exercise 1.3.22:
  * Suppose that x is a linked list Node. What does the following code fragment do?
  * t.next = x.next;
  * x.next = t;
