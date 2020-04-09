@@ -58,6 +58,16 @@ public class MyLinkedList<Item> implements Iterable<Item> {
         }
     }
 
+    public void removeAfter(Item item) {
+        for (Node x = first; x != null; x = x.next) {
+            if (x.item.equals(item) && x != last) {
+                Node nodeToBeRemove = x.next;
+                x.next = nodeToBeRemove.next;
+                nodeToBeRemove = null;
+            }
+        }
+    }
+
     public void pointToItself(Item item, Item after) {
         for (Node x = first; x != null; x = x.next) {
             if (x.item.equals(after)) {
