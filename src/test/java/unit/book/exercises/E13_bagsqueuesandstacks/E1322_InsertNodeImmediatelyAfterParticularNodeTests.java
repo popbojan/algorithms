@@ -26,6 +26,7 @@ public class E1322_InsertNodeImmediatelyAfterParticularNodeTests {
 
         linkedList.insertAfter("ZWEI", "EINS");
 
+        Assert.assertEquals(5, linkedList.size());
         Assert.assertEquals("EINS", linkedList.dequeue());
         Assert.assertEquals("ZWEI", linkedList.dequeue());
         Assert.assertEquals("DREI", linkedList.dequeue());

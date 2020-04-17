@@ -88,6 +88,7 @@ public class MyLinkedList<Item> implements Iterable<Item> {
                 t.item = item;
                 t.next = x.next;
                 x.next = t;
+                N++;
                 break;
             }
         }
