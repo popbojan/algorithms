@@ -64,6 +64,8 @@ public class MyLinkedList<Item> implements Iterable<Item> {
                 Node nodeToBeRemove = x.next;
                 x.next = nodeToBeRemove.next;
                 nodeToBeRemove = null;
+                N--;
+                break;
             }
         }
     }
