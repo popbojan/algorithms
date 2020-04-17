@@ -127,6 +127,9 @@ public class MyLinkedList<Item> implements Iterable<Item> {
         }
     }
 
+    public void remove(Item item) {
+    }
+
     @Override
     public Iterator<Item> iterator() {
         return new ListIterator();
