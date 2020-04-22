@@ -2,6 +2,7 @@ package unit.book.exercises.E13_bagsqueuesandstacks;
 
 import book.exercises.E13_bagsqueuesandstacks.E1326_RemoveAllOccurrencesOfTheKey;
 import book.exercises.E13_bagsqueuesandstacks.helper.MyLinkedList;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -26,7 +27,9 @@ public class E1326_RemoveAllOccurrencesOfTheKeyTests {
         linkedList.enqueue("FÜNF");
         linkedList.enqueue("DREI");
         linkedList.enqueue("SECHS");
+        linkedList.enqueue("DREI");
 
-        linkedList.remove("DREI");
+        linkedList.removeAll("DREI");
+        Assert.assertEquals(5, linkedList.size());
     }
 }

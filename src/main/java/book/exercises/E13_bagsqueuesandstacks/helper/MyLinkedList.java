@@ -70,6 +70,20 @@ public class MyLinkedList<Item> implements Iterable<Item> {
         }
     }
 
+    public void removeAll(Item item) {
+        for (Node x = first; x != null; x = x.next) {
+            if (x.next != null && x.next.item.equals(item)) {
+                Node nodeToBeRemoved = x.next;
+                x.next = nodeToBeRemoved.next;
+                nodeToBeRemoved = null;
+                N--;
+            } else if (x.next == null || x.next == last) {
+                last = x;
+                x.next = null;
+            }
+        }
+    }
+
     public void pointToItself(Item item, Item after) {
         for (Node x = first; x != null; x = x.next) {
             if (x.item.equals(after)) {
@@ -125,9 +139,6 @@ public class MyLinkedList<Item> implements Iterable<Item> {
                 N--;
             }
         }
-    }
-
-    public void remove(Item item) {
     }
 
     @Override
