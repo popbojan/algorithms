@@ -63,7 +63,6 @@ public class MyLinkedList<Item> implements Iterable<Item> {
             if (x.item.equals(item) && x != last) {
                 Node nodeToBeRemove = x.next;
                 x.next = nodeToBeRemove.next;
-                nodeToBeRemove = null;
                 N--;
                 break;
             }
@@ -81,7 +80,6 @@ public class MyLinkedList<Item> implements Iterable<Item> {
             } else if (x.next != null && x.next.item.equals(item)) { //next
                 Node nodeToBeRemoved = x.next;
                 x.next = nodeToBeRemoved.next;
-                nodeToBeRemoved = null;
                 N--;
             } else if ((x.next == null || x.next == last) && x.item.equals(item)) { //last
                 last = x;
@@ -133,7 +131,6 @@ public class MyLinkedList<Item> implements Iterable<Item> {
             if (k == 1 && counter == k) {
                 //delete first element
                 Node next = x.next;
-                x = null;
                 if (next == last) {
                     first = last;
                 }
@@ -142,7 +139,6 @@ public class MyLinkedList<Item> implements Iterable<Item> {
             } else if (k > 1 && k - 1 == counter) {
                 Node nodeForDeletion = x.next;
                 x.next = nodeForDeletion.next;
-                nodeForDeletion = null;
                 N--;
             }
         }
