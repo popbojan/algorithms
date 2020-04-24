@@ -81,10 +81,6 @@ public class MyLinkedList<Item> implements Iterable<Item> {
             } else if (previous != null && x.item.equals(item)) {
                 previous.next = x.next;
                 N--;
-            } else if (x.next != null && x.next.item.equals(item)) { //next
-                Node nodeToBeRemoved = x.next;
-                x.next = nodeToBeRemoved.next;
-                N--;
             }
             previous = x;
         }
