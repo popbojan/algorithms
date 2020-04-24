@@ -58,7 +58,7 @@ public class E1326_RemoveAllOccurrencesOfTheKeyTests {
     }
 
     @Test
-    public void test_remove_firstStanger_removesAllOccurrences() {
+    public void test_remove_firstStranger_removesAllOccurrences() {
         linkedList.enqueue("ZWEI");
         linkedList.enqueue("DREI");
         linkedList.enqueue("DREI");
@@ -93,5 +93,34 @@ public class E1326_RemoveAllOccurrencesOfTheKeyTests {
         Assert.assertEquals("FÜNF", linkedList.dequeue());
     }
 
+    @Test
+    public void test_remove_twoOrMoreStrangers_removesAllOccurrences() {
+        linkedList.enqueue("EINS");
+        linkedList.enqueue("ZWEI");
+        linkedList.enqueue("DREI");
+        linkedList.enqueue("DREI");
+        linkedList.enqueue("DREI");
+        linkedList.enqueue("DREI");
 
+        linkedList.removeAll("DREI");
+        Assert.assertEquals(2, linkedList.size());
+        Assert.assertEquals("EINS", linkedList.dequeue());
+        Assert.assertEquals("ZWEI", linkedList.dequeue());
+
+
+        Assert.assertEquals(0, linkedList.size());
+
+        linkedList.enqueue("EINS");
+        linkedList.enqueue("ZWEI");
+        linkedList.enqueue("VIER");
+        linkedList.enqueue("DREI");
+        linkedList.enqueue("DREI");
+        linkedList.enqueue("DREI");
+
+        linkedList.removeAll("DREI");
+        Assert.assertEquals(3, linkedList.size());
+        Assert.assertEquals("EINS", linkedList.dequeue());
+        Assert.assertEquals("ZWEI", linkedList.dequeue());
+        Assert.assertEquals("VIER", linkedList.dequeue());
+    }
 }
