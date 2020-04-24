@@ -72,14 +72,21 @@ public class MyLinkedList<Item> implements Iterable<Item> {
 
     public void removeAll(Item item) {
         for (Node x = first; x != null; x = x.next) {
-            if (x.next != null && x.next.item.equals(item)) {
+            if (x == first && x.item.equals(item)) { //first
+                first = x.next;
+                N--;
+            } else if (x != first && x.item.equals(item)) { //first occurrence of an item
+                first.next = x.next;
+                N--;
+            } else if (x.next != null && x.next.item.equals(item)) { //next
                 Node nodeToBeRemoved = x.next;
                 x.next = nodeToBeRemoved.next;
                 nodeToBeRemoved = null;
                 N--;
-            } else if (x.next == null || x.next == last) {
+            } else if ((x.next == null || x.next == last) && x.item.equals(item)) { //last
                 last = x;
                 x.next = null;
+                N--;
             }
         }
     }

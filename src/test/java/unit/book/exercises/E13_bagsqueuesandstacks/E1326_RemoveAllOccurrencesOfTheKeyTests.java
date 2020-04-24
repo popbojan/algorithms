@@ -32,4 +32,66 @@ public class E1326_RemoveAllOccurrencesOfTheKeyTests {
         linkedList.removeAll("DREI");
         Assert.assertEquals(5, linkedList.size());
     }
+
+    @Test
+    public void test_remove_matchAllItems_removesAllOccurrences() {
+        linkedList.enqueue("DREI");
+        linkedList.enqueue("DREI");
+        linkedList.enqueue("DREI");
+        linkedList.enqueue("DREI");
+
+        linkedList.removeAll("DREI");
+        Assert.assertEquals(0, linkedList.size());
+    }
+
+    @Test
+    public void test_remove_oneInTheMiddle_removesAllOccurrences() {
+        linkedList.enqueue("DREI");
+        linkedList.enqueue("DREI");
+        linkedList.enqueue("DREI");
+        linkedList.enqueue("ZWEI");
+        linkedList.enqueue("DREI");
+
+        linkedList.removeAll("DREI");
+        Assert.assertEquals(1, linkedList.size());
+        Assert.assertEquals("ZWEI", linkedList.dequeue());
+    }
+
+    @Test
+    public void test_remove_firstStanger_removesAllOccurrences() {
+        linkedList.enqueue("ZWEI");
+        linkedList.enqueue("DREI");
+        linkedList.enqueue("DREI");
+        linkedList.enqueue("DREI");
+        linkedList.enqueue("DREI");
+
+        linkedList.removeAll("DREI");
+        Assert.assertEquals(1, linkedList.size());
+        Assert.assertEquals("ZWEI", linkedList.dequeue());
+    }
+
+    @Test
+    public void test_doubleCheck_removeAllOccurrences() {
+        linkedList.enqueue("ZWEI");
+        linkedList.enqueue("DREI");
+        linkedList.enqueue("DREI");
+        linkedList.enqueue("DREI");
+        linkedList.enqueue("DREI");
+
+        linkedList.removeAll("DREI");
+        Assert.assertEquals(1, linkedList.size());
+        Assert.assertEquals("ZWEI", linkedList.dequeue());
+
+        linkedList.enqueue("DREI");
+        linkedList.enqueue("DREI");
+        linkedList.enqueue("DREI");
+        linkedList.enqueue("FÜNF");
+        linkedList.enqueue("DREI");
+
+        linkedList.removeAll("DREI");
+        Assert.assertEquals(1, linkedList.size());
+        Assert.assertEquals("FÜNF", linkedList.dequeue());
+    }
+
+
 }
