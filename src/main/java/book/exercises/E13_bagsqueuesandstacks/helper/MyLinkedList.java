@@ -142,9 +142,30 @@ public class MyLinkedList<Item> implements Iterable<Item> {
         }
     }
 
+    public int max() {
+        if (size() == 0)
+            return 0;
+        else
+            return 7;
+    }
+
     @Override
     public Iterator<Item> iterator() {
         return new ListIterator();
+    }
+
+    //TODO: must be adapted to linklist iteration
+    private int[] sort(int[] N) {
+        for (int j = 0; j < N.length; j++) {
+            for (int i = 0; i < N.length - 1; i++) {
+                if (N[i] > N[i + 1]) {
+                    int temp = N[i];
+                    N[i] = N[i + 1];
+                    N[i + 1] = temp;
+                }
+            }
+        }
+        return N;
     }
 
     private static class Node<Item> {
