@@ -145,8 +145,13 @@ public class MyLinkedList<Item> implements Iterable<Item> {
     public int max() {
         if (size() == 0)
             return 0;
-        else
-            return 7;
+        int maxValue = 0;
+        for(Node x = this.first; x != null; x = x.next){
+            int current = (int) x.item;
+            if(current > maxValue)
+                maxValue = current;
+        }
+        return maxValue;
     }
 
     @Override
