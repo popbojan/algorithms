@@ -6,6 +6,7 @@ public class MyLinkedList<Item> implements Iterable<Item> {
     private Node<Item> first = null;
     private Node<Item> last = null;
     private int N = 0;
+    private int maxValue;
 
     public boolean isEmpty() {
         return first == null;
@@ -158,7 +159,9 @@ public class MyLinkedList<Item> implements Iterable<Item> {
     public int maxRecursive() {
         if (size() == 0)
             return 0;
-        return 7;
+        maxValue = 0;
+        setMaxValueRecursively(this.first);
+        return maxValue;
     }
 
     @Override
@@ -166,18 +169,14 @@ public class MyLinkedList<Item> implements Iterable<Item> {
         return new ListIterator();
     }
 
-    //TODO: must be adapted to linklist iteration
-    private int[] sort(int[] N) {
-        for (int j = 0; j < N.length; j++) {
-            for (int i = 0; i < N.length - 1; i++) {
-                if (N[i] > N[i + 1]) {
-                    int temp = N[i];
-                    N[i] = N[i + 1];
-                    N[i + 1] = temp;
-                }
+    private void setMaxValueRecursively(Node x){
+        if(x.next != null){
+            int current = (int) x.item;
+            if(current > maxValue){
+                maxValue = current;
             }
+            setMaxValueRecursively(x.next);
         }
-        return N;
     }
 
     private static class Node<Item> {
