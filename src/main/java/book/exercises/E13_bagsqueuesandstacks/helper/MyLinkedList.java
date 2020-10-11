@@ -164,6 +164,26 @@ public class MyLinkedList<Item> implements Iterable<Item> {
         return maxValue;
     }
 
+    public void reverse(){
+        for(Item item : this){
+            Node<Item> node = new Node<>();
+            node.item = item;
+            reverse(node);
+        }
+    }
+
+    private Node reverse(Node x) {
+        Node first = x;
+        Node reverse = null;
+        while (first != null) {
+            Node second = first.next;
+            first.next = reverse;
+            reverse = first;
+            first = second;
+        }
+        return reverse;
+    }
+
     @Override
     public Iterator<Item> iterator() {
         return new ListIterator();
