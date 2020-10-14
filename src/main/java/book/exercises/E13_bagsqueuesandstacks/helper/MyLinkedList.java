@@ -123,6 +123,16 @@ public class MyLinkedList<Item> implements Iterable<Item> {
         return hasItem;
     }
 
+    public Node<Item> getNode(Item item) {
+        Node<Item> result = null;
+        for (Node x = first; x != null; x = x.next) {
+            if (x.item.equals(item)) {
+                result = x;
+            }
+        }
+        return result;
+    }
+
     public void deleteItem(int k) {
         int counter = 0;
         for (Node x = first; x != null; x = x.next) {
@@ -147,9 +157,9 @@ public class MyLinkedList<Item> implements Iterable<Item> {
         if (size() == 0)
             return 0;
         int maxValue = 0;
-        for(Node x = this.first; x != null; x = x.next){
+        for (Node x = this.first; x != null; x = x.next) {
             int current = (int) x.item;
-            if(current > maxValue)
+            if (current > maxValue)
                 maxValue = current;
         }
         return maxValue;
@@ -164,15 +174,13 @@ public class MyLinkedList<Item> implements Iterable<Item> {
         return maxValue;
     }
 
-    public void reverse(){
-        for(Item item : this){
-            Node<Item> node = new Node<>();
-            node.item = item;
-            reverse(node);
-        }
+    public void reverse(Item item) {
+        Node node = getNode(item);
+        reverse(node);
     }
 
-    private Node reverse(Node x) {
+    private void reverse(Node x) {
+        last = x;
         Node first = x;
         Node reverse = null;
         while (first != null) {
@@ -181,7 +189,28 @@ public class MyLinkedList<Item> implements Iterable<Item> {
             reverse = first;
             first = second;
         }
-        return reverse;
+        this.first = reverse;
+    }
+
+    public void reverseRecursively(Item item) {
+        Node node = getNode(item);
+        last = node;
+        reverseRecursively(node);
+    }
+
+    private Node reverseRecursively(Node first) {
+        if (first == null) {
+            return null;
+        }
+        if (first.next == null) {
+            return first;
+        }
+        Node second = first.next;
+        Node rest = reverseRecursively(second);
+        second.next = first;
+        first.next = null;
+        this.first = rest;
+        return rest;
     }
 
     @Override
@@ -189,10 +218,10 @@ public class MyLinkedList<Item> implements Iterable<Item> {
         return new ListIterator();
     }
 
-    private void setMaxValueRecursively(Node x){
-        if(x.next != null){
+    private void setMaxValueRecursively(Node x) {
+        if (x.next != null) {
             int current = (int) x.item;
-            if(current > maxValue){
+            if (current > maxValue) {
                 maxValue = current;
             }
             setMaxValueRecursively(x.next);

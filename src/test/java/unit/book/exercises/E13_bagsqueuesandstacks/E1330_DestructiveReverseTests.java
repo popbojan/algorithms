@@ -19,10 +19,24 @@ public class E1330_DestructiveReverseTests {
     }
 
     @Test
-    public void destructive() {
+    public void reverse_returnsDestructiveList() {
         linkedList.enqueue("AAA");
         linkedList.enqueue("BBB");
-        //linkedList.reverse();
+        linkedList.enqueue("CCC");
+        linkedList.reverse("AAA");
+        assertEquals("CCC", linkedList.dequeue());
+        assertEquals("BBB", linkedList.dequeue());
+        assertEquals("AAA", linkedList.dequeue());
+    }
+
+    @Test
+    public void reverseRecursively_returnsDestructiveList() {
+        linkedList.enqueue("AAA");
+        linkedList.enqueue("BBB");
+        linkedList.enqueue("CCC");
+        linkedList.reverseRecursively("AAA");
+        assertEquals("CCC", linkedList.dequeue());
+        assertEquals("BBB", linkedList.dequeue());
         assertEquals("AAA", linkedList.dequeue());
     }
 }

@@ -36,8 +36,8 @@ import book.exercises.E13_bagsqueuesandstacks.helper.MyLinkedList;
  *
  *  public Node reverse(Node first)
  *  {
- *      if(fist == null) return null;
- *      if(first.next = null) return first;
+ *      if(first == null) return null;
+ *      if(first.next == null) return first;
  *      Node second = first.next;
  *      Node rest = reverse(second);
  *      second.next = first;
