@@ -1,5 +1,7 @@
 package book.exercises.E13_bagsqueuesandstacks;
 
+import book.exercises.E13_bagsqueuesandstacks.helper.DoubleLinkedList;
+
 /**
  * @Exercise 1.3.31
  * @Page 166
@@ -8,10 +10,15 @@ package book.exercises.E13_bagsqueuesandstacks;
  * methods for the following tasks: insert at the beginning, insert at the end, remove from the beginning, remove from
  * the end, insert before a given node, insert after a given node, and remove a given node.
  */
-public class E1331_DoubleLinkedList {
+public class E1331_DoubleLinkedList<Item> {
 
-    public E1331_DoubleLinkedList(){
+    private DoubleLinkedList<Item> doubleLinkedList;
 
+    public E1331_DoubleLinkedList() {
+        doubleLinkedList = new DoubleLinkedList<>();
     }
 
+    public DoubleLinkedList<Item> getDoubleLinkedList() {
+        return doubleLinkedList;
+    }
 }
