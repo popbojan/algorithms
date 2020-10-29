@@ -197,5 +197,64 @@ public class E1331_DoubleLinkedListTests {
         assertEquals("Slayer", doubleLinkedList.removeFromTheBeginning());
     }
 
+    @Test
+    public void test12_remove_last_removesLast() {
+        doubleLinkedList.insertAtTheBeginning("Sting");
+        doubleLinkedList.insertAtTheBeginning("Simple Red");
+        doubleLinkedList.insertAtTheEnd("Burzum");
+        doubleLinkedList.insertAtTheEnd("Marduk");
+
+        doubleLinkedList.remove("Marduk");
+
+        assertEquals("Simple Red", doubleLinkedList.removeFromTheBeginning());
+        assertEquals("Sting", doubleLinkedList.removeFromTheBeginning());
+        assertEquals("Burzum", doubleLinkedList.removeFromTheBeginning());
+        assertEquals(null, doubleLinkedList.removeFromTheBeginning());
+    }
+
+    @Test
+    public void test13_remove_first_removesFirst() {
+        doubleLinkedList.insertAtTheBeginning("Sting");
+        doubleLinkedList.insertAtTheBeginning("Simple Red");
+        doubleLinkedList.insertAtTheEnd("Burzum");
+        doubleLinkedList.insertAtTheEnd("Marduk");
+
+        doubleLinkedList.remove("Simple Red");
+
+        assertEquals("Sting", doubleLinkedList.removeFromTheBeginning());
+        assertEquals("Burzum", doubleLinkedList.removeFromTheBeginning());
+        assertEquals("Marduk", doubleLinkedList.removeFromTheBeginning());
+    }
+
+    @Test
+    public void test14_remove_inTheMiddle_removesInTheMiddle() {
+        doubleLinkedList.insertAtTheBeginning("Sting");
+        doubleLinkedList.insertAtTheBeginning("Simple Red");
+        doubleLinkedList.insertAtTheEnd("Burzum");
+        doubleLinkedList.insertAtTheEnd("Marduk");
+
+        doubleLinkedList.remove("Burzum");
+
+        assertEquals("Simple Red", doubleLinkedList.removeFromTheBeginning());
+        assertEquals("Sting", doubleLinkedList.removeFromTheBeginning());
+        assertEquals("Marduk", doubleLinkedList.removeFromTheBeginning());
+        assertEquals(null, doubleLinkedList.removeFromTheBeginning());
+    }
+
+    @Test
+    public void test15_remove_inTheMiddle_removeFromTheEnd_removesInTheMiddle() {
+        doubleLinkedList.insertAtTheBeginning("Sting");
+        doubleLinkedList.insertAtTheBeginning("Simple Red");
+        doubleLinkedList.insertAtTheEnd("Burzum");
+        doubleLinkedList.insertAtTheEnd("Marduk");
+
+        doubleLinkedList.remove("Burzum");
+
+        assertEquals("Marduk", doubleLinkedList.removeFromTheEnd());
+        assertEquals("Sting", doubleLinkedList.removeFromTheEnd());
+        assertEquals("Simple Red", doubleLinkedList.removeFromTheEnd());
+        assertEquals(null, doubleLinkedList.removeFromTheEnd());
+    }
+
 
 }

@@ -46,7 +46,10 @@ public class DoubleLinkedList<Item> {
         if (first != null) {
             item = first.item;
             first = first.next;
-            if (isEmpty()) {
+            if (N > 1 && first != null) {
+                first.previous = null;
+            } else {
+                //if (isEmpty()) {
                 last = null;
             }
             N--;
@@ -60,7 +63,7 @@ public class DoubleLinkedList<Item> {
         if (last != null) {
             item = last.item;
             last = last.previous;
-            if (N > 1) {
+            if (N > 1 && last != null) {
                 last.next = null;
             } else {
                 first = null;
@@ -104,6 +107,23 @@ public class DoubleLinkedList<Item> {
                 x.next = t;
                 N++;
                 break;
+            }
+        }
+    }
+
+    public void remove(Item item) {
+        for (Node x = first; x != null && item != null; x = x.next) {
+            if (x.item.equals(item)) {
+                if (x == first) {
+                    first = x.next;
+                } else {
+                    x.previous.next = x.next;
+                }
+                if (x == last) {
+                    last = x.previous;
+                } else {
+                    x.next.previous = x.previous;
+                }
             }
         }
     }
