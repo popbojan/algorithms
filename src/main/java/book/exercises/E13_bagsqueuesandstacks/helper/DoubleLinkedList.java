@@ -70,6 +70,44 @@ public class DoubleLinkedList<Item> {
         return item;
     }
 
+    public void insertBefore(Item before, Item item) {
+        for (Node x = first; x != null && item != null && before != null; x = x.next) {
+            if (x.item.equals(before)) {
+                Node<Item> t = new Node();
+                t.item = item;
+                t.next = x;
+                t.previous = x.previous;
+                if (x == first) {
+                    first = t;
+                } else {
+                    x.previous.next = t;
+                }
+                x.previous = t;
+                N++;
+                break;
+            }
+        }
+    }
+
+    public void insertAfter(Item after, Item item) {
+        for (Node x = first; x != null && item != null && after != null; x = x.next) {
+            if (x.item.equals(after)) {
+                Node<Item> t = new Node();
+                t.item = item;
+                t.next = x.next;
+                t.previous = x;
+                if (x == last) {
+                    last = t;
+                } else {
+                    x.next.previous = t;
+                }
+                x.next = t;
+                N++;
+                break;
+            }
+        }
+    }
+
 
     private static class Node<Item> {
         private Item item;

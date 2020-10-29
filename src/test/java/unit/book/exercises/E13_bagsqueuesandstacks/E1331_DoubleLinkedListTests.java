@@ -19,7 +19,7 @@ public class E1331_DoubleLinkedListTests {
     }
 
     @Test
-    public void test_1_insertAtTheEndRemoveFromTheBeginning_returnsRightItems() {
+    public void test1_insertAtTheEndRemoveFromTheBeginning_returnsRightItems() {
         doubleLinkedList.insertAtTheEnd("Sting");
         doubleLinkedList.insertAtTheEnd("Burzum");
         assertEquals("Sting", doubleLinkedList.removeFromTheBeginning());
@@ -33,7 +33,7 @@ public class E1331_DoubleLinkedListTests {
     }
 
     @Test
-    public void test_2_insertAtTheBeginningRemoveFromTheBeginning_returnsRightItems() {
+    public void test2_insertAtTheBeginningRemoveFromTheBeginning_returnsRightItems() {
         doubleLinkedList.insertAtTheBeginning("Sting");
         doubleLinkedList.insertAtTheBeginning("Burzum");
         assertEquals("Burzum", doubleLinkedList.removeFromTheBeginning());
@@ -46,7 +46,7 @@ public class E1331_DoubleLinkedListTests {
     }
 
     @Test
-    public void test_3_insertAtTheBeginningInsertAtTheEndRemoveFromTheBeginning_returnsRightItems() {
+    public void test3_insertAtTheBeginningInsertAtTheEndRemoveFromTheBeginning_returnsRightItems() {
         doubleLinkedList.insertAtTheBeginning("Sting");
         doubleLinkedList.insertAtTheEnd("Burzum");
         doubleLinkedList.insertAtTheBeginning("Simple Red");
@@ -67,7 +67,7 @@ public class E1331_DoubleLinkedListTests {
     }
 
     @Test
-    public void test_4_insertAtTheEndRemoveFromTheEnd_returnsRightItems() {
+    public void test4_insertAtTheEndRemoveFromTheEnd_returnsRightItems() {
         doubleLinkedList.insertAtTheEnd("Sting");
         doubleLinkedList.insertAtTheEnd("Burzum");
         assertEquals("Burzum", doubleLinkedList.removeFromTheEnd());
@@ -81,7 +81,7 @@ public class E1331_DoubleLinkedListTests {
     }
 
     @Test
-    public void test_5_insertAtTheBeginningRemoveFromTheEnd_returnsRightItems() {
+    public void test5_insertAtTheBeginningRemoveFromTheEnd_returnsRightItems() {
         doubleLinkedList.insertAtTheBeginning("Sting");
         doubleLinkedList.insertAtTheBeginning("Burzum");
         assertEquals("Sting", doubleLinkedList.removeFromTheEnd());
@@ -97,7 +97,7 @@ public class E1331_DoubleLinkedListTests {
     }
 
     @Test
-    public void test_6_insertAtTheBeginningInsertAtTheEndRemoveFromTheEnd_returnsRightItems() {
+    public void test6_insertAtTheBeginningInsertAtTheEndRemoveFromTheEnd_returnsRightItems() {
         doubleLinkedList.insertAtTheBeginning("Sting");
         doubleLinkedList.insertAtTheEnd("Burzum");
         doubleLinkedList.insertAtTheBeginning("Simple Red");
@@ -116,5 +116,86 @@ public class E1331_DoubleLinkedListTests {
         assertEquals("Sting", doubleLinkedList.removeFromTheEnd());
         assertEquals("Simple Red", doubleLinkedList.removeFromTheEnd());
     }
+
+    @Test
+    public void test7_insertBefore_second_insertsBeforeSecond() {
+        doubleLinkedList.insertAtTheBeginning("Sting");
+        doubleLinkedList.insertAtTheEnd("Burzum");
+        doubleLinkedList.insertAtTheBeginning("Simple Red");
+        doubleLinkedList.insertAtTheEnd("Marduk");
+
+        doubleLinkedList.insertBefore("Sting", "Slayer");
+
+        assertEquals("Simple Red", doubleLinkedList.removeFromTheBeginning());
+        assertEquals("Slayer", doubleLinkedList.removeFromTheBeginning());
+        assertEquals("Sting", doubleLinkedList.removeFromTheBeginning());
+        assertEquals("Burzum", doubleLinkedList.removeFromTheBeginning());
+        assertEquals("Marduk", doubleLinkedList.removeFromTheBeginning());
+    }
+
+    @Test
+    public void test8_insertBefore_first_insertsBeforeFirst() {
+        doubleLinkedList.insertAtTheBeginning("Sting");
+        doubleLinkedList.insertAtTheEnd("Burzum");
+        doubleLinkedList.insertAtTheBeginning("Simple Red");
+        doubleLinkedList.insertAtTheEnd("Marduk");
+
+        doubleLinkedList.insertBefore("Simple Red", "Slayer");
+
+        assertEquals("Slayer", doubleLinkedList.removeFromTheBeginning());
+        assertEquals("Simple Red", doubleLinkedList.removeFromTheBeginning());
+        assertEquals("Sting", doubleLinkedList.removeFromTheBeginning());
+        assertEquals("Burzum", doubleLinkedList.removeFromTheBeginning());
+        assertEquals("Marduk", doubleLinkedList.removeFromTheBeginning());
+    }
+
+    @Test
+    public void test9_insertBefore_beforeLast_insertsBeforeLast() {
+        doubleLinkedList.insertAtTheBeginning("Sting");
+        doubleLinkedList.insertAtTheEnd("Burzum");
+        doubleLinkedList.insertAtTheBeginning("Simple Red");
+        doubleLinkedList.insertAtTheEnd("Marduk");
+
+        doubleLinkedList.insertBefore("Marduk", "Slayer");
+
+        assertEquals("Simple Red", doubleLinkedList.removeFromTheBeginning());
+        assertEquals("Sting", doubleLinkedList.removeFromTheBeginning());
+        assertEquals("Burzum", doubleLinkedList.removeFromTheBeginning());
+        assertEquals("Slayer", doubleLinkedList.removeFromTheBeginning());
+        assertEquals("Marduk", doubleLinkedList.removeFromTheBeginning());
+    }
+
+    @Test
+    public void test10_insertAfter_second_insertsAfterSecond() {
+        doubleLinkedList.insertAtTheBeginning("Sting");
+        doubleLinkedList.insertAtTheBeginning("Simple Red");
+        doubleLinkedList.insertAtTheEnd("Burzum");
+        doubleLinkedList.insertAtTheEnd("Marduk");
+
+        doubleLinkedList.insertAfter("Sting", "Slayer");
+
+        assertEquals("Simple Red", doubleLinkedList.removeFromTheBeginning());
+        assertEquals("Sting", doubleLinkedList.removeFromTheBeginning());
+        assertEquals("Slayer", doubleLinkedList.removeFromTheBeginning());
+        assertEquals("Burzum", doubleLinkedList.removeFromTheBeginning());
+        assertEquals("Marduk", doubleLinkedList.removeFromTheBeginning());
+    }
+
+    @Test
+    public void test11_insertAfter_last_insertsAfterLast() {
+        doubleLinkedList.insertAtTheBeginning("Sting");
+        doubleLinkedList.insertAtTheBeginning("Simple Red");
+        doubleLinkedList.insertAtTheEnd("Burzum");
+        doubleLinkedList.insertAtTheEnd("Marduk");
+
+        doubleLinkedList.insertAfter("Marduk", "Slayer");
+
+        assertEquals("Simple Red", doubleLinkedList.removeFromTheBeginning());
+        assertEquals("Sting", doubleLinkedList.removeFromTheBeginning());
+        assertEquals("Burzum", doubleLinkedList.removeFromTheBeginning());
+        assertEquals("Marduk", doubleLinkedList.removeFromTheBeginning());
+        assertEquals("Slayer", doubleLinkedList.removeFromTheBeginning());
+    }
+
 
 }
